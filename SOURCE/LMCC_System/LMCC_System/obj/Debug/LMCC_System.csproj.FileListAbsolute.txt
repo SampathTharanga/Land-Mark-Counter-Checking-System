@@ -1,0 +1,34 @@
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe.config
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\bin\Debug\LMCC_System.pdb
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\obj\Debug\LMCC_System.csprojResolveAssemblyReference.cache
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmMain.resources
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Properties.Resources.resources
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\obj\Debug\LMCC_System.csproj.GenerateResource.Cache
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\obj\Debug\LMCC_System.csproj.CoreCompileInputs.cache
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\obj\Debug\LMCC_System.exe
+c:\users\sampath\source\repos\LMCC_System\LMCC_System\obj\Debug\LMCC_System.pdb
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe.config
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\bin\Debug\LMCC_System.pdb
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmMain.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Properties.Resources.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.csproj.GenerateResource.Cache
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.csproj.CoreCompileInputs.cache
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.exe
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.pdb
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmLogin.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucSurveyor.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucLMIssue.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucLMMaking.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucLMReceived.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucLMSettle.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucReport.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucHelp.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucHome.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Surveyor.frmSurveyorType.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.LM_Making.frmLMType.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmUser.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.User.frmUserProfile.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmCommonDetails.resources
+C:\Users\Sampath\Desktop\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Login.frmFogotPassword.resources

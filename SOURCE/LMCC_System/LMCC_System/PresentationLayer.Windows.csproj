@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68653F92-5153-453E-A2EB-4F4AA2E3203A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LMCC_System</RootNamespace>
+    <AssemblyName>LMCC_System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commen Details\frmCommonDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commen Details\frmCommonDetails.Designer.cs">
+      <DependentUpon>frmCommonDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmFogotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmFogotPassword.Designer.cs">
+      <DependentUpon>frmFogotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custome Design\TextBoxBorderChange.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LM Making\frmLMType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LM Making\frmLMType.Designer.cs">
+      <DependentUpon>frmLMType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Surveyor\frmSurveyorType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Surveyor\frmSurveyorType.Designer.cs">
+      <DependentUpon>frmSurveyorType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Help\ucHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Help\ucHelp.Designer.cs">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LM Issue\ucLMIssue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LM Issue\ucLMIssue.Designer.cs">
+      <DependentUpon>ucLMIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LM Making\ucLMMaking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LM Making\ucLMMaking.Designer.cs">
+      <DependentUpon>ucLMMaking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LM Received\ucLMReceived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LM Received\ucLMReceived.Designer.cs">
+      <DependentUpon>ucLMReceived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LM Settle\ucLMSettle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LM Settle\ucLMSettle.Designer.cs">
+      <DependentUpon>ucLMSettle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ucReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report\ucReport.Designer.cs">
+      <DependentUpon>ucReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Surveyor\ucSurveyor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Surveyor\ucSurveyor.Designer.cs">
+      <DependentUpon>ucSurveyor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserProfile.Designer.cs">
+      <DependentUpon>frmUserProfile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Commen Details\frmCommonDetails.resx">
+      <DependentUpon>frmCommonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmFogotPassword.resx">
+      <DependentUpon>frmFogotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LM Issue\ucLMIssue.resx">
+      <DependentUpon>ucLMIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LM Making\frmLMType.resx">
+      <DependentUpon>frmLMType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LM Making\ucLMMaking.resx">
+      <DependentUpon>ucLMMaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LM Received\ucLMReceived.resx">
+      <DependentUpon>ucLMReceived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LM Settle\ucLMSettle.resx">
+      <DependentUpon>ucLMSettle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\ucReport.resx">
+      <DependentUpon>ucReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surveyor\frmSurveyorType.resx">
+      <DependentUpon>frmSurveyorType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surveyor\ucSurveyor.resx">
+      <DependentUpon>ucSurveyor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\ucHelp.resx">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserProfile.resx">
+      <DependentUpon>frmUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surveyor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lm-making.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lm-issue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lm-settle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lm-recived.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{80f15069-27e5-4224-a73f-025bafeee5ee}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
