@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using BusinessPropertyLayer;
 
 namespace DataAccessLayer
 {
@@ -38,7 +39,7 @@ namespace DataAccessLayer
             return ds;
         }
         //INSERT NEW USER
-        public void AddNewUserDB(UserModel model)
+        public void AddNewUserDB(IUser model)
         {
             string sql = "INSERT INTO Table_User VALUES ('" +model.username + "','" + model.userType + "','" + model.password + "','" + model.secQue + "','" + model.secAns + "','" + model.mobile + "','" + model.email + "','" + model.division + "')";
             InsertUpdateDeleteSQLString(sql);

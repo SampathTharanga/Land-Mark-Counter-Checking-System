@@ -42,9 +42,12 @@
   <ItemGroup>
     <Compile Include="UserClassBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessPropertyLayer\BusinessPropertyLayer.csproj">
+      <Project>{52a62fa5-6aee-43c1-986b-adfabca905ad}</Project>
+      <Name>BusinessPropertyLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{eae6aaa8-be98-4f58-9f5e-2d46ac1406a7}</Project>
       <Name>DataAccessLayer</Name>

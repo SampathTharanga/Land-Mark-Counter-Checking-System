@@ -61,7 +61,7 @@ namespace LMCC_System
         //SAVE USER DATA
         private void UserDataSave()
         {
-            objUserLogic = new UserClassBLL();
+            
             if (
                 String.IsNullOrWhiteSpace(txtUsername.Text) ||
                 String.IsNullOrWhiteSpace(cbxType.Text) ||
@@ -78,10 +78,20 @@ namespace LMCC_System
             }
             else
             {
-                objUserLogic.AddNewUser()
-
                 //INSERT NEW USER
-                objUserLogic.AddNewUser(txtUsername.Text, cbxType.Text.ToString(), txtPass.Text, cbxSecQue.Text.ToString(), txtSecAns.Text, txtMobile.Text, txtEmail.Text, txtDivision.Text);
+                objUserLogic = new UserClassBLL()
+                {
+                    username = txtUsername.Text,
+                    userType = cbxType.Text.ToString(),
+                    password = txtPass.Text,
+                    secQue = cbxSecQue.Text.ToString(),
+                    secAns = txtSecAns.Text,
+                    mobile = txtMobile.Text,
+                    email = txtEmail.Text,
+                    division = txtDivision.Text
+            };
+                //INSERT DATA TO DATABASE
+                objUserLogic.AddNewUser();
                 MessageBox.Show("User registration successfully!", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //CLEAR ALL TEXBOX AND COMBOBOX
@@ -132,6 +142,52 @@ namespace LMCC_System
         {
             //LOAD USER DATA
             LoadDataDgv();
+            //DATAGRIDVIEW DESIGN
+            DataGrdViewDesign();
+        }
+
+        //DATAGRIDVIEW DESIGN SECTION
+        private void DataGrdViewDesign()
+        {
+            //DATAGRIDVIEW DESIGN SECTION.
+            dgvUser.Columns[0].HeaderText = "Username";
+            dgvUser.Columns[1].HeaderText = "User Type";
+            dgvUser.Columns[2].HeaderText = "Password";
+            dgvUser.Columns[3].HeaderText = "Security Question";
+            dgvUser.Columns[4].HeaderText = "Security Answer";
+            dgvUser.Columns[5].HeaderText = "Mobile";
+            dgvUser.Columns[6].HeaderText = "Email";
+            dgvUser.Columns[7].HeaderText = "Division";
+
+            dgvUser.Columns[0].Width = 100;
+            dgvUser.Columns[1].Width = 100;
+            dgvUser.Columns[2].Width = 100;
+            dgvUser.Columns[3].Width = 100;
+            dgvUser.Columns[4].Width = 100;
+            dgvUser.Columns[5].Width = 100;
+            dgvUser.Columns[6].Width = 100;
+            dgvUser.Columns[7].Width = 100;
+
+            //dgvUser.BorderStyle = BorderStyle.None;
+            dgvUser.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvUser.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvUser.DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224, 224);
+            dgvUser.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvUser.BackgroundColor = Color.White;
+
+            dgvUser.EnableHeadersVisualStyles = false;
+            dgvUser.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvUser.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(38, 50, 64);
+            dgvUser.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvUser.MultiSelect = false;
+
+            dgvUser.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgvUser.AllowUserToResizeRows = false;
+
+            dgvUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dgvUser.AllowUserToResizeColumns = false;
         }
 
         //MOBILE NUMBER VALIDATE

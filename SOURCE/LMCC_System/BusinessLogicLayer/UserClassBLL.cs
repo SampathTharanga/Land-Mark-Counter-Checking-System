@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
-using DataAccessLayer; //DATA ACCESS LAYER
-using System.Text.RegularExpressions;
+using BusinessPropertyLayer;
+using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
-    public class UserClassBLL
+    public class UserClassBLL : IUser
     {
         //USER PROPERTIES
         public string username { get; set; }
@@ -21,20 +18,19 @@ namespace BusinessLogicLayer
         public string email { get; set; }
         public string division { get; set; }
 
-
-
-
         //USER BUSINESS LAYER CLASS OBJECT
-        public UserClassDAL objUserClsBL = new UserClassDAL();
-
-        //ENCRYPT AND DECRYPT KEY
-        private static string key { get; set; } = "A!9HHhi%XjjYY4YP2@Nob009X";
+        UserClassDAL objUserClsBL;
 
         //ADD NEW USER
-        public void AddNewUser(UserModel model)
+        public void AddNewUser()
         {
-            objUserClsBL.AddNewUserDB(model);
+            objUserClsBL = new UserClassDAL();
+            objUserClsBL.AddNewUserDB(this);
         }
+
+        #region DATA ENCRYP/DECRYPT
+        //ENCRYPT AND DECRYPT KEY
+        private static string key { get; set; } = "A!9HHhi%XjjYY4YP2@Nob009X";
         //PASSWORD ENCRYPT
         private string Encrypt(string text)
         {
@@ -75,10 +71,11 @@ namespace BusinessLogicLayer
                 }
             }
         }
-
+        #endregion
         //LOAD DATA
         public object LoadUserData()
         {
+            objUserClsBL = new UserClassDAL();
             return objUserClsBL.LoadUserData();
         }
 
