@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BusinessPropertyLayer;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
-using System.Linq;
-using System.Text;
-using BusinessPropertyLayer;
 
 namespace DataAccessLayer
 {
@@ -27,6 +22,7 @@ namespace DataAccessLayer
                 }
             }
         }
+
         //EXECUTE STRING
         private object ExecuteSqlString(string sqlstring)
         {
@@ -38,12 +34,14 @@ namespace DataAccessLayer
             objAdp.Fill(ds, "Table_User");
             return ds;
         }
+
         //INSERT NEW USER
         public void AddNewUserDB(IUser model)
         {
             string sql = "INSERT INTO Table_User VALUES ('" +model.username + "','" + model.userType + "','" + model.password + "','" + model.secQue + "','" + model.secAns + "','" + model.mobile + "','" + model.email + "','" + model.division + "')";
             InsertUpdateDeleteSQLString(sql);
         }
+
         //LOAD USER DATA
         public object LoadUserData()
         {
@@ -51,6 +49,13 @@ namespace DataAccessLayer
             string sql = "SELECT * FROM Table_User";
             ds = (DataSet)ExecuteSqlString(sql);
             return ds;
+        }
+
+        //UPDATE USER
+        public void UpdateUserDB(IUser model)
+        {
+            string sql = "UPDATE Table_User SET user_type='" + model.userType + "', password='" + model.password + "', sec_question='" + model.secQue + "',sec_answer='" + model.secAns + "',mobile='" + model.mobile + "',email='" + model.email + "',division='" + model.division + "' WHERE username='" + model.username + "'";
+            InsertUpdateDeleteSQLString(sql);
         }
     }
 }

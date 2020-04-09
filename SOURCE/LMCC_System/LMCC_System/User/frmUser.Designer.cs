@@ -267,6 +267,7 @@
             this.dgvUser.RowHeadersVisible = false;
             this.dgvUser.Size = new System.Drawing.Size(881, 213);
             this.dgvUser.TabIndex = 36;
+            this.dgvUser.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvUser_MouseDoubleClick);
             // 
             // btnAdd
             // 

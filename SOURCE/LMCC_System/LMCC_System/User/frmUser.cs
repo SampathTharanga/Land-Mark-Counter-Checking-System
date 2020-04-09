@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BusinessLogicLayer;//IMPORT BUSIINESS LOGC LAYER
+using System;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BusinessLogicLayer;//IMPORT BUSIINESS LOGC LAYER
-using System.Threading;
 using System.Text.RegularExpressions;
-using System.IO;
+using System.Windows.Forms;
 
 namespace LMCC_System
 {
@@ -50,19 +43,25 @@ namespace LMCC_System
         private void btnnClear_Click(object sender, EventArgs e)
         {
             ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
+
+            txtUsername.Enabled = true;//ENABLE TEXTBOX AFTER DATAGRIDVIEW ROW DOUBLE CLICK
+            btnAdd.Text = "Add";//TEXTBOX DEFAULT TEXT SET AFTER DATAGRIDVIEW ROW DOUBLE CLICK
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //USER DATA SAVE
-            UserDataSave();
+           if(btnAdd.Text=="Add")//USER ADD BUTTON USE
+                UserDataSave();//USER DATA SAVE
+
+            if (btnAdd.Text == "Update")//USER UPDATE BUTTON USE
+                UserDataUpadate();//USER DATA UPDATE
         }
 
         //SAVE USER DATA
         private void UserDataSave()
         {
             
-            if (
+            if (//CHECK TEXBOXES NOT NULL OR EMPTY
                 String.IsNullOrWhiteSpace(txtUsername.Text) ||
                 String.IsNullOrWhiteSpace(cbxType.Text) ||
                 String.IsNullOrWhiteSpace(txtPass.Text) ||
@@ -78,7 +77,7 @@ namespace LMCC_System
             }
             else
             {
-                //INSERT NEW USER
+                //PROPERTIES FOR DATA ADD
                 objUserLogic = new UserClassBLL()
                 {
                     username = txtUsername.Text,
@@ -100,6 +99,54 @@ namespace LMCC_System
                 //LOAD USER DATA
                 LoadDataDgv();
 
+                //SET TO BUTTON TEXT Add
+                btnAdd.Text = "Add";
+            }
+        }
+
+        //UPDATE USER DATA
+        private void UserDataUpadate()
+        {
+            if (//CHECK TEXBOXES NOT NULL OR EMPTY
+                String.IsNullOrWhiteSpace(txtUsername.Text) ||
+                String.IsNullOrWhiteSpace(cbxType.Text) ||
+                String.IsNullOrWhiteSpace(txtPass.Text) ||
+                String.IsNullOrWhiteSpace(txtConfirmPass.Text) ||
+                String.IsNullOrWhiteSpace(cbxSecQue.Text) ||
+                String.IsNullOrWhiteSpace(txtSecAns.Text) ||
+                String.IsNullOrWhiteSpace(txtEmail.Text) ||
+                String.IsNullOrWhiteSpace(txtMobile.Text) ||
+                String.IsNullOrWhiteSpace(txtDivision.Text)
+             )
+            {
+                MessageBox.Show("You must be filling all field!.", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                objUserLogic = new UserClassBLL()
+                {
+                    username = txtUsername.Text,
+                    userType = cbxType.Text,
+                    password = txtPass.Text,
+                    secQue = cbxSecQue.Text,
+                    secAns = txtSecAns.Text,
+                    mobile = txtMobile.Text,
+                    email = txtEmail.Text,
+                    division = txtDivision.Text
+                };
+
+                //UPDATE USER DATA
+                objUserLogic.UpdateUser();
+                MessageBox.Show("User Update successfully!", "User Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                //CLEAR ALL TEXBOX AND COMBOBOX
+                ClearTextBoxces();
+
+                //LOAD USER DATA
+                LoadDataDgv();
+
+                //SET TO BUTTON TEXT Add
+                btnAdd.Text = "Add";
             }
         }
 
@@ -140,16 +187,16 @@ namespace LMCC_System
 
         private void frmUser_Load(object sender, EventArgs e)
         {
-            //LOAD USER DATA
-            LoadDataDgv();
-            //DATAGRIDVIEW DESIGN
-            DataGrdViewDesign();
+            txtUsername.Enabled = true;//ENABLE TEXTBOX AFTER DATAGRIDVIEW ROW DOUBLE CLICK
+            btnAdd.Text = "Add";//TEXTBOX DEFAULT TEXT SET AFTER DATAGRIDVIEW ROW DOUBLE CLICK   
+
+            LoadDataDgv();//LOAD USER DATA
+            DataGrdViewDesign();//DATAGRIDVIEW DESIGN
         }
 
         //DATAGRIDVIEW DESIGN SECTION
         private void DataGrdViewDesign()
         {
-            //DATAGRIDVIEW DESIGN SECTION.
             dgvUser.Columns[0].HeaderText = "Username";
             dgvUser.Columns[1].HeaderText = "User Type";
             dgvUser.Columns[2].HeaderText = "Password";
@@ -162,10 +209,10 @@ namespace LMCC_System
             dgvUser.Columns[0].Width = 100;
             dgvUser.Columns[1].Width = 100;
             dgvUser.Columns[2].Width = 100;
-            dgvUser.Columns[3].Width = 100;
-            dgvUser.Columns[4].Width = 100;
+            dgvUser.Columns[3].Width = 200;
+            dgvUser.Columns[4].Width = 150;
             dgvUser.Columns[5].Width = 100;
-            dgvUser.Columns[6].Width = 100;
+            dgvUser.Columns[6].Width = 200;
             dgvUser.Columns[7].Width = 100;
 
             //dgvUser.BorderStyle = BorderStyle.None;
@@ -200,6 +247,23 @@ namespace LMCC_System
                 txtMobile.SelectAll();
                 e.Cancel = true;
             }
+        }
+
+        //MOUSE DOUBLE CLICK AND FILL ALREADY DATA TO TEXTBOXES
+        private void dgvUser_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            txtUsername.Enabled = false;
+            btnAdd.Text = "Update";//ADD BUTTON TEXT CHANGE TO Update
+
+            txtUsername.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();
+            cbxType.Text = dgvUser.CurrentRow.Cells[1].Value.ToString();
+            txtPass.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
+            txtConfirmPass.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
+            cbxSecQue.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
+            txtSecAns.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
+            txtMobile.Text = dgvUser.CurrentRow.Cells[5].Value.ToString();
+            txtEmail.Text = dgvUser.CurrentRow.Cells[6].Value.ToString();
+            txtDivision.Text = dgvUser.CurrentRow.Cells[7].Value.ToString();
         }
     }
 }
