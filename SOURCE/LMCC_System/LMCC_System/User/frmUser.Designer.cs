@@ -193,6 +193,7 @@
             this.txtSecAns.Name = "txtSecAns";
             this.txtSecAns.Size = new System.Drawing.Size(271, 20);
             this.txtSecAns.TabIndex = 29;
+            this.txtSecAns.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSecAns_KeyPress);
             // 
             // txtMobile
             // 
@@ -201,6 +202,7 @@
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(271, 20);
             this.txtMobile.TabIndex = 30;
+            this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobile_KeyPress);
             this.txtMobile.Validating += new System.ComponentModel.CancelEventHandler(this.txtMobile_Validating);
             // 
             // txtDivision
@@ -210,6 +212,7 @@
             this.txtDivision.Name = "txtDivision";
             this.txtDivision.Size = new System.Drawing.Size(271, 20);
             this.txtDivision.TabIndex = 31;
+            this.txtDivision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDivision_KeyPress);
             // 
             // txtEmail
             // 
@@ -253,6 +256,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(271, 20);
             this.txtUsername.TabIndex = 35;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // dgvUser
             // 

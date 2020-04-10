@@ -26,13 +26,19 @@ namespace DataAccessLayer
         //EXECUTE STRING
         private object ExecuteSqlString(string sqlstring)
         {
-            SqlConnection objsqlconn = new SqlConnection(conn);
-            objsqlconn.Open();
-            DataSet ds = new DataSet();
-            SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn);
-            SqlDataAdapter objAdp = new SqlDataAdapter(objcmd);
-            objAdp.Fill(ds, "Table_User");
-            return ds;
+            using (SqlConnection objsqlconn = new SqlConnection(conn))
+            {
+                objsqlconn.Open();
+                using (DataSet ds = new DataSet())
+                {
+                    using (SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn))
+                    {
+                        SqlDataAdapter objAdp = new SqlDataAdapter(objcmd);
+                        objAdp.Fill(ds, "Table_User");
+                        return ds;
+                    }
+                }
+            }
         }
 
         //INSERT NEW USER
