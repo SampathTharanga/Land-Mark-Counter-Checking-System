@@ -14,13 +14,12 @@ namespace DataAccessLayer
         private void InsertUpdateDeleteSQLString(string sqlstring)
         {
             using (SqlConnection objSqlCon = new SqlConnection(conn))
+            using (SqlCommand objCmd = new SqlCommand(sqlstring, objSqlCon))
             {
-                using (SqlCommand objCmd = new SqlCommand(sqlstring, objSqlCon))
-                {
-                    objSqlCon.Open();
-                    objCmd.ExecuteNonQuery();
-                }
+                objSqlCon.Open();
+                objCmd.ExecuteNonQuery();
             }
+
         }
 
         //EXECUTE STRING
@@ -30,14 +29,13 @@ namespace DataAccessLayer
             {
                 objsqlconn.Open();
                 using (DataSet ds = new DataSet())
+                using (SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn))
                 {
-                    using (SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn))
-                    {
-                        SqlDataAdapter objAdp = new SqlDataAdapter(objcmd);
-                        objAdp.Fill(ds, "Table_User");
-                        return ds;
-                    }
+                    SqlDataAdapter objAdp = new SqlDataAdapter(objcmd);
+                    objAdp.Fill(ds, "Table_User");
+                    return ds;
                 }
+
             }
         }
 
@@ -63,5 +61,15 @@ namespace DataAccessLayer
             string sql = "UPDATE Table_User SET user_type='" + model.userType + "', password='" + model.password + "', sec_question='" + model.secQue + "',sec_answer='" + model.secAns + "',mobile='" + model.mobile + "',email='" + model.email + "',division='" + model.division + "' WHERE username='" + model.username + "'";
             InsertUpdateDeleteSQLString(sql);
         }
+
+        //SELECT CURRENT LOGIN USER
+        public object CurrentUserData(string username)
+        {
+            DataSet ds = new DataSet();
+            string sql = "SELECT* FROM Table_User WHERE username = '" + username + "'";
+            ds = (DataSet)ExecuteSqlString(sql);
+            return ds;
+        }
+
     }
 }

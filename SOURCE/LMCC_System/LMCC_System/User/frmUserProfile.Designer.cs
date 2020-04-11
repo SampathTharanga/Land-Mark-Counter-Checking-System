@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserProfile));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblDivisionTop = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblUsernameTop = new System.Windows.Forms.Label();
+            this.lblMobile = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblDivision = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbxUserSetting = new System.Windows.Forms.PictureBox();
             this.ovalPictureBox1 = new LMCC_System.OvalPictureBox();
@@ -55,44 +55,44 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.ovalPictureBox1);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.lblEmail);
+            this.groupBox3.Controls.Add(this.lblType);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.lblDivisionTop);
             this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.lblUsernameTop);
+            this.groupBox3.Controls.Add(this.lblMobile);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.lblDivision);
+            this.groupBox3.Controls.Add(this.lblUsername);
             this.groupBox3.Location = new System.Drawing.Point(17, 56);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(296, 384);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
-            // label13
+            // lblEmail
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(116, 333);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(159, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "sampaththaranga13@gmail.com";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(116, 333);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(159, 13);
+            this.lblEmail.TabIndex = 16;
+            this.lblEmail.Text = "sampaththaranga13@gmail.com";
             // 
-            // label11
+            // lblType
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(116, 237);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 13);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Dvisional";
+            this.lblType.AutoSize = true;
+            this.lblType.ForeColor = System.Drawing.Color.White;
+            this.lblType.Location = new System.Drawing.Point(116, 237);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(50, 13);
+            this.lblType.TabIndex = 15;
+            this.lblType.Text = "Dvisional";
             // 
             // label12
             // 
@@ -104,16 +104,16 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "Type :";
             // 
-            // label6
+            // lblDivisionTop
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(111, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Anuradhapura";
+            this.lblDivisionTop.AutoSize = true;
+            this.lblDivisionTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDivisionTop.ForeColor = System.Drawing.Color.White;
+            this.lblDivisionTop.Location = new System.Drawing.Point(111, 161);
+            this.lblDivisionTop.Name = "lblDivisionTop";
+            this.lblDivisionTop.Size = new System.Drawing.Size(74, 13);
+            this.lblDivisionTop.TabIndex = 13;
+            this.lblDivisionTop.Text = "Anuradhapura";
             // 
             // pictureBox2
             // 
@@ -126,26 +126,26 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // label10
+            // lblUsernameTop
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(91, 139);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 17);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Sampath Tharanga";
+            this.lblUsernameTop.AutoSize = true;
+            this.lblUsernameTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameTop.ForeColor = System.Drawing.Color.White;
+            this.lblUsernameTop.Location = new System.Drawing.Point(91, 139);
+            this.lblUsernameTop.Name = "lblUsernameTop";
+            this.lblUsernameTop.Size = new System.Drawing.Size(130, 17);
+            this.lblUsernameTop.TabIndex = 12;
+            this.lblUsernameTop.Text = "Sampath Tharanga";
             // 
-            // label5
+            // lblMobile
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(116, 301);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "0712365476";
+            this.lblMobile.AutoSize = true;
+            this.lblMobile.ForeColor = System.Drawing.Color.White;
+            this.lblMobile.Location = new System.Drawing.Point(116, 301);
+            this.lblMobile.Name = "lblMobile";
+            this.lblMobile.Size = new System.Drawing.Size(67, 13);
+            this.lblMobile.TabIndex = 7;
+            this.lblMobile.Text = "0712365476";
             // 
             // label4
             // 
@@ -187,25 +187,25 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Email :";
             // 
-            // label8
+            // lblDivision
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(116, 269);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Annuradhapura";
+            this.lblDivision.AutoSize = true;
+            this.lblDivision.ForeColor = System.Drawing.Color.White;
+            this.lblDivision.Location = new System.Drawing.Point(116, 269);
+            this.lblDivision.Name = "lblDivision";
+            this.lblDivision.Size = new System.Drawing.Size(80, 13);
+            this.lblDivision.TabIndex = 2;
+            this.lblDivision.Text = "Annuradhapura";
             // 
-            // label9
+            // lblUsername
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(116, 205);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Sampath Tharanga";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(116, 205);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(98, 13);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "Sampath Tharanga";
             // 
             // label1
             // 
@@ -255,6 +255,7 @@
             this.Name = "frmUserProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "User Profile";
+            this.Load += new System.EventHandler(this.frmUserProfile_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -269,19 +270,19 @@
 
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDivision;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblMobile;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblDivisionTop;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblUsernameTop;
         private System.Windows.Forms.PictureBox pbxUserSetting;
         private OvalPictureBox ovalPictureBox1;
     }

@@ -38,5 +38,11 @@ namespace BusinessLogicLayer
             objUserClsBL = new UserClassDAL();
             objUserClsBL.UpdateUserDB(this);
         }
+
+        public object CurrentUser(string usename)
+        {
+            objUserClsBL = new UserClassDAL();
+            return objUserClsBL.CurrentUserData(usename);
+        }
     }
 }

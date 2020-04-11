@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
+            this.ovalPictureBox1 = new LMCC_System.OvalPictureBox();
             this.lblCommenDetails = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -47,12 +48,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ovalPictureBox1 = new LMCC_System.OvalPictureBox();
             this.panel1.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,6 +99,17 @@
             this.pnlLeftMenu.Size = new System.Drawing.Size(217, 641);
             this.pnlLeftMenu.TabIndex = 0;
             // 
+            // ovalPictureBox1
+            // 
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.ovalPictureBox1.Image = global::LMCC_System.Properties.Resources.user_profile;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(71, 25);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ovalPictureBox1.TabIndex = 0;
+            this.ovalPictureBox1.TabStop = false;
+            // 
             // lblCommenDetails
             // 
             this.lblCommenDetails.AutoSize = true;
@@ -133,7 +144,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LMCC_System.Properties.Resources.user_online;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 106);
+            this.pictureBox2.Location = new System.Drawing.Point(68, 106);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(13, 13);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,11 +157,11 @@
             this.lblUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserProfile.ForeColor = System.Drawing.Color.White;
-            this.lblUserProfile.Location = new System.Drawing.Point(51, 104);
+            this.lblUserProfile.Location = new System.Drawing.Point(84, 104);
             this.lblUserProfile.Name = "lblUserProfile";
-            this.lblUserProfile.Size = new System.Drawing.Size(130, 17);
+            this.lblUserProfile.Size = new System.Drawing.Size(64, 17);
             this.lblUserProfile.TabIndex = 0;
-            this.lblUserProfile.Text = "Sampath Tharanga";
+            this.lblUserProfile.Text = "Sampath";
             this.lblUserProfile.Click += new System.EventHandler(this.lblUserProfile_Click);
             this.lblUserProfile.MouseEnter += new System.EventHandler(this.lblUserProfile_MouseEnter);
             this.lblUserProfile.MouseLeave += new System.EventHandler(this.lblUserProfile_MouseLeave);
@@ -353,17 +364,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Developed by Sampath Tharanga | 2020 Copyright";
             // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.ovalPictureBox1.Image = global::LMCC_System.Properties.Resources.user_profile;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(71, 25);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ovalPictureBox1.TabIndex = 0;
-            this.ovalPictureBox1.TabStop = false;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,10 +382,10 @@
             this.panel1.ResumeLayout(false);
             this.pnlLeftMenu.ResumeLayout(false);
             this.pnlLeftMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

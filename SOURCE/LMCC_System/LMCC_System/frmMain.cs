@@ -27,11 +27,12 @@ namespace LMCC_System
              _btnReport = false,
              _btnHelp = false;
 
-        public frmMain()
+        public frmMain(string loginUser)
         {
             InitializeComponent();
             Load += new EventHandler(frmMain_Load);
 
+            lblUserProfile.Text = loginUser;//CURRENT LOGIN USERNAME
             
             ButtonsBorderRemove(pnlLeftMenu);//LEFT MENU BUTTONS BORDER REMOVE
         }
@@ -353,7 +354,7 @@ namespace LMCC_System
         private void lblUserProfile_Click(object sender, EventArgs e)
         {
             //USER PROFILE FORM OPEN
-            User.frmUserProfile frmUP = new User.frmUserProfile();
+            User.frmUserProfile frmUP = new User.frmUserProfile(lblUserProfile.Text);
             frmUP.ShowDialog();
         }
 

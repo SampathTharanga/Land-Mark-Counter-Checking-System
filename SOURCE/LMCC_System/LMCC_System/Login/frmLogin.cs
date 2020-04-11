@@ -121,7 +121,7 @@ namespace LMCC_System
             {
                 //OPEN MAIN FORM
                 this.Hide();
-                var formMain = new frmMain();
+                var formMain = new frmMain(txtUsename.Text);//LOGIN USERNAME RETURN MAIN FORM
                 formMain.Closed += (s, args) => this.Close();
                 formMain.ShowDialog();
             }

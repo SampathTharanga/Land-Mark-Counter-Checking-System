@@ -78,7 +78,7 @@
     <Compile Include="LM Making\frmLMType.Designer.cs">
       <DependentUpon>frmLMType.cs</DependentUpon>
     </Compile>
-    <Compile Include="OvalPictureBox.cs">
+    <Compile Include="Custome Design\OvalPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Surveyor\frmSurveyorType.cs">
