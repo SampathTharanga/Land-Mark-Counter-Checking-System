@@ -114,12 +114,13 @@
             this.lblDivisionTop.Size = new System.Drawing.Size(74, 13);
             this.lblDivisionTop.TabIndex = 13;
             this.lblDivisionTop.Text = "Anuradhapura";
+            this.lblDivisionTop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LMCC_System.Properties.Resources.user_online;
-            this.pictureBox2.Location = new System.Drawing.Point(75, 141);
+            this.pictureBox2.Location = new System.Drawing.Point(108, 141);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(13, 13);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,11 +132,12 @@
             this.lblUsernameTop.AutoSize = true;
             this.lblUsernameTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsernameTop.ForeColor = System.Drawing.Color.White;
-            this.lblUsernameTop.Location = new System.Drawing.Point(91, 139);
+            this.lblUsernameTop.Location = new System.Drawing.Point(124, 139);
             this.lblUsernameTop.Name = "lblUsernameTop";
-            this.lblUsernameTop.Size = new System.Drawing.Size(130, 17);
+            this.lblUsernameTop.Size = new System.Drawing.Size(64, 17);
             this.lblUsernameTop.TabIndex = 12;
-            this.lblUsernameTop.Text = "Sampath Tharanga";
+            this.lblUsernameTop.Text = "Sampath";
+            this.lblUsernameTop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblMobile
             // 
@@ -252,6 +254,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(346, 495);
+            this.MinimumSize = new System.Drawing.Size(346, 495);
             this.Name = "frmUserProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "User Profile";

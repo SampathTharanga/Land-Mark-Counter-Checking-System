@@ -38,15 +38,22 @@ namespace LMCC_System.User
         //LOGIN USER PROFILE DETAILS
         public void UserProfileDetails()
         {
-            objUserLogic = new UserClassBLL();
-            DataSet ds = new DataSet();
-            ds = (DataSet)objUserLogic.CurrentUser(loginUser);
+            try
+            {
+                objUserLogic = new UserClassBLL();
+                DataSet ds = new DataSet();
+                ds = (DataSet)objUserLogic.CurrentUser(loginUser);
 
-            lblUsernameTop.Text = lblUsername.Text = loginUser;
-            lblType.Text = ds.Tables["Table_User"].Rows[0].Field<string>("user_type");
-            lblDivision.Text = lblDivisionTop.Text = ds.Tables["Table_User"].Rows[0].Field<string>("division");
-            lblMobile.Text = ds.Tables["Table_User"].Rows[0].Field<string>("mobile");
-            lblEmail.Text = ds.Tables["Table_User"].Rows[0].Field<string>("email");
+                lblUsernameTop.Text = lblUsername.Text = loginUser;
+                lblType.Text = ds.Tables["Table_User"].Rows[0].Field<string>("user_type");
+                lblDivision.Text = lblDivisionTop.Text = ds.Tables["Table_User"].Rows[0].Field<string>("division");
+                lblMobile.Text = ds.Tables["Table_User"].Rows[0].Field<string>("mobile");
+                lblEmail.Text = ds.Tables["Table_User"].Rows[0].Field<string>("email");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "USER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

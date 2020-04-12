@@ -121,6 +121,7 @@
             this.lblCommenDetails.Size = new System.Drawing.Size(74, 13);
             this.lblCommenDetails.TabIndex = 10;
             this.lblCommenDetails.Text = "Anuradhapura";
+            this.lblCommenDetails.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblCommenDetails.Click += new System.EventHandler(this.lblCommenDetails_Click);
             this.lblCommenDetails.MouseEnter += new System.EventHandler(this.lblCommenDetails_MouseEnter);
             this.lblCommenDetails.MouseLeave += new System.EventHandler(this.lblCommenDetails_MouseLeave);
@@ -162,6 +163,7 @@
             this.lblUserProfile.Size = new System.Drawing.Size(64, 17);
             this.lblUserProfile.TabIndex = 0;
             this.lblUserProfile.Text = "Sampath";
+            this.lblUserProfile.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblUserProfile.Click += new System.EventHandler(this.lblUserProfile_Click);
             this.lblUserProfile.MouseEnter += new System.EventHandler(this.lblUserProfile_MouseEnter);
             this.lblUserProfile.MouseLeave += new System.EventHandler(this.lblUserProfile_MouseLeave);

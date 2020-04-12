@@ -39,6 +39,7 @@ namespace BusinessLogicLayer
             objUserClsBL.UpdateUserDB(this);
         }
 
+        //CURRENT USER LOGIN DETAILS
         public object CurrentUser(string usename)
         {
             objUserClsBL = new UserClassDAL();
