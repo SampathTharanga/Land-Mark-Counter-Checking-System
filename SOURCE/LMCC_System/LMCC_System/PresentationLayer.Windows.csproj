@@ -107,29 +107,11 @@
     <Compile Include="Help\ucHelp.Designer.cs">
       <DependentUpon>ucHelp.cs</DependentUpon>
     </Compile>
-    <Compile Include="LM Issue\ucLMIssue.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LM Issue\ucLMIssue.Designer.cs">
-      <DependentUpon>ucLMIssue.cs</DependentUpon>
-    </Compile>
     <Compile Include="LM Making\ucLMMaking.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="LM Making\ucLMMaking.Designer.cs">
       <DependentUpon>ucLMMaking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LM Received\ucLMReceived.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LM Received\ucLMReceived.Designer.cs">
-      <DependentUpon>ucLMReceived.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LM Settle\ucLMSettle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LM Settle\ucLMSettle.Designer.cs">
-      <DependentUpon>ucLMSettle.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\ucReport.cs">
       <SubType>UserControl</SubType>
@@ -161,20 +143,11 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LM Issue\ucLMIssue.resx">
-      <DependentUpon>ucLMIssue.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LM Making\frmLMType.resx">
       <DependentUpon>frmLMType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LM Making\ucLMMaking.resx">
       <DependentUpon>ucLMMaking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LM Received\ucLMReceived.resx">
-      <DependentUpon>ucLMReceived.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LM Settle\ucLMSettle.resx">
-      <DependentUpon>ucLMSettle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

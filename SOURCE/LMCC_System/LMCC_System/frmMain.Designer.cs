@@ -39,9 +39,6 @@
             this.lblUserProfile = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.btnLmRecived = new System.Windows.Forms.Button();
-            this.btnLmSttle = new System.Windows.Forms.Button();
-            this.btnLmIssue = new System.Windows.Forms.Button();
             this.btnLmMaking = new System.Windows.Forms.Button();
             this.btnSurveyor = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -86,9 +83,6 @@
             this.pnlLeftMenu.Controls.Add(this.lblUserProfile);
             this.pnlLeftMenu.Controls.Add(this.btnHelp);
             this.pnlLeftMenu.Controls.Add(this.btnReport);
-            this.pnlLeftMenu.Controls.Add(this.btnLmRecived);
-            this.pnlLeftMenu.Controls.Add(this.btnLmSttle);
-            this.pnlLeftMenu.Controls.Add(this.btnLmIssue);
             this.pnlLeftMenu.Controls.Add(this.btnLmMaking);
             this.pnlLeftMenu.Controls.Add(this.btnSurveyor);
             this.pnlLeftMenu.Controls.Add(this.btnHome);
@@ -209,69 +203,6 @@
             this.btnReport.Paint += new System.Windows.Forms.PaintEventHandler(this.btnReport_Paint);
             this.btnReport.MouseEnter += new System.EventHandler(this.btnReport_MouseEnter);
             this.btnReport.MouseLeave += new System.EventHandler(this.btnReport_MouseLeave);
-            // 
-            // btnLmRecived
-            // 
-            this.btnLmRecived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnLmRecived.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLmRecived.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLmRecived.ForeColor = System.Drawing.Color.White;
-            this.btnLmRecived.Image = global::LMCC_System.Properties.Resources.lm_recived;
-            this.btnLmRecived.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLmRecived.Location = new System.Drawing.Point(1, 448);
-            this.btnLmRecived.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmRecived.Name = "btnLmRecived";
-            this.btnLmRecived.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmRecived.Size = new System.Drawing.Size(214, 55);
-            this.btnLmRecived.TabIndex = 6;
-            this.btnLmRecived.Text = "LM RECIVED";
-            this.btnLmRecived.UseVisualStyleBackColor = false;
-            this.btnLmRecived.Click += new System.EventHandler(this.btnLmRecived_Click);
-            this.btnLmRecived.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLmRecived_Paint);
-            this.btnLmRecived.MouseEnter += new System.EventHandler(this.btnLmRecived_MouseEnter);
-            this.btnLmRecived.MouseLeave += new System.EventHandler(this.btnLmRecived_MouseLeave);
-            // 
-            // btnLmSttle
-            // 
-            this.btnLmSttle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnLmSttle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLmSttle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLmSttle.ForeColor = System.Drawing.Color.White;
-            this.btnLmSttle.Image = global::LMCC_System.Properties.Resources.lm_settle;
-            this.btnLmSttle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLmSttle.Location = new System.Drawing.Point(1, 393);
-            this.btnLmSttle.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmSttle.Name = "btnLmSttle";
-            this.btnLmSttle.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmSttle.Size = new System.Drawing.Size(214, 55);
-            this.btnLmSttle.TabIndex = 5;
-            this.btnLmSttle.Text = "LM SETTLE";
-            this.btnLmSttle.UseVisualStyleBackColor = false;
-            this.btnLmSttle.Click += new System.EventHandler(this.btnLmSttle_Click);
-            this.btnLmSttle.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLmSttle_Paint);
-            this.btnLmSttle.MouseEnter += new System.EventHandler(this.btnLmSttle_MouseEnter);
-            this.btnLmSttle.MouseLeave += new System.EventHandler(this.btnLmSttle_MouseLeave);
-            // 
-            // btnLmIssue
-            // 
-            this.btnLmIssue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnLmIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLmIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLmIssue.ForeColor = System.Drawing.Color.White;
-            this.btnLmIssue.Image = global::LMCC_System.Properties.Resources.lm_issue;
-            this.btnLmIssue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLmIssue.Location = new System.Drawing.Point(1, 338);
-            this.btnLmIssue.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmIssue.Name = "btnLmIssue";
-            this.btnLmIssue.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmIssue.Size = new System.Drawing.Size(214, 55);
-            this.btnLmIssue.TabIndex = 4;
-            this.btnLmIssue.Text = "LM ISSUE";
-            this.btnLmIssue.UseVisualStyleBackColor = false;
-            this.btnLmIssue.Click += new System.EventHandler(this.btnLmIssue_Click);
-            this.btnLmIssue.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLmIssue_Paint);
-            this.btnLmIssue.MouseEnter += new System.EventHandler(this.btnLmIssue_MouseEnter);
-            this.btnLmIssue.MouseLeave += new System.EventHandler(this.btnLmIssue_MouseLeave);
             // 
             // btnLmMaking
             // 
@@ -401,9 +332,6 @@
         private System.Windows.Forms.Button btnSurveyor;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnLmRecived;
-        private System.Windows.Forms.Button btnLmSttle;
-        private System.Windows.Forms.Button btnLmIssue;
         private System.Windows.Forms.Button btnLmMaking;
         private System.Windows.Forms.Label lblUserProfile;
         private System.Windows.Forms.Label label1;

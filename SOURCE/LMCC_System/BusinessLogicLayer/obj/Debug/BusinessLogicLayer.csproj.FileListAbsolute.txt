@@ -19,10 +19,6 @@ G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\BusinessLogicLayer\obj\Debu
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\Database.mdf
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\Database_log.ldf
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
@@ -31,4 +27,8 @@ G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\D
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\BusinessPropertyLayer.pdb
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
+G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
