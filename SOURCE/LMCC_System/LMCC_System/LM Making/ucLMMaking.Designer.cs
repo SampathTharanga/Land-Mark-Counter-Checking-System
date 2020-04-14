@@ -30,8 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -41,19 +39,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pbxLMSetting = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLMSetting)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,29 +83,6 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Land Mark Making Details";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Image = global::LMCC_System.Properties.Resources.add;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(508, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 28);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::LMCC_System.Properties.Resources.clear;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(598, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -193,17 +168,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter Surveyor Details";
             // 
-            // button3
-            // 
-            this.button3.Image = global::LMCC_System.Properties.Resources.edit;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(598, 359);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 28);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(138, 27);
@@ -256,25 +220,45 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Land Mark Making";
             // 
-            // pbxLMSetting
+            // button2
             // 
-            this.pbxLMSetting.BackColor = System.Drawing.Color.White;
-            this.pbxLMSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxLMSetting.Image = global::LMCC_System.Properties.Resources.setting;
-            this.pbxLMSetting.Location = new System.Drawing.Point(720, 18);
-            this.pbxLMSetting.Name = "pbxLMSetting";
-            this.pbxLMSetting.Size = new System.Drawing.Size(30, 30);
-            this.pbxLMSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxLMSetting.TabIndex = 25;
-            this.pbxLMSetting.TabStop = false;
-            this.pbxLMSetting.Click += new System.EventHandler(this.pbxLMSetting_Click);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Image = global::LMCC_System.Properties.Resources.add;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(508, 88);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 28);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::LMCC_System.Properties.Resources.clear;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(598, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 28);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::LMCC_System.Properties.Resources.edit;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(598, 359);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(85, 28);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Edit";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // ucLMMaking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pbxLMSetting);
             this.Controls.Add(this.panel1);
             this.Name = "ucLMMaking";
             this.Size = new System.Drawing.Size(767, 641);
@@ -285,7 +269,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLMSetting)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,6 +295,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pbxLMSetting;
     }
 }

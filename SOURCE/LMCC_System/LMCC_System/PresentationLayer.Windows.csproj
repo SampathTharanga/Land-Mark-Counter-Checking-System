@@ -51,6 +51,12 @@
     <Compile Include="Commen Details\frmCommonDetails.Designer.cs">
       <DependentUpon>frmCommonDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="LM Manage\ucLMManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LM Manage\ucLMManage.Designer.cs">
+      <DependentUpon>ucLMManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmFogotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,20 +78,14 @@
     <Compile Include="Custome Design\TextBoxBorderChange.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="LM Making\frmLMType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LM Making\frmLMType.Designer.cs">
-      <DependentUpon>frmLMType.cs</DependentUpon>
-    </Compile>
     <Compile Include="Custome Design\OvalPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Surveyor\frmSurveyorType.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Setting\ucSetting.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Surveyor\frmSurveyorType.Designer.cs">
-      <DependentUpon>frmSurveyorType.cs</DependentUpon>
+    <Compile Include="Setting\ucSetting.Designer.cs">
+      <DependentUpon>ucSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="Home\ucHome.cs">
       <SubType>UserControl</SubType>
@@ -134,6 +134,9 @@
     <EmbeddedResource Include="Commen Details\frmCommonDetails.resx">
       <DependentUpon>frmCommonDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LM Manage\ucLMManage.resx">
+      <DependentUpon>ucLMManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmFogotPassword.resx">
       <DependentUpon>frmFogotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,9 +145,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LM Making\frmLMType.resx">
-      <DependentUpon>frmLMType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LM Making\ucLMMaking.resx">
       <DependentUpon>ucLMMaking.cs</DependentUpon>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="Report\ucReport.resx">
       <DependentUpon>ucReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Surveyor\frmSurveyorType.resx">
-      <DependentUpon>frmSurveyorType.cs</DependentUpon>
+    <EmbeddedResource Include="Setting\ucSetting.resx">
+      <DependentUpon>ucSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Surveyor\ucSurveyor.resx">
       <DependentUpon>ucSurveyor.cs</DependentUpon>

@@ -57,8 +57,6 @@ G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\Prese
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CopyComplete
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.exe
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\LMCC_System\obj\Debug\LMCC_System.pdb
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database.mdf
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database_log.ldf
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe.config
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\LMCC_System.pdb
@@ -73,11 +71,9 @@ G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LM
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Login.frmFogotPassword.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmLogin.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmMain.resources
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.LM_Making.frmLMType.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucLMMaking.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Properties.Resources.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucReport.resources
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Surveyor.frmSurveyorType.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucSurveyor.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucHelp.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucHome.resources
@@ -88,3 +84,5 @@ G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\Pr
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CopyComplete
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.exe
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.pdb
+G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.LM_Manage.ucLMManage.resources
+G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Setting.ucSetting.resources

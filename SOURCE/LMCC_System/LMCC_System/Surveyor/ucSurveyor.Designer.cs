@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbxSurveyorSetting = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSurveyorSetting)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,7 +66,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pbxSurveyorSetting);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label7);
@@ -76,18 +73,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 621);
             this.panel1.TabIndex = 0;
-            // 
-            // pbxSurveyorSetting
-            // 
-            this.pbxSurveyorSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSurveyorSetting.Image = global::LMCC_System.Properties.Resources.setting;
-            this.pbxSurveyorSetting.Location = new System.Drawing.Point(710, 8);
-            this.pbxSurveyorSetting.Name = "pbxSurveyorSetting";
-            this.pbxSurveyorSetting.Size = new System.Drawing.Size(30, 30);
-            this.pbxSurveyorSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxSurveyorSetting.TabIndex = 24;
-            this.pbxSurveyorSetting.TabStop = false;
-            this.pbxSurveyorSetting.Click += new System.EventHandler(this.pbxSurveyorSetting_Click);
             // 
             // groupBox2
             // 
@@ -371,7 +356,6 @@
             this.Size = new System.Drawing.Size(767, 641);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSurveyorSetting)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -410,7 +394,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pbxSurveyorSetting;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label12;
     }
