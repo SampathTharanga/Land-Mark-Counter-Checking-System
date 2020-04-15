@@ -164,7 +164,7 @@
             this.txtPassword.MaxLength = 15;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(225, 20);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 23;
             // 
             // txtUsename
             // 
@@ -176,7 +176,7 @@
             this.txtUsename.MaxLength = 15;
             this.txtUsename.Name = "txtUsename";
             this.txtUsename.Size = new System.Drawing.Size(225, 20);
-            this.txtUsename.TabIndex = 1;
+            this.txtUsename.TabIndex = 23;
             // 
             // frmLogin
             // 
