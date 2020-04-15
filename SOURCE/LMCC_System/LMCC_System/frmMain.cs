@@ -258,11 +258,6 @@ namespace LMCC_System
             lblLogout.ForeColor = Color.DarkOrange;
         }
 
-        private void lblCommenDetails_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblCommenDetails_MouseEnter(object sender, EventArgs e)
         {
             //DIVISION LABAL MOUSE ENTER COLOR CHANGE

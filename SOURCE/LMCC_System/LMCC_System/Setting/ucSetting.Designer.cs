@@ -366,9 +366,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(14, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
+            this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Name of Distric :";
+            this.label5.Text = "Name of District :";
             // 
             // button1
             // 
