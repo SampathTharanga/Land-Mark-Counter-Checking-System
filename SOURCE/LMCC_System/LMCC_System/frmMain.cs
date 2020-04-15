@@ -21,11 +21,10 @@ namespace LMCC_System
         bool _btnHome = false,
              _btnSurveyor = false,
              _btnLmMaking = false,
-             _btnLmIssue = false,
-             _btnLmSttle = false,
-             _btnLmRecived = false,
              _btnReport = false,
-             _btnHelp = false;
+             _btnHelp = false,
+             _btnLmManage = false,
+             _btnSetting=false;
 
         public frmMain(string loginUser)
         {
@@ -76,11 +75,10 @@ namespace LMCC_System
             _btnHome = false;
             _btnSurveyor = false;
             _btnLmMaking = false;
-            _btnLmIssue = false;
-            _btnLmSttle = false;
-            _btnLmRecived = false;
             _btnReport = false;
             _btnHelp = false;
+            _btnLmManage = false;
+            _btnSetting = false;
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -127,32 +125,6 @@ namespace LMCC_System
                 ButtonLeftBlueColorLine_Hide(sender, e);
         }
 
-        private void btnLmIssue_Paint(object sender, PaintEventArgs e)
-        {
-            //CLICK COLOR OR LEAVE COLOR SET
-            if (_btnLmIssue == true)
-                ButtonLeftBlueColorLine_Show(sender, e);
-            else
-                ButtonLeftBlueColorLine_Hide(sender, e);
-        }
-
-        private void btnLmSttle_Paint(object sender, PaintEventArgs e)
-        {
-            //CLICK COLOR OR LEAVE COLOR SET
-            if (_btnLmSttle == true)
-                ButtonLeftBlueColorLine_Show(sender, e);
-            else
-                ButtonLeftBlueColorLine_Hide(sender, e);
-        }
-
-        private void btnLmRecived_Paint(object sender, PaintEventArgs e)
-        {
-            //CLICK COLOR OR LEAVE COLOR SET
-            if (_btnLmRecived == true)
-                ButtonLeftBlueColorLine_Show(sender, e);
-            else
-                ButtonLeftBlueColorLine_Hide(sender, e);
-        }
 
         private void btnReport_Paint(object sender, PaintEventArgs e)
         {
@@ -177,21 +149,6 @@ namespace LMCC_System
             _btnLmMaking = true;
         }
 
-        private void btnLmIssue_MouseEnter(object sender, EventArgs e)
-        {
-            _btnLmIssue = true;
-        }
-
-        private void btnLmSttle_MouseEnter(object sender, EventArgs e)
-        {
-            _btnLmSttle = true;
-        }
-
-        private void btnLmRecived_MouseEnter(object sender, EventArgs e)
-        {
-            _btnLmRecived = true;
-        }
-
         private void btnReport_MouseEnter(object sender, EventArgs e)
         {
             _btnReport = true;
@@ -209,33 +166,6 @@ namespace LMCC_System
                 _btnLmMaking = true;
             else
                 _btnLmMaking = false;
-        }
-
-        private void btnLmIssue_MouseLeave(object sender, EventArgs e)
-        {
-            //CLICK COLOR OR LEAVE COLOR SET
-            if (btnLmIssue.BackColor == clickColor)
-                _btnLmIssue = true;
-            else
-                _btnLmIssue = false;
-        }
-
-        private void btnLmSttle_MouseLeave(object sender, EventArgs e)
-        {
-            //CLICK COLOR OR LEAVE COLOR SET
-            if (btnLmSttle.BackColor == clickColor)
-                _btnLmSttle = true;
-            else
-                _btnLmSttle = false;
-        }
-
-        private void btnLmRecived_MouseLeave(object sender, EventArgs e)
-        {
-            //CLICK COLOR OR LEAVE COLOR SET
-            if (btnLmRecived.BackColor == clickColor)
-                _btnLmRecived = true;
-            else
-                _btnLmRecived = false;
         }
 
         private void btnReport_MouseLeave(object sender, EventArgs e)
@@ -271,60 +201,6 @@ namespace LMCC_System
                 pnlMain.Controls.Add(ucLMMaking._LMMaking);
                 ucLMMaking._LMMaking.Dock = DockStyle.Fill;
                 ucLMMaking._LMMaking.BringToFront();
-            }
-        }
-
-        private void btnLmIssue_Click(object sender, EventArgs e)
-        {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnLmIssue.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnLmIssue = true;
-
-            //USER CONTROL LM ISSUE OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucLMIssue._ucLMIssue))
-            {
-                pnlMain.Controls.Add(ucLMIssue._ucLMIssue);
-                ucLMIssue._ucLMIssue.Dock = DockStyle.Fill;
-                ucLMIssue._ucLMIssue.BringToFront();
-            }
-        }
-
-        private void btnLmSttle_Click(object sender, EventArgs e)
-        {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnLmSttle.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnLmSttle = true;
-
-            //USER CONTROL LM SETTLE OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucLMSettle._ucLMSettle))
-            {
-                pnlMain.Controls.Add(ucLMSettle._ucLMSettle);
-                ucLMSettle._ucLMSettle.Dock = DockStyle.Fill;
-                ucLMSettle._ucLMSettle.BringToFront();
-            }
-        }
-
-        private void btnLmRecived_Click(object sender, EventArgs e)
-        {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnLmRecived.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnLmRecived = true;
-
-            //USER CONTROL LM SETTLE OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucLMReceived._ucLMReceived))
-            {
-                pnlMain.Controls.Add(ucLMReceived._ucLMReceived);
-                ucLMReceived._ucLMReceived.Dock = DockStyle.Fill;
-                ucLMReceived._ucLMReceived.BringToFront();
             }
         }
 
@@ -382,13 +258,6 @@ namespace LMCC_System
             lblLogout.ForeColor = Color.DarkOrange;
         }
 
-        private void lblCommenDetails_Click(object sender, EventArgs e)
-        {
-            //COMMON DETAILS FORM OPEN
-            frmCommonDetails frmCom = new frmCommonDetails();
-            frmCom.ShowDialog();
-        }
-
         private void lblCommenDetails_MouseEnter(object sender, EventArgs e)
         {
             //DIVISION LABAL MOUSE ENTER COLOR CHANGE
@@ -444,6 +313,88 @@ namespace LMCC_System
                 ButtonLeftBlueColorLine_Show(sender, e);
             else
                 ButtonLeftBlueColorLine_Hide(sender, e);
+        }
+
+        private void btnLmManage_MouseEnter(object sender, EventArgs e)
+        {
+            _btnLmManage = true;
+        }
+
+        private void btnLmManage_MouseLeave(object sender, EventArgs e)
+        {
+            //CLICK COLOR OR LEAVE COLOR SET
+            if (btnLmManage.BackColor == clickColor)
+                _btnLmManage = true;
+            else
+                _btnLmManage = false;
+        }
+
+        private void btnLmSetting_Click(object sender, EventArgs e)
+        {
+            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+            btnLmSetting.BackColor = clickColor;
+
+            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+            _btnSetting = true;
+
+            //USER CONTROL LM MAKING OPEN
+            pnlMain.Controls.Clear();
+            if (!pnlMain.Controls.Contains(Setting.ucSetting._Setting))
+            {
+                pnlMain.Controls.Add(Setting.ucSetting._Setting);
+                Setting.ucSetting._Setting.Dock = DockStyle.Fill;
+                Setting.ucSetting._Setting.BringToFront();
+            }
+        }
+
+        private void btnLmSetting_MouseEnter(object sender, EventArgs e)
+        {
+            _btnSetting = true;
+        }
+
+        private void btnLmSetting_MouseLeave(object sender, EventArgs e)
+        {
+            //CLICK COLOR OR LEAVE COLOR SET
+            if (btnLmSetting.BackColor == clickColor)
+                _btnSetting = true;
+            else
+                _btnSetting = false;
+        }
+
+        private void btnLmSetting_Paint(object sender, PaintEventArgs e)
+        {
+            //CLICK COLOR OR LEAVE COLOR SET
+            if (_btnSetting == true)
+                ButtonLeftBlueColorLine_Show(sender, e);
+            else
+                ButtonLeftBlueColorLine_Hide(sender, e);
+        }
+
+        private void btnLmManage_Paint(object sender, PaintEventArgs e)
+        {
+            //CLICK COLOR OR LEAVE COLOR SET
+            if (_btnLmManage == true)
+                ButtonLeftBlueColorLine_Show(sender, e);
+            else
+                ButtonLeftBlueColorLine_Hide(sender, e);
+        }
+
+        private void btnLmManage_Click(object sender, EventArgs e)
+        {
+            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+            btnLmManage.BackColor = clickColor;
+
+            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+            _btnLmManage = true;
+
+            //USER CONTROL LM MAKING OPEN
+            pnlMain.Controls.Clear();
+            if (!pnlMain.Controls.Contains(LM_Manage.ucLMManage._LMManage))
+            {
+                pnlMain.Controls.Add(LM_Manage.ucLMManage._LMManage);
+                LM_Manage.ucLMManage._LMManage.Dock = DockStyle.Fill;
+                LM_Manage.ucLMManage._LMManage.BringToFront();
+            }
         }
 
         private void btnHome_MouseEnter(object sender, EventArgs e)

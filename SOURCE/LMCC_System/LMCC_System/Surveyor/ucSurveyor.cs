@@ -28,12 +28,5 @@ namespace LMCC_System
         {
             InitializeComponent();
         }
-
-        private void pbxSurveyorSetting_Click(object sender, EventArgs e)
-        {
-            //SURVEYOR SETTING FORM OPEN
-            Surveyor.frmSurveyorType ftmSt = new Surveyor.frmSurveyorType();
-            ftmSt.ShowDialog();
-        }
     }
 }

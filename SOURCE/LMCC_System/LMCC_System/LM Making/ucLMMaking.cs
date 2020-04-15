@@ -31,9 +31,7 @@ namespace LMCC_System
 
         private void pbxLMSetting_Click(object sender, EventArgs e)
         {
-            //LAND MARK TYPE FORM OPEN
-            LM_Making.frmLMType frmLMT = new LM_Making.frmLMType();
-            frmLMT.ShowDialog();
+
         }
     }
 }

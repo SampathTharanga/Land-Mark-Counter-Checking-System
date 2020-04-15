@@ -65,7 +65,7 @@
             this.btnLogIn.Location = new System.Drawing.Point(44, 335);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(225, 44);
-            this.btnLogIn.TabIndex = 7;
+            this.btnLogIn.TabIndex = 3;
             this.btnLogIn.Text = "LOG IN";
             this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
@@ -82,7 +82,7 @@
             this.llblFogotPass.Location = new System.Drawing.Point(103, 389);
             this.llblFogotPass.Name = "llblFogotPass";
             this.llblFogotPass.Size = new System.Drawing.Size(106, 15);
-            this.llblFogotPass.TabIndex = 10;
+            this.llblFogotPass.TabIndex = 4;
             this.llblFogotPass.TabStop = true;
             this.llblFogotPass.Text = "Frogot Password?";
             this.llblFogotPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblFogotPass_LinkClicked);
@@ -161,9 +161,10 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
             this.txtPassword.Location = new System.Drawing.Point(44, 284);
+            this.txtPassword.MaxLength = 15;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(225, 20);
-            this.txtPassword.TabIndex = 9;
+            this.txtPassword.TabIndex = 23;
             // 
             // txtUsename
             // 
@@ -172,9 +173,10 @@
             this.txtUsename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsename.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(186)))));
             this.txtUsename.Location = new System.Drawing.Point(44, 239);
+            this.txtUsename.MaxLength = 15;
             this.txtUsename.Name = "txtUsename";
             this.txtUsename.Size = new System.Drawing.Size(225, 20);
-            this.txtUsename.TabIndex = 8;
+            this.txtUsename.TabIndex = 23;
             // 
             // frmLogin
             // 
