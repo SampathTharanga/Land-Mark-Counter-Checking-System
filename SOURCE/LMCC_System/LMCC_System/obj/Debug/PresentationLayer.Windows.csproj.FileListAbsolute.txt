@@ -67,7 +67,6 @@ G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Bu
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\BusinessPropertyLayer.pdb
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\DataAccessLayer.pdb
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csprojAssemblyReference.cache
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmCommonDetails.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Login.frmFogotPassword.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmLogin.resources
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmMain.resources

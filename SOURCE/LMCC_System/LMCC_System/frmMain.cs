@@ -260,9 +260,7 @@ namespace LMCC_System
 
         private void lblCommenDetails_Click(object sender, EventArgs e)
         {
-            //COMMON DETAILS FORM OPEN
-            frmCommonDetails frmCom = new frmCommonDetails();
-            frmCom.ShowDialog();
+
         }
 
         private void lblCommenDetails_MouseEnter(object sender, EventArgs e)

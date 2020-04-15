@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
+            this.btnLmSetting = new System.Windows.Forms.Button();
+            this.btnLmManage = new System.Windows.Forms.Button();
             this.ovalPictureBox1 = new LMCC_System.OvalPictureBox();
             this.lblCommenDetails = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLmManage = new System.Windows.Forms.Button();
-            this.btnLmSetting = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
@@ -97,6 +97,48 @@
             this.pnlLeftMenu.Size = new System.Drawing.Size(217, 641);
             this.pnlLeftMenu.TabIndex = 0;
             // 
+            // btnLmSetting
+            // 
+            this.btnLmSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnLmSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLmSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLmSetting.ForeColor = System.Drawing.Color.White;
+            this.btnLmSetting.Image = global::LMCC_System.Properties.Resources.lm_settle;
+            this.btnLmSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLmSetting.Location = new System.Drawing.Point(-1, 393);
+            this.btnLmSetting.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnLmSetting.Name = "btnLmSetting";
+            this.btnLmSetting.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnLmSetting.Size = new System.Drawing.Size(217, 55);
+            this.btnLmSetting.TabIndex = 12;
+            this.btnLmSetting.Text = "SETTING";
+            this.btnLmSetting.UseVisualStyleBackColor = false;
+            this.btnLmSetting.Click += new System.EventHandler(this.btnLmSetting_Click);
+            this.btnLmSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLmSetting_Paint);
+            this.btnLmSetting.MouseEnter += new System.EventHandler(this.btnLmSetting_MouseEnter);
+            this.btnLmSetting.MouseLeave += new System.EventHandler(this.btnLmSetting_MouseLeave);
+            // 
+            // btnLmManage
+            // 
+            this.btnLmManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnLmManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLmManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLmManage.ForeColor = System.Drawing.Color.White;
+            this.btnLmManage.Image = global::LMCC_System.Properties.Resources.lm_issue;
+            this.btnLmManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLmManage.Location = new System.Drawing.Point(-1, 338);
+            this.btnLmManage.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnLmManage.Name = "btnLmManage";
+            this.btnLmManage.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnLmManage.Size = new System.Drawing.Size(217, 55);
+            this.btnLmManage.TabIndex = 11;
+            this.btnLmManage.Text = "LM MANAGE";
+            this.btnLmManage.UseVisualStyleBackColor = false;
+            this.btnLmManage.Click += new System.EventHandler(this.btnLmManage_Click);
+            this.btnLmManage.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLmManage_Paint);
+            this.btnLmManage.MouseEnter += new System.EventHandler(this.btnLmManage_MouseEnter);
+            this.btnLmManage.MouseLeave += new System.EventHandler(this.btnLmManage_MouseLeave);
+            // 
             // ovalPictureBox1
             // 
             this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
@@ -120,7 +162,6 @@
             this.lblCommenDetails.TabIndex = 10;
             this.lblCommenDetails.Text = "Anuradhapura";
             this.lblCommenDetails.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblCommenDetails.Click += new System.EventHandler(this.lblCommenDetails_Click);
             this.lblCommenDetails.MouseEnter += new System.EventHandler(this.lblCommenDetails_MouseEnter);
             this.lblCommenDetails.MouseLeave += new System.EventHandler(this.lblCommenDetails_MouseLeave);
             // 
@@ -300,48 +341,6 @@
             this.label1.Size = new System.Drawing.Size(246, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Developed by Sampath Tharanga | 2020 Copyright";
-            // 
-            // btnLmManage
-            // 
-            this.btnLmManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnLmManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLmManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLmManage.ForeColor = System.Drawing.Color.White;
-            this.btnLmManage.Image = global::LMCC_System.Properties.Resources.lm_issue;
-            this.btnLmManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLmManage.Location = new System.Drawing.Point(-1, 338);
-            this.btnLmManage.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmManage.Name = "btnLmManage";
-            this.btnLmManage.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmManage.Size = new System.Drawing.Size(217, 55);
-            this.btnLmManage.TabIndex = 11;
-            this.btnLmManage.Text = "LM MANAGE";
-            this.btnLmManage.UseVisualStyleBackColor = false;
-            this.btnLmManage.Click += new System.EventHandler(this.btnLmManage_Click);
-            this.btnLmManage.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLmManage_Paint);
-            this.btnLmManage.MouseEnter += new System.EventHandler(this.btnLmManage_MouseEnter);
-            this.btnLmManage.MouseLeave += new System.EventHandler(this.btnLmManage_MouseLeave);
-            // 
-            // btnLmSetting
-            // 
-            this.btnLmSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnLmSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLmSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLmSetting.ForeColor = System.Drawing.Color.White;
-            this.btnLmSetting.Image = global::LMCC_System.Properties.Resources.lm_settle;
-            this.btnLmSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLmSetting.Location = new System.Drawing.Point(-1, 393);
-            this.btnLmSetting.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmSetting.Name = "btnLmSetting";
-            this.btnLmSetting.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnLmSetting.Size = new System.Drawing.Size(217, 55);
-            this.btnLmSetting.TabIndex = 12;
-            this.btnLmSetting.Text = "SETTING";
-            this.btnLmSetting.UseVisualStyleBackColor = false;
-            this.btnLmSetting.Click += new System.EventHandler(this.btnLmSetting_Click);
-            this.btnLmSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLmSetting_Paint);
-            this.btnLmSetting.MouseEnter += new System.EventHandler(this.btnLmSetting_MouseEnter);
-            this.btnLmSetting.MouseLeave += new System.EventHandler(this.btnLmSetting_MouseLeave);
             // 
             // frmMain
             // 
