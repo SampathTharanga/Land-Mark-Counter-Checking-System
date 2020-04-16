@@ -1,5 +1,0 @@
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\bin\Debug\BusinessPropertyLayer.dll
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\bin\Debug\BusinessPropertyLayer.pdb
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.csproj.CoreCompileInputs.cache
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.dll
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.pdb
