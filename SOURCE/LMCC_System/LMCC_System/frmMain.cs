@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using BusinessLogicLayer;
 
 namespace LMCC_System
 {
     public partial class frmMain : Form
     {
+        UserClassBLL objUserLogic;
+
+        private static bool isRun = false;
+        private static readonly object syncLock = new object();
+
         //LEFT MENU BUTTON COLORS
         Color leaveColor = Color.FromArgb(38, 50, 64),
               clickColor = Color.FromArgb(52, 70, 87);
@@ -91,6 +98,34 @@ namespace LMCC_System
                 pnlMain.Controls.Add(ucHome._ucHome);
                 ucHome._ucHome.Dock = DockStyle.Fill;
                 ucHome._ucHome.BringToFront();
+            }
+
+            //ENSURE THIS METHOD ONLY RUN ONCE
+            lock (syncLock)
+            {
+                if (!isRun)
+                {
+                    LoginUserAllAvailableCheck();//AT LEAST ONE USER EXIST OR NOT CHECK
+                    isRun = true;
+                }
+            }
+        }
+
+        //AT LEAST ONE USER EXIST OR NOT CHECK
+        private void LoginUserAllAvailableCheck()
+        {
+            objUserLogic = new UserClassBLL();
+            DataSet ds = new DataSet();
+            ds = (DataSet)objUserLogic.CurrentUser(lblUserProfile.Text);
+            string secQue = ds.Tables["Table_User"].Rows[0].Field<string>("sec_question");
+            string secAns = ds.Tables["Table_User"].Rows[0].Field<string>("sec_answer");
+            string mobile = ds.Tables["Table_User"].Rows[0].Field<string>("mobile");
+            string division = ds.Tables["Table_User"].Rows[0].Field<string>("division");
+            if (string.IsNullOrEmpty(secQue) || string.IsNullOrEmpty(secAns) || string.IsNullOrEmpty(mobile) || string.IsNullOrEmpty(division))
+            {
+                frmUser frmUs = new frmUser();
+                frmUs.ShowDialog();
+                MessageBox.Show("You must filling all of details.", "User Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

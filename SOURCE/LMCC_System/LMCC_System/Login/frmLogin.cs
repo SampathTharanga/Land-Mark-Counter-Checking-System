@@ -14,6 +14,9 @@ namespace LMCC_System
         {
             InitializeComponent();
 
+            btnLogIn.Enabled = true;
+            llblFogotPass.Enabled = true; ;
+
             //BUTTON BORDER REMOVE
             btnLogIn.FlatAppearance.BorderSize = 0;
             lblPrecentage.Visible = false;
@@ -150,6 +153,9 @@ namespace LMCC_System
                     {
                         //RUNNING BACKGROUNDWORKER AND STARTING PROCESS COUNTING PRECENTAGE
                         backgroundWorker1.RunWorkerAsync();
+
+                        btnLogIn.Enabled = false;
+                        llblFogotPass.Enabled = false;
                     }
                     else
                     {
