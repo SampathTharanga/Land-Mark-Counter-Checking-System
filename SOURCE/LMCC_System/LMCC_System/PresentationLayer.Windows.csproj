@@ -86,7 +86,7 @@
     <Compile Include="Custome Design\TextBoxBorderChange.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Custome Design\OvalPictureBox.cs">
+    <Compile Include="OvalPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Setting\ucSetting.cs">

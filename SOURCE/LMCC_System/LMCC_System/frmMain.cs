@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogicLayer;//BUSINESS LOOGIC LAYER
 
 namespace LMCC_System
 {
@@ -24,7 +18,7 @@ namespace LMCC_System
              _btnReport = false,
              _btnHelp = false,
              _btnLmManage = false,
-             _btnSetting=false;
+             _btnSetting = false;
 
         public frmMain(string loginUser)
         {
@@ -32,7 +26,7 @@ namespace LMCC_System
             Load += new EventHandler(frmMain_Load);
 
             lblUserProfile.Text = loginUser;//CURRENT LOGIN USERNAME
-            
+
             ButtonsBorderRemove(pnlLeftMenu);//LEFT MENU BUTTONS BORDER REMOVE
         }
         //LEFT MENU BUTTONS BORDER REMOVE
@@ -53,6 +47,7 @@ namespace LMCC_System
                 Color.Red, 0, ButtonBorderStyle.Solid,
                 Color.Red, 0, ButtonBorderStyle.Solid);
         }
+
         //LEFT MENU BUTTONS BLUE COLOR LINE REMOVE AND SET DEFAULT COLOR
         private void ButtonLeftBlueColorLine_Hide(object sender, PaintEventArgs e)
         {
@@ -80,6 +75,7 @@ namespace LMCC_System
             _btnLmManage = false;
             _btnSetting = false;
         }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
@@ -298,7 +294,7 @@ namespace LMCC_System
 
             //USER CONTROL SURVEYOR OPEN
             pnlMain.Controls.Clear();
-            if(!pnlMain.Controls.Contains(ucSurveyor._Surveyor))
+            if (!pnlMain.Controls.Contains(ucSurveyor._Surveyor))
             {
                 pnlMain.Controls.Add(ucSurveyor._Surveyor);
                 ucSurveyor._Surveyor.Dock = DockStyle.Fill;
