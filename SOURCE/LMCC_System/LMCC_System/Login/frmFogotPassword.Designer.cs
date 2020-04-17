@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFogotPassword));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbxSecQue = new System.Windows.Forms.ComboBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.txtSecAns = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnFroget = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.cbxSecQue);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.txtSecAns);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btnFroget);
+            this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(19, 45);
             this.groupBox1.Name = "groupBox1";
@@ -60,23 +60,38 @@
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             // 
-            // button3
+            // cbxSecQue
             // 
-            this.button3.Image = global::LMCC_System.Properties.Resources.clear;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(195, 139);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 28);
-            this.button3.TabIndex = 45;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = false;
+            this.cbxSecQue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSecQue.FormattingEnabled = true;
+            this.cbxSecQue.Items.AddRange(new object[] {
+            "What is your nick name?",
+            "What is your favorite actress?",
+            "What is your favorite animal?",
+            "What is your favorite place?"});
+            this.cbxSecQue.Location = new System.Drawing.Point(122, 59);
+            this.cbxSecQue.Name = "cbxSecQue";
+            this.cbxSecQue.Size = new System.Drawing.Size(249, 21);
+            this.cbxSecQue.TabIndex = 46;
             // 
-            // textBox3
+            // btnClear
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(249, 20);
-            this.textBox3.TabIndex = 43;
+            this.btnClear.Image = global::LMCC_System.Properties.Resources.clear;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(195, 139);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(85, 28);
+            this.btnClear.TabIndex = 45;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtSecAns
+            // 
+            this.txtSecAns.Location = new System.Drawing.Point(122, 97);
+            this.txtSecAns.Name = "txtSecAns";
+            this.txtSecAns.Size = new System.Drawing.Size(249, 20);
+            this.txtSecAns.TabIndex = 43;
             // 
             // label3
             // 
@@ -87,16 +102,17 @@
             this.label3.TabIndex = 42;
             this.label3.Text = "Security Answer :";
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(286, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(286, 139);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(85, 28);
+            this.btnCancel.TabIndex = 41;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -107,24 +123,25 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Security Question :";
             // 
-            // button2
+            // btnFroget
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Image = global::LMCC_System.Properties.Resources.add;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(104, 139);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 28);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnFroget.BackColor = System.Drawing.Color.White;
+            this.btnFroget.Image = global::LMCC_System.Properties.Resources.add;
+            this.btnFroget.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFroget.Location = new System.Drawing.Point(104, 139);
+            this.btnFroget.Name = "btnFroget";
+            this.btnFroget.Size = new System.Drawing.Size(85, 28);
+            this.btnFroget.TabIndex = 31;
+            this.btnFroget.Text = "Froget";
+            this.btnFroget.UseVisualStyleBackColor = false;
+            this.btnFroget.Click += new System.EventHandler(this.btnFroget_Click);
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtUsername.Location = new System.Drawing.Point(122, 24);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(249, 20);
+            this.txtUsername.TabIndex = 1;
             // 
             // label1
             // 
@@ -145,14 +162,6 @@
             this.label7.TabIndex = 41;
             this.label7.Text = "Frogot Password";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(122, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 21);
-            this.comboBox1.TabIndex = 46;
-            // 
             // frmFogotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,6 +171,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(446, 286);
+            this.MinimumSize = new System.Drawing.Size(446, 286);
             this.Name = "frmFogotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Frogot Password";
@@ -175,15 +186,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnFroget;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSecAns;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ComboBox cbxSecQue;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using BusinessLogicLayer;
@@ -178,7 +179,6 @@ namespace LMCC_System
         {
             try
             {
-
                 this.Invoke(new MethodInvoker(delegate ()//FIX: CROSS-OPERATION NOT VALID ERROR
                 {
                     //OPEN MAIN FORM
@@ -197,6 +197,11 @@ namespace LMCC_System
             //OPEN FROGOT PASSWORD FORM
             Login.frmFogotPassword frmFP = new Login.frmFogotPassword();
             frmFP.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

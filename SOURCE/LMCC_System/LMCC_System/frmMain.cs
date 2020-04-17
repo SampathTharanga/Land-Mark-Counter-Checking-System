@@ -85,66 +85,78 @@ namespace LMCC_System
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-
-            btnHome.BackColor = clickColor;//CLICK COLOR SET
-            _btnHome = true;
-
-            //USER CONTROL LM HOME OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucHome._ucHome))
+            try
             {
-                pnlMain.Controls.Add(ucHome._ucHome);
-                ucHome._ucHome.Dock = DockStyle.Fill;
-                ucHome._ucHome.BringToFront();
-            }
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
 
-            //ENSURE THIS METHOD ONLY RUN ONCE
-            lock (syncLock)
-            {
-                if (!isRun)
+                btnHome.BackColor = clickColor;//CLICK COLOR SET
+                _btnHome = true;
+
+                //USER CONTROL LM HOME OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(ucHome._ucHome))
                 {
-                    LoginUserAllAvailableCheck();//AT LEAST ONE USER EXIST OR NOT CHECK
-                    isRun = true;
+                    pnlMain.Controls.Add(ucHome._ucHome);
+                    ucHome._ucHome.Dock = DockStyle.Fill;
+                    ucHome._ucHome.BringToFront();
+                }
+
+                //ENSURE THIS METHOD ONLY RUN ONCE
+                lock (syncLock)
+                {
+                    if (!isRun)
+                    {
+                        LoginUserAllAvailableCheck();//AT LEAST ONE USER EXIST OR NOT CHECK
+                        isRun = true;
+                    }
                 }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         //AT LEAST ONE USER EXIST OR NOT CHECK
         private void LoginUserAllAvailableCheck()
         {
-            objUserLogic = new UserClassBLL();
-            DataSet ds = new DataSet();
-            ds = (DataSet)objUserLogic.CurrentUser(lblUserProfile.Text);
-            string secQue = ds.Tables["Table_User"].Rows[0].Field<string>("sec_question");
-            string secAns = ds.Tables["Table_User"].Rows[0].Field<string>("sec_answer");
-            string mobile = ds.Tables["Table_User"].Rows[0].Field<string>("mobile");
-            string division = ds.Tables["Table_User"].Rows[0].Field<string>("division");
-            if (string.IsNullOrEmpty(secQue) || string.IsNullOrEmpty(secAns) || string.IsNullOrEmpty(mobile) || string.IsNullOrEmpty(division))
+            try
             {
-                frmUser frmUs = new frmUser();
-                frmUs.ShowDialog();
-                MessageBox.Show("You must filling all of details.", "User Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                objUserLogic = new UserClassBLL();
+                DataSet ds = new DataSet();
+                ds = (DataSet)objUserLogic.CurrentUser(lblUserProfile.Text);
+                string secQue = ds.Tables["Table_User"].Rows[0].Field<string>("sec_question");
+                string secAns = ds.Tables["Table_User"].Rows[0].Field<string>("sec_answer");
+                string mobile = ds.Tables["Table_User"].Rows[0].Field<string>("mobile");
+                string division = ds.Tables["Table_User"].Rows[0].Field<string>("division");
+                if (string.IsNullOrEmpty(secQue) || string.IsNullOrEmpty(secAns) || string.IsNullOrEmpty(mobile) || string.IsNullOrEmpty(division))
+                {
+                    frmUser frmUs = new frmUser();
+                    frmUs.ShowDialog();
+                    MessageBox.Show("You must filling all of details.", "User Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnHome.BackColor = clickColor;//CLICK COLOR SET
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnHome = true;
-
-            //USER CONTROL LM HOME OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucHome._ucHome))
+            try
             {
-                pnlMain.Controls.Add(ucHome._ucHome);
-                ucHome._ucHome.Dock = DockStyle.Fill;
-                ucHome._ucHome.BringToFront();
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                btnHome.BackColor = clickColor;//CLICK COLOR SET
+
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+                _btnHome = true;
+
+                //USER CONTROL LM HOME OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(ucHome._ucHome))
+                {
+                    pnlMain.Controls.Add(ucHome._ucHome);
+                    ucHome._ucHome.Dock = DockStyle.Fill;
+                    ucHome._ucHome.BringToFront();
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnLmMaking_Paint(object sender, PaintEventArgs e)
@@ -219,38 +231,46 @@ namespace LMCC_System
 
         private void btnLmMaking_Click(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnLmMaking.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnLmMaking = true;
-
-            //USER CONTROL LM MAKING OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucLMMaking._LMMaking))
+            try
             {
-                pnlMain.Controls.Add(ucLMMaking._LMMaking);
-                ucLMMaking._LMMaking.Dock = DockStyle.Fill;
-                ucLMMaking._LMMaking.BringToFront();
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                btnLmMaking.BackColor = clickColor;
+
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+                _btnLmMaking = true;
+
+                //USER CONTROL LM MAKING OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(ucLMMaking._LMMaking))
+                {
+                    pnlMain.Controls.Add(ucLMMaking._LMMaking);
+                    ucLMMaking._LMMaking.Dock = DockStyle.Fill;
+                    ucLMMaking._LMMaking.BringToFront();
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnReport.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnReport = true;
-
-            //USER CONTROL LM SETTLE OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucReport._ucReport))
+            try
             {
-                pnlMain.Controls.Add(ucReport._ucReport);
-                ucReport._ucReport.Dock = DockStyle.Fill;
-                ucReport._ucReport.BringToFront();
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                btnReport.BackColor = clickColor;
+
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+                _btnReport = true;
+
+                //USER CONTROL LM SETTLE OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(ucReport._ucReport))
+                {
+                    pnlMain.Controls.Add(ucReport._ucReport);
+                    ucReport._ucReport.Dock = DockStyle.Fill;
+                    ucReport._ucReport.BringToFront();
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void lblLogout_Click(object sender, EventArgs e)
@@ -303,38 +323,46 @@ namespace LMCC_System
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnHelp.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnHelp = true;
-
-            //USER CONTROL LM SETTLE OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucHelp._ucHelp))
+            try
             {
-                pnlMain.Controls.Add(ucHelp._ucHelp);
-                ucHelp._ucHelp.Dock = DockStyle.Fill;
-                ucHelp._ucHelp.BringToFront();
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                btnHelp.BackColor = clickColor;
+
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+                _btnHelp = true;
+
+                //USER CONTROL LM SETTLE OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(ucHelp._ucHelp))
+                {
+                    pnlMain.Controls.Add(ucHelp._ucHelp);
+                    ucHelp._ucHelp.Dock = DockStyle.Fill;
+                    ucHelp._ucHelp.BringToFront();
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnSurveyor_Click(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnSurveyor.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnSurveyor = true;
-
-            //USER CONTROL SURVEYOR OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(ucSurveyor._Surveyor))
+            try
             {
-                pnlMain.Controls.Add(ucSurveyor._Surveyor);
-                ucSurveyor._Surveyor.Dock = DockStyle.Fill;
-                ucSurveyor._Surveyor.BringToFront();
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                btnSurveyor.BackColor = clickColor;
+
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+                _btnSurveyor = true;
+
+                //USER CONTROL SURVEYOR OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(ucSurveyor._Surveyor))
+                {
+                    pnlMain.Controls.Add(ucSurveyor._Surveyor);
+                    ucSurveyor._Surveyor.Dock = DockStyle.Fill;
+                    ucSurveyor._Surveyor.BringToFront();
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnHome_Paint(object sender, PaintEventArgs e)
@@ -362,20 +390,24 @@ namespace LMCC_System
 
         private void btnLmSetting_Click(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnLmSetting.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnSetting = true;
-
-            //USER CONTROL LM MAKING OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(Setting.ucSetting._Setting))
+            try
             {
-                pnlMain.Controls.Add(Setting.ucSetting._Setting);
-                Setting.ucSetting._Setting.Dock = DockStyle.Fill;
-                Setting.ucSetting._Setting.BringToFront();
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                btnLmSetting.BackColor = clickColor;
+
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+                _btnSetting = true;
+
+                //USER CONTROL LM MAKING OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(Setting.ucSetting._Setting))
+                {
+                    pnlMain.Controls.Add(Setting.ucSetting._Setting);
+                    Setting.ucSetting._Setting.Dock = DockStyle.Fill;
+                    Setting.ucSetting._Setting.BringToFront();
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnLmSetting_MouseEnter(object sender, EventArgs e)
@@ -412,20 +444,24 @@ namespace LMCC_System
 
         private void btnLmManage_Click(object sender, EventArgs e)
         {
-            DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
-            btnLmManage.BackColor = clickColor;
-
-            MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
-            _btnLmManage = true;
-
-            //USER CONTROL LM MAKING OPEN
-            pnlMain.Controls.Clear();
-            if (!pnlMain.Controls.Contains(LM_Manage.ucLMManage._LMManage))
+            try
             {
-                pnlMain.Controls.Add(LM_Manage.ucLMManage._LMManage);
-                LM_Manage.ucLMManage._LMManage.Dock = DockStyle.Fill;
-                LM_Manage.ucLMManage._LMManage.BringToFront();
+                DefaultColorSetAllMenuButtons(pnlLeftMenu);//DEFAULT COLOR SET LEFT MENU ALL BUTTONS
+                btnLmManage.BackColor = clickColor;
+
+                MenuButtonDefaultValSet();//LEFT MENU ALL BUTTON BLUE COLOR LINE DISABLE
+                _btnLmManage = true;
+
+                //USER CONTROL LM MAKING OPEN
+                pnlMain.Controls.Clear();
+                if (!pnlMain.Controls.Contains(LM_Manage.ucLMManage._LMManage))
+                {
+                    pnlMain.Controls.Add(LM_Manage.ucLMManage._LMManage);
+                    LM_Manage.ucLMManage._LMManage.Dock = DockStyle.Fill;
+                    LM_Manage.ucLMManage._LMManage.BringToFront();
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnHome_MouseEnter(object sender, EventArgs e)
