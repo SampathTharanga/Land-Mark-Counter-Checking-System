@@ -79,6 +79,7 @@ namespace LMCC_System.Login
                     {
                         string password = ds.Tables["Table_User"].Rows[0].Field<string>("password");
                         MessageBox.Show("Your password is \"" + password + "\"", "Fogot Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
                     else
                     {

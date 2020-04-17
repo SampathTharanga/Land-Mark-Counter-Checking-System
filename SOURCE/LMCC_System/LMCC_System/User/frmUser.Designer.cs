@@ -346,9 +346,9 @@
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(30, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(326, 13);
+            this.label7.Size = new System.Drawing.Size(393, 13);
             this.label7.TabIndex = 47;
-            this.label7.Text = "*** Important : Must remember you can not change username again.";
+            this.label7.Text = "*** Important : Must remember, you can not change or delete any username again.";
             // 
             // openFileDialog1
             // 
@@ -366,6 +366,8 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(935, 623);
+            this.MinimumSize = new System.Drawing.Size(935, 623);
             this.Name = "frmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users Details";
