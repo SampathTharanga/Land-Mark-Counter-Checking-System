@@ -35,7 +35,6 @@ namespace DataAccessLayer
                     objAdp.Fill(ds, "Table_User");
                     return ds;
                 }
-
             }
         }
 
@@ -58,7 +57,7 @@ namespace DataAccessLayer
         //UPDATE USER
         public void UpdateUserDB(IUser model)
         {
-            string sql = "UPDATE Table_User SET user_type='" + model.userType + "', password='" + model.password + "', sec_question='" + model.secQue + "',sec_answer='" + model.secAns + "',mobile='" + model.mobile + "',email='" + model.email + "',division='" + model.division + "' WHERE username='" + model.username + "'";
+            string sql = "UPDATE Table_User SET user_type='" + model.userType + "', password='" + model.password + "', sec_question='" + model.secQue + "',sec_answer='" + model.secAns + "',mobile='" + model.mobile + "',email='" + model.email + "', division='" + model.division + "' WHERE username='" + model.username + "'";
             InsertUpdateDeleteSQLString(sql);
         }
 

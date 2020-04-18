@@ -109,8 +109,28 @@ namespace LMCC_System
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            //PLACEHOLDER
-            PlaceHolderUser();
+            PlaceHolderUser();//PLACEHOLDER
+            UserNotExist();//IF NOT USER OPEN USER REGISTERATION WINDOW
+
+
+        }
+
+        //IF NOT USER OPEN USER REGISTERATION WINDOW
+        private void UserNotExist()
+        {
+            try
+            {
+                objUserLogic = new UserClassBLL();
+                DataSet ds = new DataSet();
+                ds = (DataSet)objUserLogic.LoadUserData();
+                DataTable dt = ds.Tables["Table_User"];
+                if (dt.Rows.Count == 0)
+                {
+                    frmUser frmObjUser = new frmUser();
+                    frmObjUser.ShowDialog();
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnLogIn_Paint(object sender, PaintEventArgs e)
