@@ -1,6 +1,7 @@
 ﻿using BusinessLogicLayer;//IMPORT BUSIINESS LOGC LAYER
 using System;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -52,6 +53,7 @@ namespace LMCC_System
             ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
 
             txtUsername.Enabled = true;//ENABLE TEXTBOX AFTER DATAGRIDVIEW ROW DOUBLE CLICK
+            txtDivision.Enabled = true;
             btnAdd.Text = "Add";//TEXTBOX DEFAULT TEXT SET AFTER DATAGRIDVIEW ROW DOUBLE CLICK
         }
 
@@ -165,6 +167,7 @@ namespace LMCC_System
 
                     //TEXTBOX ENABLE
                     txtUsername.Enabled = true;
+                    txtDivision.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -217,6 +220,7 @@ namespace LMCC_System
         private void frmUser_Load(object sender, EventArgs e)
         {
             txtUsername.Enabled = true;//ENABLE TEXTBOX AFTER DATAGRIDVIEW ROW DOUBLE CLICK
+            txtDivision.Enabled = true;
             btnAdd.Text = "Add";//TEXTBOX DEFAULT TEXT SET AFTER DATAGRIDVIEW ROW DOUBLE CLICK   
 
             LoadDataDgv();//LOAD USER DATA
@@ -291,6 +295,7 @@ namespace LMCC_System
             try
             {
                 txtUsername.Enabled = false;
+                txtDivision.Enabled = false;
                 btnAdd.Text = "Update";//ADD BUTTON TEXT CHANGE TO Update
 
                 txtUsername.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();

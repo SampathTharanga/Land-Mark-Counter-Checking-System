@@ -57,7 +57,7 @@ namespace DataAccessLayer
         //UPDATE USER
         public void UpdateUserDB(IUser model)
         {
-            string sql = "UPDATE Table_User SET user_type='" + model.userType + "', password='" + model.password + "', sec_question='" + model.secQue + "',sec_answer='" + model.secAns + "',mobile='" + model.mobile + "',email='" + model.email + "', division='" + model.division + "' WHERE username='" + model.username + "'";
+            string sql = "UPDATE Table_User SET user_type='" + model.userType + "', password='" + model.password + "', sec_question='" + model.secQue + "',sec_answer='" + model.secAns + "',mobile='" + model.mobile + "',email='" + model.email + "' WHERE username='" + model.username + "' AND division='" + model.division + "'";
             InsertUpdateDeleteSQLString(sql);
         }
 
@@ -65,7 +65,7 @@ namespace DataAccessLayer
         public object CurrentUserData(string username)
         {
             DataSet ds = new DataSet();
-            string sql = "SELECT* FROM Table_User WHERE username = '" + username + "'";
+            string sql = "SELECT * FROM Table_User WHERE username = '" + username + "'";
             ds = (DataSet)ExecuteSqlString(sql);
             return ds;
         }

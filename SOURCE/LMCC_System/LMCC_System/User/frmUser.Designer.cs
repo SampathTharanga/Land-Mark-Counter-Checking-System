@@ -346,9 +346,10 @@
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(30, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(393, 13);
+            this.label7.Size = new System.Drawing.Size(572, 13);
             this.label7.TabIndex = 47;
-            this.label7.Text = "*** Important : Must remember, you can not change or delete any username again.";
+            this.label7.Text = "*** Important : Must remember, you can not change again \"Username\" and \"Division\"" +
+    ". Also you can not delete any user.";
             // 
             // openFileDialog1
             // 
