@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogicLayer;
 
 namespace LMCC_System.Setting
 {
@@ -25,9 +26,61 @@ namespace LMCC_System.Setting
             }
         }
 
+        //CREATE SETTING CLASS
+        SettingClassBLL objSetting;
+
         public ucSetting()
         {
             InitializeComponent();
+        }
+
+        //ADD NEW DIVISION
+        private void AddDivision() 
+        {
+            try
+            {
+                if(String.IsNullOrWhiteSpace(txtDivisioin.Text))
+                {
+                    MessageBox.Show("Please enter ivision name!", "Division  Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    objSetting = new SettingClassBLL();
+                    if (objSetting.DivivisionExist(txtDivisioin.Text) == false)
+                    {
+                        objSetting = new SettingClassBLL()
+                        {
+                            division = txtDivisioin.Text
+                        };
+
+                        //ADD DIVISION
+                        objSetting.AddNewDivision();
+                        MessageBox.Show("Added Successfully!", "Division Add", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Division exist!", "Division Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtDivisioin.Clear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAddDivision_Click(object sender, EventArgs e)
+        {
+            if (btnAddDivision.Text == "Add")
+                AddDivision();//ADD DIVISION
+            if (btnAddDivision.Text == "Update")
+                UpdateDivision();
+        }
+
+        private void UpdateDivision()
+        {
+            
         }
     }
 }

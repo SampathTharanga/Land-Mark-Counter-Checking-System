@@ -45,10 +45,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgtvDivision = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnAddDivision = new System.Windows.Forms.Button();
+            this.txtDivisioin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -71,7 +71,7 @@
             this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgtvDivision)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -233,7 +233,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.dgtvDivision);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -243,18 +243,18 @@
             this.tabPage3.Text = "Division";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dgtvDivision
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(17, 111);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(323, 235);
-            this.dataGridView3.TabIndex = 45;
+            this.dgtvDivision.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgtvDivision.Location = new System.Drawing.Point(17, 111);
+            this.dgtvDivision.Name = "dgtvDivision";
+            this.dgtvDivision.Size = new System.Drawing.Size(323, 235);
+            this.dgtvDivision.TabIndex = 45;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.btnAddDivision);
+            this.groupBox2.Controls.Add(this.txtDivisioin);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(17, 16);
             this.groupBox2.Name = "groupBox2";
@@ -262,24 +262,25 @@
             this.groupBox2.TabIndex = 44;
             this.groupBox2.TabStop = false;
             // 
-            // button6
+            // btnAddDivision
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Image = global::LMCC_System.Properties.Resources.add;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(220, 41);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(85, 28);
-            this.button6.TabIndex = 31;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnAddDivision.BackColor = System.Drawing.Color.White;
+            this.btnAddDivision.Image = global::LMCC_System.Properties.Resources.add;
+            this.btnAddDivision.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddDivision.Location = new System.Drawing.Point(220, 41);
+            this.btnAddDivision.Name = "btnAddDivision";
+            this.btnAddDivision.Size = new System.Drawing.Size(85, 28);
+            this.btnAddDivision.TabIndex = 31;
+            this.btnAddDivision.Text = "Add";
+            this.btnAddDivision.UseVisualStyleBackColor = false;
+            this.btnAddDivision.Click += new System.EventHandler(this.btnAddDivision_Click);
             // 
-            // textBox3
+            // txtDivisioin
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 14);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 20);
-            this.textBox3.TabIndex = 1;
+            this.txtDivisioin.Location = new System.Drawing.Point(114, 14);
+            this.txtDivisioin.Name = "txtDivisioin";
+            this.txtDivisioin.Size = new System.Drawing.Size(191, 20);
+            this.txtDivisioin.TabIndex = 1;
             // 
             // label2
             // 
@@ -457,7 +458,7 @@
             this.groupBox4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgtvDivision)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -488,10 +489,10 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgtvDivision;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnAddDivision;
+        private System.Windows.Forms.TextBox txtDivisioin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox3;
