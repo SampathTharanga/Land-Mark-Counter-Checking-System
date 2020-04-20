@@ -14,8 +14,8 @@ G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\DataAccessLayer\obj\Debug\D
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 G:\THADIYA SERVAY DIPARTMENT\Version 1.0\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\Database.mdf
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\Database_log.ldf
+G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\Database.mdf
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\BusinessPropertyLayer.dll

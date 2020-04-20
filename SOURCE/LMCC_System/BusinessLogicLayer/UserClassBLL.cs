@@ -45,5 +45,12 @@ namespace BusinessLogicLayer
             objUserClsBL = new UserClassDAL();
             return objUserClsBL.CurrentUserData(usename);
         }
+
+        //CHECK USER WITH USERNAME AND DIVISION
+        public bool NewUserCheck(string username, string division)
+        {
+            objUserClsBL = new UserClassDAL();
+            return objUserClsBL.NewUserDataCheck(username, division);
+        }
     }
 }

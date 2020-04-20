@@ -1,7 +1,6 @@
 ﻿using BusinessLogicLayer;//IMPORT BUSIINESS LOGC LAYER
 using System;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -87,35 +86,44 @@ namespace LMCC_System
                 }
                 else
                 {
-                    //PROPERTIES FOR DATA ADD
-                    objUserLogic = new UserClassBLL()
+                    if (objUserLogic.NewUserCheck(txtUsername.Text, txtDivision.Text) == false)
                     {
-                        username = txtUsername.Text,
-                        userType = cbxType.Text.ToString(),
-                        password = txtPass.Text,
-                        secQue = cbxSecQue.Text.ToString(),
-                        secAns = txtSecAns.Text,
-                        mobile = txtMobile.Text,
-                        email = txtEmail.Text,
-                        division = txtDivision.Text
-                    };
-                    //INSERT DATA TO DATABASE
-                    objUserLogic.AddNewUser();
-                    MessageBox.Show("User registration successfully!", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    //CLEAR ALL TEXBOX AND COMBOBOX
-                    ClearTextBoxces();
+                        //PROPERTIES FOR DATA ADD
+                        objUserLogic = new UserClassBLL()
+                        {
+                            username = txtUsername.Text,
+                            userType = cbxType.Text.ToString(),
+                            password = txtPass.Text,
+                            secQue = cbxSecQue.Text.ToString(),
+                            secAns = txtSecAns.Text,
+                            mobile = txtMobile.Text,
+                            email = txtEmail.Text,
+                            division = txtDivision.Text
+                        };
+                        //INSERT DATA TO DATABASE
+                        objUserLogic.AddNewUser();
+                        MessageBox.Show("User registration successfully!", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    //LOAD USER DATA
-                    LoadDataDgv();
+                        //CLEAR ALL TEXBOX AND COMBOBOX
+                        ClearTextBoxces();
 
-                    //SET TO BUTTON TEXT Add
-                    btnAdd.Text = "Add";
+                        //LOAD USER DATA
+                        LoadDataDgv();
+
+                        //SET TO BUTTON TEXT Add
+                        btnAdd.Text = "Add";
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Already exist this user!", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message ,"USER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "USER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -140,34 +148,35 @@ namespace LMCC_System
                 }
                 else
                 {
-                    objUserLogic = new UserClassBLL()
-                    {
-                        username = txtUsername.Text,
-                        userType = cbxType.Text,
-                        password = txtPass.Text,
-                        secQue = cbxSecQue.Text,
-                        secAns = txtSecAns.Text,
-                        mobile = txtMobile.Text,
-                        email = txtEmail.Text,
-                        division = txtDivision.Text
-                    };
+                        objUserLogic = new UserClassBLL()
+                        {
+                            username = txtUsername.Text,
+                            userType = cbxType.Text,
+                            password = txtPass.Text,
+                            secQue = cbxSecQue.Text,
+                            secAns = txtSecAns.Text,
+                            mobile = txtMobile.Text,
+                            email = txtEmail.Text,
+                            division = txtDivision.Text
+                        };
 
-                    //UPDATE USER DATA
-                    objUserLogic.UpdateUser();
-                    MessageBox.Show("User Update successfully!", "User Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //UPDATE USER DATA
+                        objUserLogic.UpdateUser();
+                        MessageBox.Show("User Update successfully!", "User Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    //CLEAR ALL TEXBOX AND COMBOBOX
-                    ClearTextBoxces();
+                        //CLEAR ALL TEXBOX AND COMBOBOX
+                        ClearTextBoxces();
 
-                    //LOAD USER DATA
-                    LoadDataDgv();
+                        //LOAD USER DATA
+                        LoadDataDgv();
 
-                    //SET TO BUTTON TEXT Add
-                    btnAdd.Text = "Add";
+                        //SET TO BUTTON TEXT Add
+                        btnAdd.Text = "Add";
 
-                    //TEXTBOX ENABLE
-                    txtUsername.Enabled = true;
-                    txtDivision.Enabled = true;
+                        //TEXTBOX ENABLE
+                        txtUsername.Enabled = true;
+                        txtDivision.Enabled = true; ;
+    
                 }
             }
             catch (Exception ex)

@@ -70,5 +70,24 @@ namespace DataAccessLayer
             return ds;
         }
 
+        //CHECK NEW USER WITH CHECK USERNAME AND DIVISION
+        public bool NewUserDataCheck(string username, string division)
+        {
+            bool check = false;
+            using (SqlConnection objSqlConn = new SqlConnection(conn))
+            {
+                objSqlConn.Open();
+                string sql = "SELECT * FROM Table_User WHERE username = '" + username + "' AND division='" + division + "'";
+                using (SqlCommand cmd = new SqlCommand(sql, objSqlConn))
+                {
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                        check = true;
+                    return check;
+
+                }
+            }
+        }
+
     }
 }
