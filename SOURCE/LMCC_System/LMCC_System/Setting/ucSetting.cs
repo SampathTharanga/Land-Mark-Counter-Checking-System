@@ -226,21 +226,6 @@ namespace LMCC_System.Setting
         {
             dgvDivision.Columns[0].HeaderText = "Division";
             dgvDivision.Columns[0].Width = 300;
-
-            dgvDivision.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgvDivision.DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224, 224);
-            dgvDivision.DefaultCellStyle.SelectionForeColor = Color.Black;
-            dgvDivision.BackgroundColor = Color.White;
-            dgvDivision.EnableHeadersVisualStyles = false;
-            dgvDivision.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvDivision.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(38, 50, 64);
-            dgvDivision.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvDivision.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDivision.MultiSelect = false;
-            dgvDivision.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            dgvDivision.AllowUserToResizeRows = false;
-            dgvDivision.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            dgvDivision.AllowUserToResizeColumns = false;
         }
 
         private void btnDivisionClear_Click(object sender, EventArgs e)
@@ -281,21 +266,6 @@ namespace LMCC_System.Setting
         {
             dgvSurveyorType.Columns[0].Width = 300;
             dgvSurveyorType.Columns[0].HeaderText = "Surveyor Type";
-
-            dgvSurveyorType.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgvSurveyorType.DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224, 224);
-            dgvSurveyorType.DefaultCellStyle.SelectionForeColor = Color.Black;
-            dgvSurveyorType.BackgroundColor = Color.White;
-            dgvSurveyorType.EnableHeadersVisualStyles = false;
-            dgvSurveyorType.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvSurveyorType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(38, 50, 64);
-            dgvSurveyorType.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvSurveyorType.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSurveyorType.MultiSelect = false;
-            dgvSurveyorType.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            dgvSurveyorType.AllowUserToResizeRows = false;
-            dgvSurveyorType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            dgvSurveyorType.AllowUserToResizeColumns = false;
         }
         //ADD NEW SURVEYOR TYPE
         private void AddSurveyorType()
