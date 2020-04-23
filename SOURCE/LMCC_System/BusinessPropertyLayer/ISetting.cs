@@ -11,5 +11,10 @@ namespace BusinessPropertyLayer
         //DIVISION PROPERTIES
         string division { get; set; }
         string oldDivision { get; set; }
+
+
+        //SURVEYOR PROPERTIES
+        string surveyorType { get; set; }
+        string existSurveyorType { get; set; }
     }
 }

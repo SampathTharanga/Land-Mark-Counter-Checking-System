@@ -31,7 +31,7 @@ namespace DataAccessLayer
         }
 
         //EXECUTE STRING AND RETURN DATASET
-        private object ExecuteSqlString(string query)
+        private object ExecuteSqlString(string query, string tableName)
         {
             using(SqlConnection objSqlConn=new SqlConnection(conn))
             {
@@ -40,7 +40,8 @@ namespace DataAccessLayer
                 using (SqlCommand cmd= new SqlCommand(query,objSqlConn))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(ds, "Table_Division");
+                    //da.Fill(ds, "Table_Division");
+                    da.Fill(ds, tableName);
                     return ds;
                 }
             }
@@ -88,9 +89,55 @@ namespace DataAccessLayer
         {
             DataSet ds = new DataSet();
             string query = "SELECT * FROM Table_Division";
-            ds = (DataSet)ExecuteSqlString(query);
+            ds = (DataSet)ExecuteSqlString(query, "Table_Division");
             return ds;
         }
 
+
+
+        //--------------------------------------------------------------//
+        //                      SURVEYOR TYPE                           //
+        //--------------------------------------------------------------//
+
+        //ADD NEW SURVEYOR TYPE
+        public void AddNewSurveyorTypeDB(ISetting model)
+        {
+            string query = "INSERT INTO Table_Surveyor_Type VALUES ('" + model.surveyorType + "')";
+            InsertUpdateeleteSQL(query);
+        }
+
+        //UPDATE SURVEYOR TYPE
+        public void UpdateSurveyorTypeDB(ISetting model)
+        {
+            string query = "UPDATE Table_Surveyor_Type SET surveyor_type ='" + model.surveyorType + "' WHERE surveyor_type='" + model.existSurveyorType + "'";
+            InsertUpdateeleteSQL(query); ;
+        }
+
+        //LOAD SURVEYOR TYPE
+        public bool SurveyorTypeExistDB(string surveyorType)
+        {
+            bool check = false;
+            using (SqlConnection objConn = new SqlConnection(conn))
+            {
+                objConn.Open();
+                string query = "SELECT * FROM Table_Surveyor_Type WHERE surveyor_type='" + surveyorType + "'";
+                using (SqlCommand cmd=new SqlCommand (query, objConn))
+                {
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                        check = true;
+                    return check;
+                }
+            }
+        }
+
+        //CHECK EXIST SURVEYOR TYPE
+        public object LoadSurveyorType()
+        {
+            DataSet ds = new DataSet();
+            string query = "SELECT * FROM Table_Surveyor_Type";
+            ds = (DataSet)ExecuteSqlString(query, "Table_Surveyor_Type");
+            return ds;
+        }
     }
 }

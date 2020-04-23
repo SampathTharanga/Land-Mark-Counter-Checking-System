@@ -37,10 +37,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvSurveyorType = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnSurveyorTypeAdd = new System.Windows.Forms.Button();
+            this.txtSurveyorType = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -60,7 +60,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnSurveyorTypeClear = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnDivisionClear = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -69,7 +69,7 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSurveyorType)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -165,7 +165,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.dgvSurveyorType);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -175,19 +175,19 @@
             this.tabPage1.Text = "Surveyor Type";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvSurveyorType
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(17, 113);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(323, 232);
-            this.dataGridView2.TabIndex = 43;
+            this.dgvSurveyorType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSurveyorType.Location = new System.Drawing.Point(17, 113);
+            this.dgvSurveyorType.Name = "dgvSurveyorType";
+            this.dgvSurveyorType.Size = new System.Drawing.Size(323, 232);
+            this.dgvSurveyorType.TabIndex = 43;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.btnSurveyorTypeClear);
+            this.groupBox4.Controls.Add(this.btnSurveyorTypeAdd);
+            this.groupBox4.Controls.Add(this.txtSurveyorType);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Location = new System.Drawing.Point(17, 16);
             this.groupBox4.Name = "groupBox4";
@@ -195,24 +195,25 @@
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
             // 
-            // button3
+            // btnSurveyorTypeAdd
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Image = global::LMCC_System.Properties.Resources.add;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(220, 41);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 28);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSurveyorTypeAdd.BackColor = System.Drawing.Color.White;
+            this.btnSurveyorTypeAdd.Image = global::LMCC_System.Properties.Resources.add;
+            this.btnSurveyorTypeAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSurveyorTypeAdd.Location = new System.Drawing.Point(220, 41);
+            this.btnSurveyorTypeAdd.Name = "btnSurveyorTypeAdd";
+            this.btnSurveyorTypeAdd.Size = new System.Drawing.Size(85, 28);
+            this.btnSurveyorTypeAdd.TabIndex = 31;
+            this.btnSurveyorTypeAdd.Text = "Add";
+            this.btnSurveyorTypeAdd.UseVisualStyleBackColor = false;
+            this.btnSurveyorTypeAdd.Click += new System.EventHandler(this.btnSurveyorTypeAdd_Click);
             // 
-            // textBox2
+            // txtSurveyorType
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 14);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtSurveyorType.Location = new System.Drawing.Point(114, 14);
+            this.txtSurveyorType.Name = "txtSurveyorType";
+            this.txtSurveyorType.Size = new System.Drawing.Size(191, 20);
+            this.txtSurveyorType.TabIndex = 1;
             // 
             // label3
             // 
@@ -290,9 +291,11 @@
             // txtDivisioin
             // 
             this.txtDivisioin.Location = new System.Drawing.Point(114, 14);
+            this.txtDivisioin.MaxLength = 50;
             this.txtDivisioin.Name = "txtDivisioin";
             this.txtDivisioin.Size = new System.Drawing.Size(191, 20);
             this.txtDivisioin.TabIndex = 1;
+            this.txtDivisioin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDivisioin_KeyPress);
             // 
             // label2
             // 
@@ -440,17 +443,17 @@
             this.btnHome.Text = "Backup Data";
             this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnSurveyorTypeClear
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Image = global::LMCC_System.Properties.Resources.clear;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(130, 41);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(85, 28);
-            this.button6.TabIndex = 52;
-            this.button6.Text = "Clear";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnSurveyorTypeClear.BackColor = System.Drawing.Color.White;
+            this.btnSurveyorTypeClear.Image = global::LMCC_System.Properties.Resources.clear;
+            this.btnSurveyorTypeClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSurveyorTypeClear.Location = new System.Drawing.Point(130, 41);
+            this.btnSurveyorTypeClear.Name = "btnSurveyorTypeClear";
+            this.btnSurveyorTypeClear.Size = new System.Drawing.Size(85, 28);
+            this.btnSurveyorTypeClear.TabIndex = 52;
+            this.btnSurveyorTypeClear.Text = "Clear";
+            this.btnSurveyorTypeClear.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
@@ -504,7 +507,7 @@
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSurveyorType)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -522,10 +525,10 @@
         #endregion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvSurveyorType;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnSurveyorTypeAdd;
+        private System.Windows.Forms.TextBox txtSurveyorType;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -553,7 +556,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSurveyorTypeClear;
         private System.Windows.Forms.Button btnDivisionClear;
         private System.Windows.Forms.Button button7;
     }

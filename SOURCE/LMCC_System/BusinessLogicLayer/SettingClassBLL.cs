@@ -14,8 +14,17 @@ namespace BusinessLogicLayer
         public string division { get; set; }
         public string oldDivision { get; set; }
 
+        //SURVEYOR TYPE PROPERTIES
+        public string surveyorType { get; set; }
+        public string existSurveyorType { get; set; }
+
         //SETTING BUSINESS LAYER CLASS OBJECT
         SettingClassDAL objSetDal;
+
+
+        //--------------------------------------------------------------//
+        //                            DIVISION                          //
+        //--------------------------------------------------------------//
 
         //ADD NEW DIVISION
         public void AddNewDivision()
@@ -43,6 +52,40 @@ namespace BusinessLogicLayer
         {
             objSetDal = new SettingClassDAL();
             return objSetDal.LoadDivisionData();
+        }
+
+
+
+        //--------------------------------------------------------------//
+        //                      SURVEYOR TYPE                           //
+        //--------------------------------------------------------------//
+
+        //ADD NEW SURVEYOR TYPE
+        public void AddNewSuerveyorType()
+        {
+            objSetDal = new SettingClassDAL();
+            objSetDal.AddNewSurveyorTypeDB(this);
+        }
+
+        //UPDATE SURVEYOR TYPE
+        public void UpdateSurveyorType()
+        {
+            objSetDal = new SettingClassDAL();
+            objSetDal.UpdateSurveyorTypeDB(this);
+        }
+
+        //CHECK EXIST SURVEYOR TYPE
+        public bool CheckSurveyorType(string surveyorType)
+        {
+            objSetDal = new SettingClassDAL();
+            return objSetDal.SurveyorTypeExistDB(surveyorType);
+        }
+
+        //LOAD SURVEYOR TYPES
+        public object LoadSurveyorType()
+        {
+            objSetDal = new SettingClassDAL(); ;
+            return objSetDal.LoadSurveyorType();
         }
     }
 }
