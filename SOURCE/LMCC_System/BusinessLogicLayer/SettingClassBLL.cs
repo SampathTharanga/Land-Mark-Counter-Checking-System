@@ -12,6 +12,7 @@ namespace BusinessLogicLayer
     {
         //DIVISION PROPERTIES
         public string division { get; set; }
+        public string oldDivision { get; set; }
 
         //SETTING BUSINESS LAYER CLASS OBJECT
         SettingClassDAL objSetDal;
@@ -35,6 +36,13 @@ namespace BusinessLogicLayer
         {
             objSetDal = new SettingClassDAL();
             return objSetDal.DivisionExistDB(division);
+        }
+
+        //LOAD DIVISION DATA
+        public object LoadDivision()
+        {
+            objSetDal = new SettingClassDAL();
+            return objSetDal.LoadDivisionData();
         }
     }
 }

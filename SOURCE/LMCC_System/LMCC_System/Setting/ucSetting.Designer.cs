@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSetting));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,14 +44,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgtvDivision = new System.Windows.Forms.DataGridView();
+            this.dgvDivision = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAddDivision = new System.Windows.Forms.Button();
             this.txtDivisioin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -62,6 +60,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btnDivisionClear = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,7 +73,7 @@
             this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgtvDivision)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDivision)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,6 +89,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button9);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
@@ -182,6 +185,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.label3);
@@ -233,7 +237,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dgtvDivision);
+            this.tabPage3.Controls.Add(this.dgvDivision);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -243,16 +247,24 @@
             this.tabPage3.Text = "Division";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dgtvDivision
+            // dgvDivision
             // 
-            this.dgtvDivision.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtvDivision.Location = new System.Drawing.Point(17, 111);
-            this.dgtvDivision.Name = "dgtvDivision";
-            this.dgtvDivision.Size = new System.Drawing.Size(323, 235);
-            this.dgtvDivision.TabIndex = 45;
+            this.dgvDivision.AllowUserToAddRows = false;
+            this.dgvDivision.AllowUserToDeleteRows = false;
+            this.dgvDivision.AllowUserToResizeColumns = false;
+            this.dgvDivision.AllowUserToResizeRows = false;
+            this.dgvDivision.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDivision.Location = new System.Drawing.Point(17, 111);
+            this.dgvDivision.Name = "dgvDivision";
+            this.dgvDivision.ReadOnly = true;
+            this.dgvDivision.RowHeadersVisible = false;
+            this.dgvDivision.Size = new System.Drawing.Size(323, 235);
+            this.dgvDivision.TabIndex = 45;
+            this.dgvDivision.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvDivision_MouseDoubleClick);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnDivisionClear);
             this.groupBox2.Controls.Add(this.btnAddDivision);
             this.groupBox2.Controls.Add(this.txtDivisioin);
             this.groupBox2.Controls.Add(this.label2);
@@ -315,17 +327,6 @@
             this.groupBox3.Size = new System.Drawing.Size(323, 141);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
-            // 
-            // button7
-            // 
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(224, 92);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(85, 28);
-            this.button7.TabIndex = 41;
-            this.button7.Text = "Cancel";
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // textBox4
             // 
@@ -439,6 +440,55 @@
             this.btnHome.Text = "Backup Data";
             this.btnHome.UseVisualStyleBackColor = false;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Image = global::LMCC_System.Properties.Resources.clear;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(130, 41);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(85, 28);
+            this.button6.TabIndex = 52;
+            this.button6.Text = "Clear";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Image = global::LMCC_System.Properties.Resources.clear;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(130, 41);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(85, 28);
+            this.button9.TabIndex = 53;
+            this.button9.Text = "Clear";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // btnDivisionClear
+            // 
+            this.btnDivisionClear.BackColor = System.Drawing.Color.White;
+            this.btnDivisionClear.Image = global::LMCC_System.Properties.Resources.clear;
+            this.btnDivisionClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDivisionClear.Location = new System.Drawing.Point(129, 41);
+            this.btnDivisionClear.Name = "btnDivisionClear";
+            this.btnDivisionClear.Size = new System.Drawing.Size(85, 28);
+            this.btnDivisionClear.TabIndex = 53;
+            this.btnDivisionClear.Text = "Clear";
+            this.btnDivisionClear.UseVisualStyleBackColor = false;
+            this.btnDivisionClear.Click += new System.EventHandler(this.btnDivisionClear_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.Image = global::LMCC_System.Properties.Resources.clear;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(224, 92);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(85, 28);
+            this.button7.TabIndex = 53;
+            this.button7.Text = "Clear";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
             // ucSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +496,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucSetting";
             this.Size = new System.Drawing.Size(767, 641);
+            this.Load += new System.EventHandler(this.ucSetting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -458,7 +509,7 @@
             this.groupBox4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgtvDivision)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDivision)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -489,18 +540,21 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dgtvDivision;
+        private System.Windows.Forms.DataGridView dgvDivision;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAddDivision;
         private System.Windows.Forms.TextBox txtDivisioin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDivisionClear;
+        private System.Windows.Forms.Button button7;
     }
 }

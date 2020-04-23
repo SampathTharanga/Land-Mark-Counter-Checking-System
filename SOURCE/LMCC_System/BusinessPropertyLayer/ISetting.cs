@@ -10,5 +10,6 @@ namespace BusinessPropertyLayer
     {
         //DIVISION PROPERTIES
         string division { get; set; }
+        string oldDivision { get; set; }
     }
 }

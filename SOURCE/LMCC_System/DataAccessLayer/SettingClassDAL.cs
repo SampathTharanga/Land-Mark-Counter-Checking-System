@@ -40,7 +40,7 @@ namespace DataAccessLayer
                 using (SqlCommand cmd= new SqlCommand(query,objSqlConn))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(ds, "");
+                    da.Fill(ds, "Table_Division");
                     return ds;
                 }
             }
@@ -61,7 +61,7 @@ namespace DataAccessLayer
         //UPDATE DIVISION
         public void UpdateDivisionDB(ISetting model)
         {
-            string query = "UPDATE Table_Division SET division = '" + model.division + "'";
+            string query = "UPDATE Table_Division SET division = '" + model.division + "' WHERE division = '" + model.oldDivision + "'";
             InsertUpdateeleteSQL(query);
         }
         
@@ -82,5 +82,15 @@ namespace DataAccessLayer
                 }
             }
         }
+
+        //LOAD DIVISION DATA
+        public object LoadDivisionData()
+        {
+            DataSet ds = new DataSet();
+            string query = "SELECT * FROM Table_Division";
+            ds = (DataSet)ExecuteSqlString(query);
+            return ds;
+        }
+
     }
 }

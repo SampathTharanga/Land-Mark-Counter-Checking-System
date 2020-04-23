@@ -407,7 +407,7 @@ namespace LMCC_System
                     Setting.ucSetting._Setting.BringToFront();
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "Setting Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnLmSetting_MouseEnter(object sender, EventArgs e)
