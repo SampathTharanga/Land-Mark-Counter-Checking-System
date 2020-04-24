@@ -35,6 +35,8 @@ namespace LMCC_System.Setting
         }
 
 
+
+
         //--------------------------------------------------------------//
         //                            COMMON                            //
         //--------------------------------------------------------------//
@@ -65,41 +67,7 @@ namespace LMCC_System.Setting
             }
         }
 
-        //ALL DATAGRIDVIEW COMMONLY STYLE CHANGE
-        //private void DgvCommonStyle()
-        //{
-        //    try
-        //    {
-        //        Action<Control.ControlCollection> func = null;
-        //        func = (controls) =>
-        //        {
-        //            foreach (Control control in controls)
-        //            {
-        //                if (control is DataGridView)
-        //                {
-        //                    (control as DataGridView).AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-        //                    (control as DataGridView).DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224, 224);
-        //                    (control as DataGridView).DefaultCellStyle.SelectionForeColor = Color.Black;
-        //                    (control as DataGridView).BackgroundColor = Color.White;
-        //                    (control as DataGridView).EnableHeadersVisualStyles = false;
-        //                    (control as DataGridView).ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-        //                    (control as DataGridView).ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(38, 50, 64);
-        //                    (control as DataGridView).ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-        //                    (control as DataGridView).SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        //                    (control as DataGridView).MultiSelect = false;
-        //                    (control as DataGridView).AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-        //                    (control as DataGridView).AllowUserToResizeRows = false;
-        //                    (control as DataGridView).AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-        //                    (control as DataGridView).AllowUserToResizeColumns = false;
-        //                }
-        //            }
-        //        };
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+
 
 
         //--------------------------------------------------------------//
@@ -206,11 +174,6 @@ namespace LMCC_System.Setting
 
         private void ucSetting_Load(object sender, EventArgs e)
         {
-            //DgvCommonStyle();//ALL DATAGRIDVIEW COMMONLY STYLE CHANGE
-
-            //DgvDivisionStyle();//DIVISION DATAGRIDVIEW STYLE CHANGE
-            //DgvSurveyorTypeStyle();//SURVEYOR TYPE DATAGRIDVIEW STYLE CHANGE
-
             LoadDivisionDatas();//LOAD DIVISION DATA
             LoadSurveyorTypeData();//LOAD SURVEYOR TYPE DATA
         }
@@ -239,15 +202,18 @@ namespace LMCC_System.Setting
         }
 
 
+
+
+
         //--------------------------------------------------------------//
         //                      SURVEYOR TYPE                           //
         //--------------------------------------------------------------//
 
         private void btnSurveyorTypeAdd_Click(object sender, EventArgs e)
         {
-            if (btnAddDivision.Text == "Add")
+            if (btnSurveyorTypeAdd.Text == "Add")
                 AddSurveyorType();//ADD NEW SURVEYOR TYPE
-            if (btnAddDivision.Text == "Update")
+            if (btnSurveyorTypeAdd.Text == "Update")
                 UpdateSurveyorType();//UPDATE SURVEYOR TYPE
         }
 
@@ -260,7 +226,7 @@ namespace LMCC_System.Setting
 
             DgvSurveyorTypeStyle();
         }
-        
+
         //SURVEYOR TYPE DATA GRIDVIEW STYLE
         private void DgvSurveyorTypeStyle()
         {
@@ -270,36 +236,100 @@ namespace LMCC_System.Setting
         //ADD NEW SURVEYOR TYPE
         private void AddSurveyorType()
         {
-            if (String.IsNullOrWhiteSpace(txtSurveyorType.Text))
+            try
             {
-                MessageBox.Show("Please enter Surveyor Type!", "Add New Surveyor Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                objSetting = new SettingClassBLL();
-                if (objSetting.CheckSurveyorType(txtSurveyorType.Text) == false)
+                if (String.IsNullOrWhiteSpace(txtSurveyorType.Text))
                 {
-                    objSetting = new SettingClassBLL()
-                    {
-                        surveyorType = txtSurveyorType.Text
-                    };
-                    objSetting.AddNewSuerveyorType();
-                    MessageBox.Show("Surveyor New Type added successful!", "Add New Surveyor Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadSurveyorTypeData();
-                    ClearTextBoxces();
+                    MessageBox.Show("Please enter Surveyor Type!", "Add New Surveyor Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Surveyor Type is exist!", "Add New Surveyor Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ClearTextBoxces();
+                    objSetting = new SettingClassBLL();
+                    if (objSetting.CheckSurveyorType(txtSurveyorType.Text) == false)
+                    {
+                        objSetting = new SettingClassBLL()
+                        {
+                            surveyorType = txtSurveyorType.Text
+                        };
+                        objSetting.AddNewSuerveyorType();
+                        MessageBox.Show("Surveyor New Type added successful!", "Add New Surveyor Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadSurveyorTypeData();
+                        ClearTextBoxces();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Surveyor Type is exist!", "Add New Surveyor Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearTextBoxces();
+                    }
                 }
             }
-    }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-    //UPDATE SURVEYOR TYPE
-    private void UpdateSurveyorType()
+        //UPDATE SURVEYOR TYPE
+        private void UpdateSurveyorType()
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (String.IsNullOrWhiteSpace(txtSurveyorType.Text))
+                {
+                    MessageBox.Show("Please enter Surveyor Type!", "Surveyor Type Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    objSetting = new SettingClassBLL();
+                    if (objSetting.CheckSurveyorType(txtSurveyorType.Text) == false)
+                    {
+                        objSetting = new SettingClassBLL()
+                        {
+                            surveyorType = txtSurveyorType.Text,
+                            existSurveyorType = dgvSurveyorType.CurrentRow.Cells[0].Value.ToString()
+                        };
+                        objSetting.UpdateSurveyorType();
+                        MessageBox.Show("Surveyor Type update successful!", "Surveyor Type Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadSurveyorTypeData();
+                        ClearTextBoxces();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Surveyor Type exist!", "Surveyor Type Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearTextBoxces();
+                    }
+                }
+                btnSurveyorTypeAdd.Text = "Add";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSurveyorTypeClear_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxces();
+            btnSurveyorTypeAdd.Text = "Add";
+        }
+
+        private void dgvSurveyorType_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                btnSurveyorTypeAdd.Text = "Update";
+                txtSurveyorType.Text = dgvSurveyorType.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtSurveyorType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
         }
     }
 }
