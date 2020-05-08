@@ -48,6 +48,8 @@ namespace DataAccessLayer
         }
 
 
+
+
         //--------------------------------------------------------------//
         //                            DIVISION                          //
         //--------------------------------------------------------------//
@@ -95,6 +97,8 @@ namespace DataAccessLayer
 
 
 
+
+
         //--------------------------------------------------------------//
         //                      SURVEYOR TYPE                           //
         //--------------------------------------------------------------//
@@ -113,7 +117,7 @@ namespace DataAccessLayer
             InsertUpdateeleteSQL(query); ;
         }
 
-        //LOAD SURVEYOR TYPE
+        //CHECK EXIST SURVEYOR TYPE
         public bool SurveyorTypeExistDB(string surveyorType)
         {
             bool check = false;
@@ -131,12 +135,60 @@ namespace DataAccessLayer
             }
         }
 
-        //CHECK EXIST SURVEYOR TYPE
+        //LOAD SURVEYOR TYPE
         public object LoadSurveyorType()
         {
             DataSet ds = new DataSet();
             string query = "SELECT * FROM Table_Surveyor_Type";
             ds = (DataSet)ExecuteSqlString(query, "Table_Surveyor_Type");
+            return ds;
+        }
+
+
+
+
+        //--------------------------------------------------------------//
+        //                       LAND MARK TYPE                         //
+        //--------------------------------------------------------------//
+
+        //ADD LAND MARK TYPE
+        public void AddNewLandMarkTypeDB(ISetting model)
+        {
+            string query = "INSERT INTO Table_LM_Type VALUES ('" + model.landMarkType + "')";
+            InsertUpdateeleteSQL(query);
+        }
+
+        //UPDATE LAND MARK TYPE
+        public void UpdateLandMarkTypeDB(ISetting model)
+        {
+            string query = "UPDATE Table_LM_Type SET lm_type='" + model.landMarkType + "' WHERE lm_type='" + model.existLandMarkType + "'";
+            InsertUpdateeleteSQL(query);
+        }
+
+        //CHECK EXIST LAND MARK TYPE
+        public bool ExistLandMarkTypeDB(string landMarkType)
+        {
+            bool check = false;
+            string query = "SELECT * FROM Table_LM_Type WHERE lm_type='" + landMarkType + "'";
+            using (SqlConnection objConn = new SqlConnection(conn))
+            {
+                objConn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, objConn))
+                {
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                        check = true;
+                    return check;
+                }
+            }
+        }
+
+        //LOAD LAND MARK TYPE
+        public object LoadLandMarkTypeDB()
+        {
+            DataSet ds = new DataSet();
+            string query = "SELECT * FROM Table_LM_Type";
+            ds = (DataSet)ExecuteSqlString(query, "Table_LM_Type");
             return ds;
         }
     }

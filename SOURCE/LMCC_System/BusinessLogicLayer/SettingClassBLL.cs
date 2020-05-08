@@ -18,6 +18,10 @@ namespace BusinessLogicLayer
         public string surveyorType { get; set; }
         public string existSurveyorType { get; set; }
 
+        //LAND MARK PROPERTIES
+        public string landMarkType { get; set; }
+        public string existLandMarkType { get; set; }
+
         //SETTING BUSINESS LAYER CLASS OBJECT
         SettingClassDAL objSetDal;
 
@@ -86,6 +90,39 @@ namespace BusinessLogicLayer
         {
             objSetDal = new SettingClassDAL(); ;
             return objSetDal.LoadSurveyorType();
+        }
+
+
+        //--------------------------------------------------------------//
+        //                       LAND MARK TYPE                         //
+        //--------------------------------------------------------------//
+
+        //ADD NEW LAND MARK TYPE
+        public void AddNewLandMarkType()
+        {
+            objSetDal = new SettingClassDAL();
+            objSetDal.AddNewLandMarkTypeDB(this);
+        }
+
+        //UPDATE LAND MARK TYPE
+        public void UpdateLandMarkType()
+        {
+            objSetDal = new SettingClassDAL();
+            objSetDal.UpdateLandMarkTypeDB(this);
+        }
+
+        //CHECK EXIST LAND MARK TYPE
+        public bool CheckLandMarkType(string landMarkType)
+        {
+            objSetDal = new SettingClassDAL();
+            return objSetDal.ExistLandMarkTypeDB(landMarkType);
+        }
+
+        //LOAD LAND MARK TYPES
+        public object LoadLandMarkType()
+        {
+            objSetDal = new SettingClassDAL();
+            return objSetDal.LoadLandMarkTypeDB();
         }
     }
 }

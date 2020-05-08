@@ -16,5 +16,9 @@ namespace BusinessPropertyLayer
         //SURVEYOR PROPERTIES
         string surveyorType { get; set; }
         string existSurveyorType { get; set; }
+
+        //LAND MARK PROPERTIES
+        string landMarkType { get; set; }
+        string existLandMarkType { get; set; }
     }
 }

@@ -176,6 +176,7 @@ namespace LMCC_System.Setting
         {
             LoadDivisionDatas();//LOAD DIVISION DATA
             LoadSurveyorTypeData();//LOAD SURVEYOR TYPE DATA
+            LoadLandMarTypekData();//LOAD LAND MARK TYPE DATA
         }
 
         private void dgvDivision_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -330,6 +331,134 @@ namespace LMCC_System.Setting
         private void txtSurveyorType_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
+        }
+
+
+        //--------------------------------------------------------------//
+        //                       LAND MARK TYPE                         //
+        //--------------------------------------------------------------//
+
+        //LOAD LAND MARK DATA
+        private void LoadLandMarTypekData()
+        {
+            objSetting = new SettingClassBLL();
+            dgvLandMarkType.DataSource = objSetting.LoadLandMarkType();
+            dgvLandMarkType.DataMember = "Table_LM_Type";
+
+            DgvLandMarkTypeStyle();
+        }
+
+        //ADD NEW LAND MARK DATA
+        private void AddLandMark()
+        {
+            if(String.IsNullOrWhiteSpace(txtLMType.Text))
+            {
+                MessageBox.Show("Please enter Land Mark Type!", "Land Mark Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                objSetting = new SettingClassBLL();
+                if(objSetting.CheckLandMarkType(txtLMType.Text) == false)
+                {
+                    objSetting = new SettingClassBLL()
+                    {
+                        landMarkType=txtLMType.Text
+                    };
+
+                    objSetting.AddNewLandMarkType();
+                    MessageBox.Show("Land Mark Type added successful!", "Add New Land Mark Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadLandMarTypekData();
+                    ClearTextBoxces();
+                }
+                else
+                {
+                    MessageBox.Show("Land Mark Type is exist!", "Land Mark Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearTextBoxces();
+                }
+            }
+        }
+
+        //UPDATE LANDA MARK DATA
+        private void UpdateLandMark()
+        {
+            try
+            {
+                if (String.IsNullOrWhiteSpace(txtLMType.Text))
+                {
+                    MessageBox.Show("Please enter Land Mark Type!", "Land Mark Type Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    objSetting = new SettingClassBLL();
+                    if (objSetting.CheckLandMarkType(txtLMType.Text) == false)
+                    {
+                        objSetting = new SettingClassBLL()
+                        {
+                            landMarkType = txtLMType.Text,
+                            existLandMarkType = dgvLandMarkType.CurrentRow.Cells[0].Value.ToString()
+                        };
+                        objSetting.UpdateLandMarkType();
+                        MessageBox.Show("Land Mark Type update successful!", "Land Mark Type Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadLandMarTypekData();
+                        ClearTextBoxces();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Surveyor Type exist!", "Surveyor Type Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearTextBoxces();
+                    }
+                }
+                btnLMTypeAdd.Text = "Add";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //DATAGRIDVIEW STYLE LANDA MARK TYPE
+        private void DgvLandMarkTypeStyle()
+        {
+            dgvLandMarkType.Columns[0].Width = 300;
+            dgvLandMarkType.Columns[0].HeaderText = "Land Mark Type";
+        }
+
+        private void btnLMTypeClear_Click(object sender, EventArgs e)
+        {
+            btnLMTypeAdd.Text = "Add";
+            ClearTextBoxces();
+        }
+
+        private void dgvLandMarkType_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                btnLMTypeAdd.Text = "Update";
+                txtLMType.Text = dgvLandMarkType.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Land Mark Type Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtLMType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
+        }
+
+        private void btnLMTypeAdd_Click(object sender, EventArgs e)
+        {
+            if (btnLMTypeAdd.Text == "Add")
+                AddLandMark();//ADD NEW LAND MARK TYPE
+            if (btnLMTypeAdd.Text == "Update")
+                UpdateLandMark();//UPDATE LAND MARK TYPE
+        }
+
+        private void btnCommonClear_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxces();
         }
     }
 }
