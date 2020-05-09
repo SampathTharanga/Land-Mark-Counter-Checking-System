@@ -195,6 +195,7 @@ namespace LMCC_System.Setting
         private void btnDivisionClear_Click(object sender, EventArgs e)
         {
             ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
+            btnAddDivision.Text = "Add";
         }
 
         private void txtDivisioin_KeyPress(object sender, KeyPressEventArgs e)
