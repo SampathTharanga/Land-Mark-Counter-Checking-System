@@ -191,7 +191,7 @@ namespace LMCC_System.Setting
         private void DgvDivisionStyle()
         {
             dgvDivision.Columns[0].HeaderText = "Division";
-            dgvDivision.Columns[0].Width = 300;
+            dgvDivision.Columns[0].Width = 320;
         }
 
         private void btnDivisionClear_Click(object sender, EventArgs e)
@@ -234,7 +234,7 @@ namespace LMCC_System.Setting
         //SURVEYOR TYPE DATA GRIDVIEW STYLE
         private void DgvSurveyorTypeStyle()
         {
-            dgvSurveyorType.Columns[0].Width = 300;
+            dgvSurveyorType.Columns[0].Width = 320;
             dgvSurveyorType.Columns[0].HeaderText = "Surveyor Type";
         }
         //ADD NEW SURVEYOR TYPE
@@ -423,7 +423,7 @@ namespace LMCC_System.Setting
         //DATAGRIDVIEW STYLE LANDA MARK TYPE
         private void DgvLandMarkTypeStyle()
         {
-            dgvLandMarkType.Columns[0].Width = 300;
+            dgvLandMarkType.Columns[0].Width = 320;
             dgvLandMarkType.Columns[0].HeaderText = "Land Mark Type";
         }
 
