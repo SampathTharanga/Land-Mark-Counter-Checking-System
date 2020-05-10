@@ -10,6 +10,7 @@ namespace LMCC_System
     public partial class frmUser : Form
     {
         UserClassBLL objUserLogic;
+
         public frmUser()
         {
             InitializeComponent();

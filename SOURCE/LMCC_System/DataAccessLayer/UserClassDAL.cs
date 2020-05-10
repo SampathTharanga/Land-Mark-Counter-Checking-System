@@ -43,6 +43,11 @@ namespace DataAccessLayer
         {
             string sql = "INSERT INTO Table_User VALUES ('" +model.username + "','" + model.userType + "','" + model.password + "','" + model.secQue + "','" + model.secAns + "','" + model.mobile + "','" + model.email + "','" + model.division + "')";
             InsertUpdateDeleteSQLString(sql);
+
+            //INSERT COOMON DETAILS
+            string district = "Please Update", snrss = "Please Update";
+            string com_query = "INSERT INTO Table_Common_Details VALUES('" + model.division + "', '" + model.username + "', '" + district + "', '" + snrss + "')";
+            InsertUpdateDeleteSQLString(com_query);
         }
 
         //LOAD USER DATA

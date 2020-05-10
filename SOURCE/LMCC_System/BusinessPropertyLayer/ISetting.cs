@@ -20,5 +20,12 @@ namespace BusinessPropertyLayer
         //LAND MARK PROPERTIES
         string landMarkType { get; set; }
         string existLandMarkType { get; set; }
+
+
+        //COMMON DETAILS
+        string common_division { get; set; }
+        string common_username { get; set; }
+        string common_district { get; set; }
+        string common_snrss { get; set; }
     }
 }

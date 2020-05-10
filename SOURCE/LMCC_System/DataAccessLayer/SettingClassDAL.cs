@@ -191,5 +191,35 @@ namespace DataAccessLayer
             ds = (DataSet)ExecuteSqlString(query, "Table_LM_Type");
             return ds;
         }
+
+
+
+
+        //--------------------------------------------------------------//
+        //                       LAND MARK TYPE                         //
+        //--------------------------------------------------------------//
+
+        //ADD COMMEN DETAILS
+        //public void AddCommonDetails(ISetting model)
+        //{
+        //    string query = "INSERT INTO Table_Common_Details VALUES('" + model.common_division + "', '" + model.common_username + "', '" + model.common_district + "', '" + model.common_snrss + "')";
+        //    InsertUpdateeleteSQL(query);
+        //}
+
+        //UPDATE COMMEN DETAILS
+        public void UpdateCommonDetails(ISetting model)
+        {
+            string query = "UPDATE Table_Common_Details SET district='" + model.common_district + "', snrss='" + model.common_snrss + "' WHERE division='" + model.common_division + "' AND username='" + model.common_username + "'";
+            InsertUpdateeleteSQL(query);
+        }
+
+        //LOAD COMMEN DETAILS
+        public object LoadCommonDetails()
+        {
+            DataSet ds = new DataSet();
+            string query = "SELECT * FROM Table_Common_Details";
+            ds = (DataSet)ExecuteSqlString(query, "Table_Common_Details");
+            return ds;
+        }
     }
 }

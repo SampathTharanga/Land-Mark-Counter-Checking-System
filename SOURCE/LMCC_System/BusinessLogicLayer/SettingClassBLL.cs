@@ -22,6 +22,12 @@ namespace BusinessLogicLayer
         public string landMarkType { get; set; }
         public string existLandMarkType { get; set; }
 
+        //COMMON DETAILS
+        public string common_division { get; set; }
+        public string common_username { get; set; }
+        public string common_district { get; set; }
+        public string common_snrss { get; set; }
+
         //SETTING BUSINESS LAYER CLASS OBJECT
         SettingClassDAL objSetDal;
 
@@ -123,6 +129,33 @@ namespace BusinessLogicLayer
         {
             objSetDal = new SettingClassDAL();
             return objSetDal.LoadLandMarkTypeDB();
+        }
+
+
+
+        //--------------------------------------------------------------//
+        //                       COMMON DETAILS                         //
+        //--------------------------------------------------------------//
+
+        ////ADD COMMON DETAILS
+        //public void AddCommonDetailsDB()
+        //{
+        //    objSetDal = new SettingClassDAL();
+        //    objSetDal.AddCommonDetails(this);
+        //}
+
+        //UPDATE COMMON DETAILS
+        public void UpdateCommonDetailsDB()
+        {
+            objSetDal = new SettingClassDAL();
+            objSetDal.UpdateCommonDetails(this);
+        }
+
+        //LOAD COMMON DETAILS
+        public object LoadCommonDetails()
+        {
+            objSetDal = new SettingClassDAL();
+            return objSetDal.LoadCommonDetails();
         }
     }
 }

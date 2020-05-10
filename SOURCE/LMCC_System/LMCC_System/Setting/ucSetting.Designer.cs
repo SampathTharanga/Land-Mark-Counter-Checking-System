@@ -63,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnCommonClear = new System.Windows.Forms.Button();
             this.txtCommonNameOfSnrss = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCommonSave = new System.Windows.Forms.Button();
@@ -456,7 +455,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnCommonClear);
             this.groupBox3.Controls.Add(this.txtCommonNameOfSnrss);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.btnCommonSave);
@@ -467,19 +465,6 @@
             this.groupBox3.Size = new System.Drawing.Size(323, 141);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
-            // 
-            // btnCommonClear
-            // 
-            this.btnCommonClear.BackColor = System.Drawing.Color.White;
-            this.btnCommonClear.Image = global::LMCC_System.Properties.Resources.clear;
-            this.btnCommonClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCommonClear.Location = new System.Drawing.Point(224, 92);
-            this.btnCommonClear.Name = "btnCommonClear";
-            this.btnCommonClear.Size = new System.Drawing.Size(85, 28);
-            this.btnCommonClear.TabIndex = 53;
-            this.btnCommonClear.Text = "Clear";
-            this.btnCommonClear.UseVisualStyleBackColor = false;
-            this.btnCommonClear.Click += new System.EventHandler(this.btnCommonClear_Click);
             // 
             // txtCommonNameOfSnrss
             // 
@@ -502,12 +487,13 @@
             this.btnCommonSave.BackColor = System.Drawing.Color.White;
             this.btnCommonSave.Image = global::LMCC_System.Properties.Resources.add;
             this.btnCommonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCommonSave.Location = new System.Drawing.Point(133, 92);
+            this.btnCommonSave.Location = new System.Drawing.Point(224, 91);
             this.btnCommonSave.Name = "btnCommonSave";
             this.btnCommonSave.Size = new System.Drawing.Size(85, 28);
             this.btnCommonSave.TabIndex = 31;
             this.btnCommonSave.Text = "Save";
             this.btnCommonSave.UseVisualStyleBackColor = false;
+            this.btnCommonSave.Click += new System.EventHandler(this.btnCommonSave_Click);
             // 
             // txtCommonNameOfDistrict
             // 
@@ -659,6 +645,5 @@
         private System.Windows.Forms.Button btnLMTypeClear;
         private System.Windows.Forms.Button btnSurveyorTypeClear;
         private System.Windows.Forms.Button btnDivisionClear;
-        private System.Windows.Forms.Button btnCommonClear;
     }
 }

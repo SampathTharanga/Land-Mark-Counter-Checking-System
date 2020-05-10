@@ -67,7 +67,8 @@ namespace LMCC_System.Setting
             }
         }
 
-
+        //COMMON DETAILS
+        string _division = string.Empty, _username = string.Empty;
 
 
         //--------------------------------------------------------------//
@@ -177,6 +178,7 @@ namespace LMCC_System.Setting
             LoadDivisionDatas();//LOAD DIVISION DATA
             LoadSurveyorTypeData();//LOAD SURVEYOR TYPE DATA
             LoadLandMarTypekData();//LOAD LAND MARK TYPE DATA
+            LoadCommonDetails();//LOAD COMMON DETAILS
         }
 
         private void dgvDivision_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -457,9 +459,58 @@ namespace LMCC_System.Setting
                 UpdateLandMark();//UPDATE LAND MARK TYPE
         }
 
-        private void btnCommonClear_Click(object sender, EventArgs e)
+
+        //--------------------------------------------------------------//
+        //                       COMMON DETIALS                         //
+        //--------------------------------------------------------------//
+
+        private void btnCommonSave_Click(object sender, EventArgs e)
         {
-            ClearTextBoxces();
+            UpdateNewCommonDetails();//UPDATE COMMON DETAILS
+        }
+
+
+        //UPDATE COMMON DETAILS
+        private void UpdateNewCommonDetails()
+        {
+            try
+            {
+                if (String.IsNullOrWhiteSpace(txtCommonNameOfDistrict.Text) || String.IsNullOrWhiteSpace(txtCommonNameOfSnrss.Text))
+                    MessageBox.Show("Common details can not be empty!", "Common Details", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    objSetting = new SettingClassBLL();
+
+                    objSetting = new SettingClassBLL()
+                    {
+                        common_district = txtCommonNameOfDistrict.Text,
+                        common_snrss = txtCommonNameOfSnrss.Text,
+                        common_division= _division,
+                        common_username= _username
+                    };
+                    objSetting.UpdateCommonDetailsDB();
+                    MessageBox.Show("Common Details update successful!", "Common Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Common Details", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //LOAD COMMON DETAILS
+        private void LoadCommonDetails()
+        {
+            objSetting = new SettingClassBLL();
+            DataSet ds = new DataSet();
+            ds = (DataSet)objSetting.LoadCommonDetails();
+
+            _username = ds.Tables["Table_Common_Details"].Rows[0]["username"].ToString();
+            _division = ds.Tables["Table_Common_Details"].Rows[0]["division"].ToString();
+            
+            txtCommonNameOfDistrict.Text = ds.Tables["Table_Common_Details"].Rows[0]["district"].ToString();
+            txtCommonNameOfSnrss.Text = ds.Tables["Table_Common_Details"].Rows[0]["snrss"].ToString();
         }
     }
 }
