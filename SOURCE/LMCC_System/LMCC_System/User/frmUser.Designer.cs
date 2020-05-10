@@ -43,7 +43,6 @@
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.txtSecAns = new System.Windows.Forms.TextBox();
             this.txtMobile = new System.Windows.Forms.TextBox();
-            this.txtDivision = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cbxType = new System.Windows.Forms.ComboBox();
             this.cbxSecQue = new System.Windows.Forms.ComboBox();
@@ -55,6 +54,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.cbxDivision = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -205,15 +205,6 @@
             this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobile_KeyPress);
             this.txtMobile.Validating += new System.ComponentModel.CancelEventHandler(this.txtMobile_Validating);
             // 
-            // txtDivision
-            // 
-            this.txtDivision.Location = new System.Drawing.Point(587, 125);
-            this.txtDivision.MaxLength = 30;
-            this.txtDivision.Name = "txtDivision";
-            this.txtDivision.Size = new System.Drawing.Size(271, 20);
-            this.txtDivision.TabIndex = 31;
-            this.txtDivision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDivision_KeyPress);
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(587, 60);
@@ -312,6 +303,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxDivision);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnnClear);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -319,7 +311,6 @@
             this.groupBox1.Controls.Add(this.cbxSecQue);
             this.groupBox1.Controls.Add(this.cbxType);
             this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtDivision);
             this.groupBox1.Controls.Add(this.txtMobile);
             this.groupBox1.Controls.Add(this.txtSecAns);
             this.groupBox1.Controls.Add(this.txtConfirmPass);
@@ -354,6 +345,15 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // cbxDivision
+            // 
+            this.cbxDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxDivision.FormattingEnabled = true;
+            this.cbxDivision.Location = new System.Drawing.Point(587, 126);
+            this.cbxDivision.Name = "cbxDivision";
+            this.cbxDivision.Size = new System.Drawing.Size(271, 21);
+            this.cbxDivision.TabIndex = 48;
             // 
             // frmUser
             // 
@@ -396,7 +396,6 @@
         private System.Windows.Forms.TextBox txtConfirmPass;
         private System.Windows.Forms.TextBox txtSecAns;
         private System.Windows.Forms.TextBox txtMobile;
-        private System.Windows.Forms.TextBox txtDivision;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox cbxType;
         private System.Windows.Forms.ComboBox cbxSecQue;
@@ -408,5 +407,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox cbxDivision;
     }
 }

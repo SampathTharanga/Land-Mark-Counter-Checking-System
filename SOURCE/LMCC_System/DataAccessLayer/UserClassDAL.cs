@@ -1,4 +1,5 @@
 ﻿using BusinessPropertyLayer;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -90,6 +91,26 @@ namespace DataAccessLayer
                         check = true;
                     return check;
 
+                }
+            }
+        }
+
+        //LOAD DIVISION TO COMBO BOX
+        public List<string> LoadDivisionToCombo()
+        {
+            using (SqlConnection objSqlcon=new SqlConnection(conn))
+            {
+                objSqlcon.Open();
+                string query = "SELECT division FROM Table_Division";
+                using (SqlCommand cmd=new SqlCommand(query,objSqlcon))
+                {
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    List<string> divisionList = new List<string>();
+                    while (dr.Read())
+                    {
+                        divisionList.Add(dr["division"].ToString());
+                    }
+                    return divisionList;
                 }
             }
         }

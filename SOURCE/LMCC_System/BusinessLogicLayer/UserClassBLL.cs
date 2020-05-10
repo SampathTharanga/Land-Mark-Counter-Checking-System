@@ -1,5 +1,6 @@
 ﻿using BusinessPropertyLayer;
 using DataAccessLayer;
+using System.Collections.Generic;
 
 namespace BusinessLogicLayer
 {
@@ -51,6 +52,13 @@ namespace BusinessLogicLayer
         {
             objUserClsBL = new UserClassDAL();
             return objUserClsBL.NewUserDataCheck(username, division);
+        }
+
+        //LOAD DIVISION TO COMBO BOX
+        public List<string> LoadDivisioToCbx()
+        {
+            objUserClsBL = new UserClassDAL();
+            return objUserClsBL.LoadDivisionToCombo();
         }
     }
 }

@@ -202,7 +202,7 @@ namespace LMCC_System.Setting
 
         private void txtDivisioin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete || e.KeyChar == (char)Keys.Space);
         }
 
 
@@ -333,7 +333,7 @@ namespace LMCC_System.Setting
 
         private void txtSurveyorType_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete || e.KeyChar == (char)Keys.Space);
         }
 
 
@@ -448,7 +448,7 @@ namespace LMCC_System.Setting
 
         private void txtLMType_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete || e.KeyChar == (char)Keys.Space);
         }
 
         private void btnLMTypeAdd_Click(object sender, EventArgs e)
@@ -497,6 +497,16 @@ namespace LMCC_System.Setting
 
                 MessageBox.Show(ex.Message, "Common Details", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtCommonNameOfDistrict_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete || e.KeyChar == (char)Keys.Space);
+        }
+
+        private void txtCommonNameOfSnrss_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete || e.KeyChar == (char)Keys.Space);
         }
 
         //LOAD COMMON DETAILS

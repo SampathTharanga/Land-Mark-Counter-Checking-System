@@ -53,7 +53,7 @@ namespace LMCC_System
             ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
 
             txtUsername.Enabled = true;//ENABLE TEXTBOX AFTER DATAGRIDVIEW ROW DOUBLE CLICK
-            txtDivision.Enabled = true;
+            cbxDivision.Enabled = true;
             btnAdd.Text = "Add";//TEXTBOX DEFAULT TEXT SET AFTER DATAGRIDVIEW ROW DOUBLE CLICK
         }
 
@@ -80,14 +80,14 @@ namespace LMCC_System
                     String.IsNullOrWhiteSpace(txtSecAns.Text) ||
                     String.IsNullOrWhiteSpace(txtEmail.Text) ||
                     String.IsNullOrWhiteSpace(txtMobile.Text) ||
-                    String.IsNullOrWhiteSpace(txtDivision.Text)
+                    String.IsNullOrWhiteSpace(cbxDivision.Text)
                     )
                 {
                     MessageBox.Show("You must be filling all field!.", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    if (objUserLogic.NewUserCheck(txtUsername.Text, txtDivision.Text) == false)
+                    if (objUserLogic.NewUserCheck(txtUsername.Text, cbxDivision.Text) == false)
                     {
 
                         //PROPERTIES FOR DATA ADD
@@ -100,7 +100,7 @@ namespace LMCC_System
                             secAns = txtSecAns.Text,
                             mobile = txtMobile.Text,
                             email = txtEmail.Text,
-                            division = txtDivision.Text
+                            division = cbxDivision.Text
                         };
                         //INSERT DATA TO DATABASE
                         objUserLogic.AddNewUser();
@@ -142,7 +142,7 @@ namespace LMCC_System
                     String.IsNullOrWhiteSpace(txtSecAns.Text) ||
                     String.IsNullOrWhiteSpace(txtEmail.Text) ||
                     String.IsNullOrWhiteSpace(txtMobile.Text) ||
-                    String.IsNullOrWhiteSpace(txtDivision.Text)
+                    String.IsNullOrWhiteSpace(cbxDivision.Text)
                  )
                 {
                     MessageBox.Show("You must be filling all field!.", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -158,7 +158,7 @@ namespace LMCC_System
                             secAns = txtSecAns.Text,
                             mobile = txtMobile.Text,
                             email = txtEmail.Text,
-                            division = txtDivision.Text
+                            division = cbxDivision.Text
                         };
 
                         //UPDATE USER DATA
@@ -176,7 +176,7 @@ namespace LMCC_System
 
                         //TEXTBOX ENABLE
                         txtUsername.Enabled = true;
-                        txtDivision.Enabled = true; ;
+                    cbxDivision.Enabled = true; ;
     
                 }
             }
@@ -230,11 +230,15 @@ namespace LMCC_System
         private void frmUser_Load(object sender, EventArgs e)
         {
             txtUsername.Enabled = true;//ENABLE TEXTBOX AFTER DATAGRIDVIEW ROW DOUBLE CLICK
-            txtDivision.Enabled = true;
+            cbxDivision.Enabled = true;
             btnAdd.Text = "Add";//TEXTBOX DEFAULT TEXT SET AFTER DATAGRIDVIEW ROW DOUBLE CLICK   
 
             LoadDataDgv();//LOAD USER DATA
             DataGrdViewDesign();//DATAGRIDVIEW DESIGN
+
+            //LOAD DIVISION DATA TO COMBO BOX
+            objUserLogic = new UserClassBLL();
+            cbxDivision.DataSource=objUserLogic.LoadDivisioToCbx();
         }
 
         //DATAGRIDVIEW DESIGN SECTION
@@ -305,7 +309,7 @@ namespace LMCC_System
             try
             {
                 txtUsername.Enabled = false;
-                txtDivision.Enabled = false;
+                cbxDivision.Enabled = false;
                 btnAdd.Text = "Update";//ADD BUTTON TEXT CHANGE TO Update
 
                 txtUsername.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();
@@ -316,7 +320,7 @@ namespace LMCC_System
                 txtSecAns.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
                 txtMobile.Text = dgvUser.CurrentRow.Cells[5].Value.ToString();
                 txtEmail.Text = dgvUser.CurrentRow.Cells[6].Value.ToString();
-                txtDivision.Text = dgvUser.CurrentRow.Cells[7].Value.ToString();
+                cbxDivision.Text = dgvUser.CurrentRow.Cells[7].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -337,12 +341,7 @@ namespace LMCC_System
 
         private void txtSecAns_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
-        }
-
-        private void txtDivision_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete);
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete || e.KeyChar == (char)Keys.Space);
         }
     }
 }
