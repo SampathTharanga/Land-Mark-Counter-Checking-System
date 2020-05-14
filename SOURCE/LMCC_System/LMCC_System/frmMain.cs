@@ -31,11 +31,24 @@ namespace LMCC_System
         {
             InitializeComponent();
             Load += new EventHandler(frmMain_Load);
-
+            
             lblUserProfile.Text = loginUser;//CURRENT LOGIN USERNAME
 
             ButtonsBorderRemove(pnlLeftMenu);//LEFT MENU BUTTONS BORDER REMOVE
         }
+
+
+        public string _CurrentUserDivision
+        {
+            get { return lblCommenDetails.Text; }
+            set { lblCommenDetails.Text = division; }
+        }
+        public string _CurrentUsername
+        {
+            get { return lblUserProfile.Text; }
+        }
+
+
         //LEFT MENU BUTTONS BORDER REMOVE
         private void ButtonsBorderRemove(Panel panel)
         {
@@ -83,6 +96,8 @@ namespace LMCC_System
             _btnSetting = false;
         }
 
+
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             try
@@ -115,6 +130,7 @@ namespace LMCC_System
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
+        string division;
         //AT LEAST ONE USER EXIST OR NOT CHECK
         private void LoginUserAllAvailableCheck()
         {
@@ -126,7 +142,8 @@ namespace LMCC_System
                 string secQue = ds.Tables["Table_User"].Rows[0].Field<string>("sec_question");
                 string secAns = ds.Tables["Table_User"].Rows[0].Field<string>("sec_answer");
                 string mobile = ds.Tables["Table_User"].Rows[0].Field<string>("mobile");
-                string division = ds.Tables["Table_User"].Rows[0].Field<string>("division");
+                division = ds.Tables["Table_User"].Rows[0].Field<string>("division");
+                lblCommenDetails.Text = division;//CURRENT USER DIVISION 
                 if (string.IsNullOrEmpty(secQue) || string.IsNullOrEmpty(secAns) || string.IsNullOrEmpty(mobile) || string.IsNullOrEmpty(division))
                 {
                     frmUser frmUs = new frmUser();

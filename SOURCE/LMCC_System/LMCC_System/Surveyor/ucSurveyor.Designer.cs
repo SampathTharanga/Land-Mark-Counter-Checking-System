@@ -133,6 +133,7 @@
             this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtEmail
             // 
@@ -308,6 +309,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucSurveyor";
             this.Size = new System.Drawing.Size(767, 641);
+            this.Load += new System.EventHandler(this.ucSurveyor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

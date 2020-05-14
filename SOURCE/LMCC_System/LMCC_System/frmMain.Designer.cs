@@ -158,9 +158,8 @@
             this.lblCommenDetails.ForeColor = System.Drawing.Color.White;
             this.lblCommenDetails.Location = new System.Drawing.Point(71, 126);
             this.lblCommenDetails.Name = "lblCommenDetails";
-            this.lblCommenDetails.Size = new System.Drawing.Size(74, 13);
+            this.lblCommenDetails.Size = new System.Drawing.Size(0, 13);
             this.lblCommenDetails.TabIndex = 10;
-            this.lblCommenDetails.Text = "Anuradhapura";
             this.lblCommenDetails.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblCommenDetails.MouseEnter += new System.EventHandler(this.lblCommenDetails_MouseEnter);
             this.lblCommenDetails.MouseLeave += new System.EventHandler(this.lblCommenDetails_MouseLeave);
@@ -199,9 +198,8 @@
             this.lblUserProfile.ForeColor = System.Drawing.Color.White;
             this.lblUserProfile.Location = new System.Drawing.Point(84, 104);
             this.lblUserProfile.Name = "lblUserProfile";
-            this.lblUserProfile.Size = new System.Drawing.Size(64, 17);
+            this.lblUserProfile.Size = new System.Drawing.Size(0, 17);
             this.lblUserProfile.TabIndex = 0;
-            this.lblUserProfile.Text = "Sampath";
             this.lblUserProfile.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblUserProfile.Click += new System.EventHandler(this.lblUserProfile_Click);
             this.lblUserProfile.MouseEnter += new System.EventHandler(this.lblUserProfile_MouseEnter);
