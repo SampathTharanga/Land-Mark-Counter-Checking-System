@@ -4,3 +4,9 @@ G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\ob
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.dll
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.pdb
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.csprojAssemblyReference.cache
+E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\bin\Debug\BusinessPropertyLayer.dll
+E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\bin\Debug\BusinessPropertyLayer.pdb
+E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.csprojAssemblyReference.cache
+E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.csproj.CoreCompileInputs.cache
+E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.dll
+E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessPropertyLayer\obj\Debug\BusinessPropertyLayer.pdb
