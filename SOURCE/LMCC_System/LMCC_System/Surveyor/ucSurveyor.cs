@@ -27,8 +27,8 @@ namespace LMCC_System
         }
 
         SurveyorClassBLL objClassBLL;
-        static string user = string.Empty;
-        frmMain objFrmMain = new frmMain(user);
+
+        frmMain objFrmMain = new frmMain("");
 
         public ucSurveyor()
         {
@@ -78,8 +78,8 @@ namespace LMCC_System
                 }
                 else
                 {
-                    if (objClassBLL.ExistSurveyor(txtEmpRegNo.Text, objFrmMain._CurrentUserDivision) == false)
-                    {
+                    //if (objClassBLL.ExistSurveyor(txtEmpRegNo.Text, objFrmMain._CurrentUserDivision) == false)
+                    //{
 
                         ////PROPERTIES FOR DATA ADD
                         //objUserLogic = new UserClassBLL()
@@ -105,12 +105,12 @@ namespace LMCC_System
 
                         ////SET TO BUTTON TEXT Add
                         //btnAdd.Text = "Add";
-                    }
+                    //}
 
-                    else
-                    {
-                        MessageBox.Show("Already exist this user!", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    //else
+                    //{
+                    //    MessageBox.Show("Already exist this user!", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
                 }
             }
             catch (Exception ex)
@@ -132,12 +132,19 @@ namespace LMCC_System
             ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
         }
 
+        //string _username="", _division="";
+        //public void PassValue(string username, string division)
+        //{
+        //    _division = division;
+        //    _username = username;
+        //}
+
+
+        
         private void ucSurveyor_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(objFrmMain._CurrentUserDivision) || string.IsNullOrWhiteSpace(objFrmMain._CurrentUsername))
-                MessageBox.Show(objFrmMain._CurrentUserDivision + " | " + objFrmMain._CurrentUsername);
-            else
-                MessageBox.Show("Empty");
+            //MessageBox.Show(_division + " | " + _username);
+            MessageBox.Show(objFrmMain.un);
         }
     }
 }

@@ -10,6 +10,7 @@ namespace LMCC_System
     public partial class frmMain : Form
     {
         UserClassBLL objUserLogic;
+        ucSurveyor objUcSurveyor;
 
         private static bool isRun = false;
         private static readonly object syncLock = new object();
@@ -36,18 +37,6 @@ namespace LMCC_System
 
             ButtonsBorderRemove(pnlLeftMenu);//LEFT MENU BUTTONS BORDER REMOVE
         }
-
-
-        public string _CurrentUserDivision
-        {
-            get { return lblCommenDetails.Text; }
-            set { lblCommenDetails.Text = division; }
-        }
-        public string _CurrentUsername
-        {
-            get { return lblUserProfile.Text; }
-        }
-
 
         //LEFT MENU BUTTONS BORDER REMOVE
         private void ButtonsBorderRemove(Panel panel)
@@ -130,7 +119,6 @@ namespace LMCC_System
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-        string division;
         //AT LEAST ONE USER EXIST OR NOT CHECK
         private void LoginUserAllAvailableCheck()
         {
@@ -142,7 +130,7 @@ namespace LMCC_System
                 string secQue = ds.Tables["Table_User"].Rows[0].Field<string>("sec_question");
                 string secAns = ds.Tables["Table_User"].Rows[0].Field<string>("sec_answer");
                 string mobile = ds.Tables["Table_User"].Rows[0].Field<string>("mobile");
-                division = ds.Tables["Table_User"].Rows[0].Field<string>("division");
+                string division = ds.Tables["Table_User"].Rows[0].Field<string>("division");
                 lblCommenDetails.Text = division;//CURRENT USER DIVISION 
                 if (string.IsNullOrEmpty(secQue) || string.IsNullOrEmpty(secAns) || string.IsNullOrEmpty(mobile) || string.IsNullOrEmpty(division))
                 {
@@ -150,9 +138,15 @@ namespace LMCC_System
                     frmUs.ShowDialog();
                     MessageBox.Show("You must filling all of details.", "User Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                //SET CURRENT USERNAME AND DIVISION
+                //objUcSurveyor = new ucSurveyor();
+                //objUcSurveyor.PassValue(lblUserProfile.Text, division);
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
+
+        public string un { get { return lblCommenDetails.Text; } }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -359,6 +353,7 @@ namespace LMCC_System
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
+
 
         private void btnSurveyor_Click(object sender, EventArgs e)
         {
