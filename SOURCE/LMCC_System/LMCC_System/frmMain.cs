@@ -142,6 +142,8 @@ namespace LMCC_System
                 //SET CURRENT USERNAME AND DIVISION
                 //objUcSurveyor = new ucSurveyor();
                 //objUcSurveyor.PassValue(lblUserProfile.Text, division);
+
+                
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
