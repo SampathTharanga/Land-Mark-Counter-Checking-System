@@ -1,12 +1,8 @@
-﻿using System;
+﻿using BusinessPropertyLayer;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BusinessPropertyLayer;
 
 namespace DataAccessLayer
 {
@@ -59,11 +55,6 @@ namespace DataAccessLayer
         //LOAD SURVEYOR DATA
         public object LoadSurveyor()
         {
-            //DataSet ds = new DataSet();
-            //string sql = "SELECT * FROM Table_Surveyor";
-            //ds = (DataSet)ExecuteSqlString(sql);
-            //return ds;
-
             using (SqlConnection objSqlConn = new SqlConnection(conn))
             {
                 string sql = "SELECT * FROM Table_Surveyor";
@@ -95,11 +86,11 @@ namespace DataAccessLayer
         //LOAD SURVEYOR TYPE TO COMBOBOX
         public List<string> LoadSurveyorTypeToCombo()
         {
-            using (SqlConnection objSqlCon=new SqlConnection(conn))
+            using (SqlConnection objSqlCon = new SqlConnection(conn))
             {
                 objSqlCon.Open();
                 string query = "SELECT surveyor_type FROM Table_Surveyor_Type";
-                using (SqlCommand cmd=new SqlCommand(query, objSqlCon))
+                using (SqlCommand cmd = new SqlCommand(query, objSqlCon))
                 {
                     SqlDataReader dr = cmd.ExecuteReader();
                     List<string> surveyorTypeList = new List<string>();
@@ -109,37 +100,6 @@ namespace DataAccessLayer
                     }
                     return surveyorTypeList;
                 }
-            }
-        }
-
-
-        //DATA FILTER
-        public object SearchDataDB()
-        {
-            //DataSet ds = new DataSet();
-            //ds = (DataSet)objClassBLL.LoadSurveyor();
-            //DataTable dt = ds.Tables["Table_Surveyor"];
-            //DataView dv = new DataView(dt);
-            //dv.RowFilter = string.Format("initial_name like '%" + txtSearchName.Text + "%'");
-            //dgvSurveyor.Refresh();
-
-
-            using (SqlConnection objSqlCon = new SqlConnection(conn))
-            {
-                objSqlCon.Open();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Table_Surveyor", conn);
-                DataTable dtbl = new DataTable();
-                da.Fill(dtbl);
-
-                return da;
-                //BindingSource bnsue = new BindingSource();
-                //bnsue.DataSource = dtbl;
-                //dgvInvoiceView.DataSource = bnsue;
-                //da.Update(dtbl);
-
-                //DataView dv = new DataView(dtbl);
-                //dv.RowFilter = "invoiceNo like '%" + txtInvoNo.Text + "%' ";
-                //dgvInvoiceView.DataSource = dv;
             }
         }
     }

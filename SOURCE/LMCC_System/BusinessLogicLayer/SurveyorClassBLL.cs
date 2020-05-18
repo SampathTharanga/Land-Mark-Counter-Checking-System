@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BusinessLogicLayer;
-using BusinessPropertyLayer;
+﻿using BusinessPropertyLayer;
 using DataAccessLayer;
+using System;
+using System.Collections.Generic;
 
 namespace BusinessLogicLayer
 {
@@ -57,11 +53,5 @@ namespace BusinessLogicLayer
             objSurveyorDAL = new SurveyorClassDAL();
             return objSurveyorDAL.LoadSurveyorTypeToCombo();
         }
-
-        //public object SearchData(string data)
-        //{
-        //    objSurveyorDAL = new SurveyorClassDAL();
-        //    return objSurveyorDAL.SearchDataDB(data);
-        //}
     }
 }

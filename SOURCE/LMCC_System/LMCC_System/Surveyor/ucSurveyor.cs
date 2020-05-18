@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BusinessLogicLayer;
+using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BusinessLogicLayer;
+using System.Drawing;
 using System.Text.RegularExpressions;
-using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace LMCC_System
 {
@@ -229,6 +224,10 @@ namespace LMCC_System
             //LOAD DIVISION DATA TO COMBO BOX
             objClassBLL = new SurveyorClassBLL();
             cbxSurveyorType.DataSource = objClassBLL.LoadSurveyorType();
+            cbxSearchSurType.DataSource = objClassBLL.LoadSurveyorType();
+
+            //CLEAR ALL COMBOBOX DEFAULT SELECT VALUE
+            ClearTextBoxces();
         }
 
         //DATAGRIDVIEW DESIGN SECTION
@@ -317,7 +316,34 @@ namespace LMCC_System
         private void txtSearchName_TextChanged(object sender, EventArgs e)
         {
             //FILTER DATA
-            (dgvSurveyor.DataSource as DataTable).DefaultView.RowFilter = string.Format("initial_name  like '%" + txtSearchName.Text + "%'");
+            (dgvSurveyor.DataSource as DataTable).DefaultView.RowFilter = string.Format("initial_name  LIKE '%" + txtSearchName.Text + "%'");
+        }
+
+        private void txtSearchEmpNo_TextChanged(object sender, EventArgs e)
+        {
+            //FILTER DATA
+            (dgvSurveyor.DataSource as DataTable).DefaultView.RowFilter = string.Format("emp_reg_no  LIKE '%" + txtSearchEmpNo.Text + "%'");
+        }
+
+        private void cbxSearchSurType_TextChanged(object sender, EventArgs e)
+        {
+            //FILTER DATA
+            (dgvSurveyor.DataSource as DataTable).DefaultView.RowFilter = string.Format("surveyor_type  LIKE '%" + cbxSearchSurType.Text.ToString() + "%'");
+        }
+
+        private void txtSearchName_MouseClick(object sender, MouseEventArgs e)
+        {
+            ClearTextBoxces();//CLEAR ALL COMBOBOX DEFAULT SELECT VALUE
+        }
+
+        private void txtSearchEmpNo_MouseClick(object sender, MouseEventArgs e)
+        {
+            ClearTextBoxces();//CLEAR ALL COMBOBOX DEFAULT SELECT VALUE
+        }
+
+        private void cbxSearchSurType_MouseClick(object sender, MouseEventArgs e)
+        {
+            ClearTextBoxces();//CLEAR ALL COMBOBOX DEFAULT SELECT VALUE
         }
 
         //MOBILE NUMBER VALIDATE
