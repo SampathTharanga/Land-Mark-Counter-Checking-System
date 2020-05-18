@@ -27,8 +27,6 @@ G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debu
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\Database.mdf
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\Database_log.ldf
-E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\DataAccessLayer.dll
-E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\BusinessPropertyLayer.dll
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\BusinessPropertyLayer.pdb
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
@@ -36,3 +34,14 @@ E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\Database.mdf
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\Database_log.ldf
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\BusinessPropertyLayer.dll
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\bin\Debug\BusinessPropertyLayer.pdb
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

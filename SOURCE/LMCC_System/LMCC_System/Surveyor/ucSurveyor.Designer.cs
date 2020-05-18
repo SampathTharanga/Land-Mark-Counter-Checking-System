@@ -122,6 +122,7 @@
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -157,6 +158,7 @@
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(190, 20);
             this.txtMobile.TabIndex = 9;
+            this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobile_KeyPress);
             // 
             // label5
             // 
@@ -290,6 +292,7 @@
             this.dgvSurveyor.Name = "dgvSurveyor";
             this.dgvSurveyor.Size = new System.Drawing.Size(665, 243);
             this.dgvSurveyor.TabIndex = 13;
+            this.dgvSurveyor.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvSurveyor_MouseDoubleClick);
             // 
             // label7
             // 

@@ -115,6 +115,9 @@ namespace LMCC_System
                         isRun = true;
                     }
                 }
+
+                //PARSE CURRENT USER DATA TO SURVEYOR USERCONTROL
+                ucSurveyor.PassValue(lblUserProfile.Text, lblCommenDetails.Text);
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
@@ -147,8 +150,6 @@ namespace LMCC_System
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
-
-        public string un { get { return lblCommenDetails.Text; } }
 
         private void btnHome_Click(object sender, EventArgs e)
         {

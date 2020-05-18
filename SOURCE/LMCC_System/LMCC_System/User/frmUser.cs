@@ -176,7 +176,7 @@ namespace LMCC_System
 
                         //TEXTBOX ENABLE
                         txtUsername.Enabled = true;
-                    cbxDivision.Enabled = true; ;
+                    cbxDivision.Enabled = true;
     
                 }
             }
