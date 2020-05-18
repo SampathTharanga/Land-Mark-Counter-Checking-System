@@ -94,7 +94,7 @@ namespace LMCC_System
                             date = DateTime.Today,
                             emp_reg_no=txtEmpRegNo.Text,
                             initail_name=txtName.Text,
-                            surveyor_type=cbxSearchSurType.Text,
+                            surveyor_type=cbxSurveyorType.Text.ToString(),
                             mobile=txtMobile.Text,
                             email=txtEmail.Text,
                             division=_division,
@@ -134,7 +134,7 @@ namespace LMCC_System
                 if (//CHECK TEXBOXES NOT NULL OR EMPTY
                     String.IsNullOrWhiteSpace(txtEmpRegNo.Text) ||
                     String.IsNullOrWhiteSpace(txtName.Text) ||
-                    String.IsNullOrWhiteSpace(cbxSearchSurType.Text) ||
+                    String.IsNullOrWhiteSpace(cbxSurveyorType.Text) ||
                     String.IsNullOrWhiteSpace(txtMobile.Text) ||
                     String.IsNullOrWhiteSpace(txtEmail.Text)
                  )

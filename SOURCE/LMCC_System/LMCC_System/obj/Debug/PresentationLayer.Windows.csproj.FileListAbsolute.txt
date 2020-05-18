@@ -110,8 +110,6 @@ E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debu
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.User.frmUserProfile.resources
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.GenerateResource.cache
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CoreCompileInputs.cache
-C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database.mdf
-C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database_log.ldf
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe.config
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\LMCC_System.pdb
