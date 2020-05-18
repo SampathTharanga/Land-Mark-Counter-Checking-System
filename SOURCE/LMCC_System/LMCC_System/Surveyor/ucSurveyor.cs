@@ -71,8 +71,8 @@ namespace LMCC_System
         //SAVE SURVEYOR DATA
         private void UserDataSave()
         {
-            //try
-            //{
+            try
+            {
                 if (//CHECK TEXBOXES NOT NULL OR EMPTY
                     String.IsNullOrWhiteSpace(txtEmpRegNo.Text) ||
                     String.IsNullOrWhiteSpace(txtName.Text) ||
@@ -92,13 +92,13 @@ namespace LMCC_System
                         objClassBLL = new SurveyorClassBLL()
                         {
                             date = DateTime.Today,
-                            emp_reg_no=txtEmpRegNo.Text,
-                            initail_name=txtName.Text,
-                            surveyor_type=cbxSurveyorType.Text.ToString(),
-                            mobile=txtMobile.Text,
-                            email=txtEmail.Text,
-                            division=_division,
-                            username=_username
+                            emp_reg_no = txtEmpRegNo.Text,
+                            initail_name = txtName.Text,
+                            surveyor_type = cbxSurveyorType.Text.ToString(),
+                            mobile = txtMobile.Text,
+                            email = txtEmail.Text,
+                            division = _division,
+                            username = _username
                         };
                         //INSERT DATA TO DATABASE
                         objClassBLL.AddNewSurveyor();
@@ -112,6 +112,8 @@ namespace LMCC_System
 
                         //SET TO BUTTON TEXT Add
                         btnAdd.Text = "Add";
+
+                        txtEmpRegNo.Enabled = true;
                     }
 
                     else
@@ -119,11 +121,11 @@ namespace LMCC_System
                         MessageBox.Show("Already exist this surveyor!", "Surveyor Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "USER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "USER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //UPDATE SURVEYOR DATA
@@ -167,6 +169,8 @@ namespace LMCC_System
 
                     //SET TO BUTTON TEXT Add
                     btnAdd.Text = "Add";
+
+                    txtEmpRegNo.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -208,6 +212,8 @@ namespace LMCC_System
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
+            btnAdd.Text = "Add";
+            txtEmpRegNo.Enabled = true;
         }
 
         private void ucSurveyor_Load(object sender, EventArgs e)
@@ -215,6 +221,7 @@ namespace LMCC_System
             lblDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
 
             btnAdd.Text = "Add";//TEXTBOX DEFAULT TEXT SET AFTER DATAGRIDVIEW ROW DOUBLE CLICK   
+            txtEmpRegNo.Enabled = true;
 
             LoadDataDgv();//LOAD USER DATA
             DataGrdViewDesign();//DATAGRIDVIEW DESIGN
@@ -240,11 +247,11 @@ namespace LMCC_System
 
                 dgvSurveyor.Columns[0].Width = 100;
                 dgvSurveyor.Columns[1].Width = 100;
-                dgvSurveyor.Columns[2].Width = 100;
-                dgvSurveyor.Columns[3].Width = 200;
+                dgvSurveyor.Columns[2].Width = 200;
+                dgvSurveyor.Columns[3].Width = 100;
                 dgvSurveyor.Columns[4].Width = 150;
-                dgvSurveyor.Columns[5].Width = 100;
-                dgvSurveyor.Columns[6].Width = 200;
+                dgvSurveyor.Columns[5].Width = 200;
+                dgvSurveyor.Columns[6].Width = 100;
                 dgvSurveyor.Columns[7].Width = 100;
 
                 //dgvUser.BorderStyle = BorderStyle.None;
@@ -266,7 +273,6 @@ namespace LMCC_System
                 dgvSurveyor.AllowUserToResizeRows = false;
 
                 dgvSurveyor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                dgvSurveyor.AllowUserToResizeColumns = false;
             }
             catch (Exception ex)
             {
@@ -280,7 +286,7 @@ namespace LMCC_System
             try
             {
                 btnAdd.Text = "Update";//ADD BUTTON TEXT CHANGE TO Update
-
+                txtEmpRegNo.Enabled = false;
                 txtEmpRegNo.Text = dgvSurveyor.CurrentRow.Cells[1].Value.ToString();
                 txtName.Text = dgvSurveyor.CurrentRow.Cells[2].Value.ToString();
                 cbxSurveyorType.Text = dgvSurveyor.CurrentRow.Cells[3].Value.ToString();
