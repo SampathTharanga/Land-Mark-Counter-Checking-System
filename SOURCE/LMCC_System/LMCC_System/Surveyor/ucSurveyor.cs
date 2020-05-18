@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace LMCC_System
 {
@@ -184,7 +185,6 @@ namespace LMCC_System
         {
             objClassBLL = new SurveyorClassBLL();
             dgvSurveyor.DataSource = objClassBLL.LoadSurveyor();
-            dgvSurveyor.DataMember = "Table_Surveyor";
         }
 
         //VALIDATING EMAIL IS CORRECT
@@ -314,6 +314,12 @@ namespace LMCC_System
                 SurveyorDataUpadate();//USER DATA UPDATE
         }
 
+        private void txtSearchName_TextChanged(object sender, EventArgs e)
+        {
+            //FILTER DATA
+            (dgvSurveyor.DataSource as DataTable).DefaultView.RowFilter = string.Format("initial_name  like '%" + txtSearchName.Text + "%'");
+        }
+
         //MOBILE NUMBER VALIDATE
         private void txtMobile_Validating(object sender, CancelEventArgs e)
         {
@@ -325,7 +331,5 @@ namespace LMCC_System
                 e.Cancel = true;
             }
         }
-
-
     }
 }

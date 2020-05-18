@@ -57,5 +57,11 @@ namespace BusinessLogicLayer
             objSurveyorDAL = new SurveyorClassDAL();
             return objSurveyorDAL.LoadSurveyorTypeToCombo();
         }
+
+        //public object SearchData(string data)
+        //{
+        //    objSurveyorDAL = new SurveyorClassDAL();
+        //    return objSurveyorDAL.SearchDataDB(data);
+        //}
     }
 }

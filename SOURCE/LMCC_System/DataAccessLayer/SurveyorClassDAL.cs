@@ -59,10 +59,19 @@ namespace DataAccessLayer
         //LOAD SURVEYOR DATA
         public object LoadSurveyor()
         {
-            DataSet ds = new DataSet();
-            string sql = "SELECT * FROM Table_Surveyor";
-            ds = (DataSet)ExecuteSqlString(sql);
-            return ds;
+            //DataSet ds = new DataSet();
+            //string sql = "SELECT * FROM Table_Surveyor";
+            //ds = (DataSet)ExecuteSqlString(sql);
+            //return ds;
+
+            using (SqlConnection objSqlConn = new SqlConnection(conn))
+            {
+                string sql = "SELECT * FROM Table_Surveyor";
+                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
         }
 
         //CHECK EXIST SURVEYOR
@@ -103,5 +112,35 @@ namespace DataAccessLayer
             }
         }
 
+
+        //DATA FILTER
+        public object SearchDataDB()
+        {
+            //DataSet ds = new DataSet();
+            //ds = (DataSet)objClassBLL.LoadSurveyor();
+            //DataTable dt = ds.Tables["Table_Surveyor"];
+            //DataView dv = new DataView(dt);
+            //dv.RowFilter = string.Format("initial_name like '%" + txtSearchName.Text + "%'");
+            //dgvSurveyor.Refresh();
+
+
+            using (SqlConnection objSqlCon = new SqlConnection(conn))
+            {
+                objSqlCon.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Table_Surveyor", conn);
+                DataTable dtbl = new DataTable();
+                da.Fill(dtbl);
+
+                return da;
+                //BindingSource bnsue = new BindingSource();
+                //bnsue.DataSource = dtbl;
+                //dgvInvoiceView.DataSource = bnsue;
+                //da.Update(dtbl);
+
+                //DataView dv = new DataView(dtbl);
+                //dv.RowFilter = "invoiceNo like '%" + txtInvoNo.Text + "%' ";
+                //dgvInvoiceView.DataSource = dv;
+            }
+        }
     }
 }
