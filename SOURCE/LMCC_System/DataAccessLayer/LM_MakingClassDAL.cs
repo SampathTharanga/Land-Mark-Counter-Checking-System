@@ -1,12 +1,8 @@
-﻿using System;
+﻿using BusinessPropertyLayer;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BusinessPropertyLayer;
 
 namespace DataAccessLayer
 {
@@ -36,13 +32,14 @@ namespace DataAccessLayer
                 using (SqlCommand objCmd = new SqlCommand(sqlstring, objSqlConn))
                 {
                     SqlDataAdapter objAdap = new SqlDataAdapter(objCmd);
-                    objAdap.Fill(ds, "Table_Surveyor");
+                    objAdap.Fill(ds, "Table_LM_Making");
                     return ds;
                 }
             }
         }
 
         //INSERT NEW LM MAKING
+        int id = 1;
         public void AddNewLmMakingDB(ILM_Making model)
         {
 
@@ -52,12 +49,14 @@ namespace DataAccessLayer
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                int id = 0;
-                if (dt.Rows.Count > 0) 
+
+                if (dt.Rows.Count > 0)
                 {
                     DataRow lastRow = dt.Rows[dt.Rows.Count - 1];
                     id = int.Parse(lastRow["making_id"].ToString());
+                    id++;
                 }
+
                 string query = "INSERT INTO Table_LM_Making VALUES ('" + id + "','" + model.date + "','" + model.lm_type + "','" + model.supplier_name + "','" + model.no_of_lm + "','" + model.username + "','" + model.division + "')";
                 InsertDeleteUpdateCommon(query);
             }
