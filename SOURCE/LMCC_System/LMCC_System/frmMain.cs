@@ -118,6 +118,9 @@ namespace LMCC_System
 
                 //PARSE CURRENT USER DATA TO SURVEYOR USERCONTROL
                 ucSurveyor.PassValue(lblUserProfile.Text, lblCommenDetails.Text);
+
+                //PARSE CURRENT USER DATA TO LM MAKING USERCONTROL
+                ucLMMaking.PassValue(lblUserProfile.Text, lblCommenDetails.Text);
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "User Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }

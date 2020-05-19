@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILM_Making.cs" />
     <Compile Include="ISetting.cs" />
     <Compile Include="ISurveyor.cs" />
     <Compile Include="IUser.cs" />

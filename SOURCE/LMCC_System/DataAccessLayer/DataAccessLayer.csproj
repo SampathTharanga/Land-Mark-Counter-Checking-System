@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LM_MakingClassDAL.cs" />
     <Compile Include="SettingClassDAL.cs" />
     <Compile Include="SurveyorClassDAL.cs" />
     <Compile Include="UserClassDAL.cs" />
