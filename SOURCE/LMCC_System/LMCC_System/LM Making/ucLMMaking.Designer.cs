@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -197,6 +200,8 @@
             this.txtSearchSupName.Name = "txtSearchSupName";
             this.txtSearchSupName.Size = new System.Drawing.Size(190, 20);
             this.txtSearchSupName.TabIndex = 31;
+            this.txtSearchSupName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSearchSupName_MouseClick);
+            this.txtSearchSupName.TextChanged += new System.EventHandler(this.txtSearchSupName_TextChanged);
             // 
             // cbxSearchLmType
             // 
@@ -206,6 +211,8 @@
             this.cbxSearchLmType.Name = "cbxSearchLmType";
             this.cbxSearchLmType.Size = new System.Drawing.Size(190, 21);
             this.cbxSearchLmType.TabIndex = 27;
+            this.cbxSearchLmType.TextChanged += new System.EventHandler(this.cbxSearchLmType_TextChanged);
+            this.cbxSearchLmType.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbxSearchLmType_MouseClick);
             // 
             // label3
             // 
@@ -218,9 +225,37 @@
             // 
             // dgvLmMaking
             // 
-            this.dgvLmMaking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLmMaking.AllowUserToAddRows = false;
+            this.dgvLmMaking.AllowUserToDeleteRows = false;
+            this.dgvLmMaking.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dgvLmMaking.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvLmMaking.BackgroundColor = System.Drawing.Color.White;
+            this.dgvLmMaking.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLmMaking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvLmMaking.ColumnHeadersHeight = 35;
+            this.dgvLmMaking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLmMaking.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvLmMaking.Location = new System.Drawing.Point(18, 62);
+            this.dgvLmMaking.MultiSelect = false;
             this.dgvLmMaking.Name = "dgvLmMaking";
+            this.dgvLmMaking.ReadOnly = true;
+            this.dgvLmMaking.RowHeadersVisible = false;
+            this.dgvLmMaking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLmMaking.Size = new System.Drawing.Size(665, 317);
             this.dgvLmMaking.TabIndex = 13;
             this.dgvLmMaking.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvLmMaking_MouseDoubleClick);

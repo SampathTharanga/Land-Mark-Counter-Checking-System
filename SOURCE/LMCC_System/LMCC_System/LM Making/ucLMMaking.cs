@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
+﻿using BusinessLogicLayer;
+using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 using System.Windows.Forms;
-using BusinessLogicLayer;
-using System.Text.RegularExpressions;
 
 namespace LMCC_System
 {
@@ -75,8 +69,8 @@ namespace LMCC_System
         //SAVE DATA
         private void DataSave()
         {
-            //try
-            //{
+            try
+            {
                 if (//CHECK TEXBOXES NOT NULL OR EMPTY
                     String.IsNullOrWhiteSpace(txtSupplierName.Text) ||
                     String.IsNullOrWhiteSpace(cbxLmType.Text.ToString()) ||
@@ -111,11 +105,11 @@ namespace LMCC_System
                         //SET TO BUTTON TEXT Add
                         btnAdd.Text = "Add";
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "LM MAKING", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "LM MAKING", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //UPDATE DATA
@@ -217,7 +211,29 @@ namespace LMCC_System
                 DataSave();//DATA SAVE
 
             if (btnAdd.Text == "Update")//UPDATE BUTTON USE
-                Update();//DATA UPDATE
+                DataUpadate();//DATA UPDATE
+        }
+
+        private void txtSearchSupName_TextChanged(object sender, EventArgs e)
+        {
+            //FILTER DATA
+            (dgvLmMaking.DataSource as DataTable).DefaultView.RowFilter = string.Format("supplier_name  LIKE '%" + txtSearchSupName.Text + "%'");
+        }
+
+        private void cbxSearchLmType_TextChanged(object sender, EventArgs e)
+        {
+            //FILTER DATA
+            (dgvLmMaking.DataSource as DataTable).DefaultView.RowFilter = string.Format("lm_type  LIKE '%" + cbxSearchLmType.Text + "%'");
+        }
+
+        private void txtSearchSupName_MouseClick(object sender, MouseEventArgs e)
+        {
+            ClearTextBoxces();//CLEAR ALL COMBOBOX DEFAULT SELECT VALUE
+        }
+
+        private void cbxSearchLmType_MouseClick(object sender, MouseEventArgs e)
+        {
+            ClearTextBoxces();//CLEAR ALL COMBOBOX DEFAULT SELECT VALUE
         }
 
         //DATAGRIDVIEW DESIGN SECTION
@@ -233,9 +249,9 @@ namespace LMCC_System
                 dgvLmMaking.Columns[5].HeaderText = "Username";
                 dgvLmMaking.Columns[6].HeaderText = "Division";
 
-                dgvLmMaking.Columns[0].Width = 100;
+                dgvLmMaking.Columns[0].Width = 50;
                 dgvLmMaking.Columns[1].Width = 100;
-                dgvLmMaking.Columns[2].Width = 200;
+                dgvLmMaking.Columns[2].Width = 100;
                 dgvLmMaking.Columns[3].Width = 200;
                 dgvLmMaking.Columns[4].Width = 100;
                 dgvLmMaking.Columns[5].Width = 100;
