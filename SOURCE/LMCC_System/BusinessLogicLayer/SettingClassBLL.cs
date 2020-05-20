@@ -1,5 +1,6 @@
 ﻿using BusinessPropertyLayer;
 using DataAccessLayer;
+using System.Collections.Generic;
 
 namespace BusinessLogicLayer
 {
@@ -22,6 +23,12 @@ namespace BusinessLogicLayer
         public string common_username { get; set; }
         public string common_district { get; set; }
         public string common_snrss { get; set; }
+
+        //STOCK PROPERTIES
+        public string stock_lm_type { get; set; }
+        public string stock_division { get; set; }
+        public int stock_lm_total { get; set; }
+
 
         //SETTING BUSINESS LAYER CLASS OBJECT
         SettingClassDAL objSetDal;
@@ -152,5 +159,31 @@ namespace BusinessLogicLayer
             objSetDal = new SettingClassDAL();
             return objSetDal.LoadCommonDetails();
         }
+
+        //--------------------------------------------------------------//
+        //                            STOCK                             //
+        //--------------------------------------------------------------//
+
+        //DEFAULT STOCK DATA INSERT
+        public void DefaultStockData()
+        {
+            objSetDal = new SettingClassDAL();
+            objSetDal.StockDefaultDataAddDB(this);
+        }
+
+        //LAN MARK TYPE COLLECTION
+        public List<string> AllLandMarkTypes()
+        {
+            objSetDal = new SettingClassDAL();
+            return objSetDal.LandMarkTypeSet();
+        }
+
+        //LAN MARK TYPE COLLECTION
+        public List<string> AllDivisios()
+        {
+            objSetDal = new SettingClassDAL();
+            return objSetDal.DivisionSet();
+        }
+        
     }
 }

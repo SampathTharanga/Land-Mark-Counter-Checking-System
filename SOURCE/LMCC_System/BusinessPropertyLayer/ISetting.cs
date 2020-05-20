@@ -21,5 +21,11 @@
         string common_username { get; set; }
         string common_district { get; set; }
         string common_snrss { get; set; }
+
+
+        //STOCK PROPERTIES
+        string stock_lm_type { get; set; }
+        string stock_division { get; set; }
+        int stock_lm_total { get; set; }
     }
 }

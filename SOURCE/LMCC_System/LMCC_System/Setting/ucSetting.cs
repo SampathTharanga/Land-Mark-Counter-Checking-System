@@ -99,6 +99,7 @@ namespace LMCC_System.Setting
                         objSetting.AddNewDivision();
                         MessageBox.Show("Added Successfully!", "Division Add", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDivisionDatas();
+                        DeafultValueAddToStock();//STOCK DEFAULT DATA INSERTING
                         ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
                     }
                     else
@@ -371,6 +372,7 @@ namespace LMCC_System.Setting
                     objSetting.AddNewLandMarkType();
                     MessageBox.Show("Land Mark Type added successful!", "Add New Land Mark Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadLandMarTypekData();
+                    DeafultValueAddToStockDivision();//STOCK DEFAULT DATA ADD WITH LM TYPE
                     ClearTextBoxces();
                 }
                 else
@@ -423,8 +425,15 @@ namespace LMCC_System.Setting
         //DATAGRIDVIEW STYLE LANDA MARK TYPE
         private void DgvLandMarkTypeStyle()
         {
-            dgvLandMarkType.Columns[0].Width = 320;
-            dgvLandMarkType.Columns[0].HeaderText = "Land Mark Type";
+            try
+            {
+                dgvLandMarkType.Columns[0].Width = 320;
+                dgvLandMarkType.Columns[0].HeaderText = "Land Mark Type";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "LAND MARK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnLMTypeClear_Click(object sender, EventArgs e)
@@ -512,15 +521,79 @@ namespace LMCC_System.Setting
         //LOAD COMMON DETAILS
         private void LoadCommonDetails()
         {
-            objSetting = new SettingClassBLL();
-            DataSet ds = new DataSet();
-            ds = (DataSet)objSetting.LoadCommonDetails();
+            try
+            {
+                objSetting = new SettingClassBLL();
+                DataSet ds = new DataSet();
+                ds = (DataSet)objSetting.LoadCommonDetails();
 
-            _username = ds.Tables["Table_Common_Details"].Rows[0]["username"].ToString();
-            _division = ds.Tables["Table_Common_Details"].Rows[0]["division"].ToString();
-            
-            txtCommonNameOfDistrict.Text = ds.Tables["Table_Common_Details"].Rows[0]["district"].ToString();
-            txtCommonNameOfSnrss.Text = ds.Tables["Table_Common_Details"].Rows[0]["snrss"].ToString();
+                _username = ds.Tables["Table_Common_Details"].Rows[0]["username"].ToString();
+                _division = ds.Tables["Table_Common_Details"].Rows[0]["division"].ToString();
+
+                txtCommonNameOfDistrict.Text = ds.Tables["Table_Common_Details"].Rows[0]["district"].ToString();
+                txtCommonNameOfSnrss.Text = ds.Tables["Table_Common_Details"].Rows[0]["snrss"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Division Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+        //--------------------------------------------------------------//
+        //                       STOCK SECTION                          //
+        //--------------------------------------------------------------//
+
+
+        //LAND MARK TYPES WITH STOCK DEFAULT DATA
+        private void DeafultValueAddToStock()
+        {
+            try
+            {
+                foreach (var list in objSetting.AllLandMarkTypes())
+                {
+                    objSetting = new SettingClassBLL();
+                    objSetting = new SettingClassBLL()
+                    {
+                        stock_lm_type = list.ToString(),
+                        stock_division = txtDivisioin.Text,
+                        stock_lm_total = 0
+                    };
+                    objSetting.DefaultStockData();
+                }
+                MessageBox.Show("Stock default data inserted for new division!", "STOCK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "STOCK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        //DIVISION WITH STOCK DEFAULT DATA
+        private void DeafultValueAddToStockDivision()
+        {
+            try
+            {
+                objSetting = new SettingClassBLL();
+                foreach (var list in objSetting.AllDivisios())
+                {
+                    objSetting = new SettingClassBLL()
+                    {
+                        stock_lm_type = txtLMType.Text,
+                        stock_division = list.ToString(),
+                        stock_lm_total = 0
+                    };
+                    objSetting.DefaultStockData();
+                }
+                MessageBox.Show("Stock default data inserted for new Land Mark Type!", "STOCK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "STOCK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

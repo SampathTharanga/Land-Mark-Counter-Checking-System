@@ -1,4 +1,5 @@
 ﻿using BusinessPropertyLayer;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -191,7 +192,7 @@ namespace DataAccessLayer
 
 
         //--------------------------------------------------------------//
-        //                       LAND MARK TYPE                         //
+        //                       COMMON DETAILS                         //
         //--------------------------------------------------------------//
 
         //ADD COMMEN DETAILS
@@ -215,6 +216,59 @@ namespace DataAccessLayer
             string query = "SELECT * FROM Table_Common_Details";
             ds = (DataSet)ExecuteSqlString(query, "Table_Common_Details");
             return ds;
+        }
+
+
+
+        //--------------------------------------------------------------//
+        //                            STOCK                             //
+        //--------------------------------------------------------------//
+
+        //INSERT DEFAULT DATA TO STOCK
+        public void StockDefaultDataAddDB(ISetting model)
+        {
+            string query = "INSERT INTO Table_Stock VALUES ('" + model.stock_lm_type + "', '" + model.stock_division + "', '" + model.stock_lm_total + "')";
+            InsertUpdateeleteSQL(query);
+        }
+
+        //LAND MARK TYPES LIST
+        public List<string> LandMarkTypeSet()
+        {
+            using (SqlConnection objSqlCon = new SqlConnection(conn))
+            {
+                objSqlCon.Open();
+                string query = "SELECT lm_type FROM Table_LM_Type   ";
+                using (SqlCommand cmd = new SqlCommand(query, objSqlCon))
+                {
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    List<string> lmTypeList = new List<string>();
+                    while (dr.Read())
+                    {
+                        lmTypeList.Add(dr["lm_type"].ToString());
+                    }
+                    return lmTypeList;
+                }
+            }
+        }
+
+        //DIVISIONS LIST
+        public List<string> DivisionSet()
+        {
+            using (SqlConnection objSqlCon = new SqlConnection(conn))
+            {
+                objSqlCon.Open();
+                string query = "SELECT division FROM Table_Division   ";
+                using (SqlCommand cmd = new SqlCommand(query, objSqlCon))
+                {
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    List<string> DivisionList = new List<string>();
+                    while (dr.Read())
+                    {
+                        DivisionList.Add(dr["division"].ToString());
+                    }
+                    return DivisionList;
+                }
+            }
         }
     }
 }
