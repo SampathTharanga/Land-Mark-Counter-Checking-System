@@ -10,7 +10,6 @@ namespace LMCC_System
     public partial class frmMain : Form
     {
         UserClassBLL objUserLogic;
-        ucSurveyor objUcSurveyor;
 
         private static bool isRun = false;
         private static readonly object syncLock = new object();

@@ -28,17 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pieChart2 = new LiveCharts.WinForms.PieChart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -55,7 +61,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cartesianChart1);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(16, 14);
             this.groupBox3.Name = "groupBox3";
@@ -64,18 +69,9 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List of Issue";
             // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChart1.Location = new System.Drawing.Point(3, 16);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(710, 210);
-            this.cartesianChart1.TabIndex = 0;
-            this.cartesianChart1.Text = "cartesianChart1";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pieChart1);
+            this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(16, 265);
             this.groupBox1.Name = "groupBox1";
@@ -84,18 +80,9 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Land Mark Stock";
             // 
-            // pieChart1
-            // 
-            this.pieChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pieChart1.Location = new System.Drawing.Point(3, 16);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(330, 334);
-            this.pieChart1.TabIndex = 5;
-            this.pieChart1.Text = "pieChart1";
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.pieChart2);
+            this.groupBox2.Controls.Add(this.chart2);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(371, 265);
             this.groupBox2.Name = "groupBox2";
@@ -104,15 +91,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Settle and Non Settle List";
             // 
-            // pieChart2
+            // chart1
             // 
-            this.pieChart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pieChart2.ForeColor = System.Drawing.Color.White;
-            this.pieChart2.Location = new System.Drawing.Point(3, 16);
-            this.pieChart2.Name = "pieChart2";
-            this.pieChart2.Size = new System.Drawing.Size(355, 331);
-            this.pieChart2.TabIndex = 6;
-            this.pieChart2.Text = "pieChart2";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(18, 20);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(300, 300);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(17, 29);
+            this.chart2.Name = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(300, 300);
+            this.chart2.TabIndex = 0;
+            this.chart2.Text = "chart2";
             // 
             // ucHome
             // 
@@ -124,20 +133,20 @@
             this.Size = new System.Drawing.Size(767, 641);
             this.Load += new System.EventHandler(this.ucHome_Load);
             this.panel4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel4;
-        private LiveCharts.WinForms.PieChart pieChart1;
-        private LiveCharts.WinForms.PieChart pieChart2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }
