@@ -138,3 +138,5 @@ C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LM
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CopyComplete
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.exe
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.pdb
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database.mdf
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database_log.ldf

@@ -137,9 +137,10 @@ namespace LMCC_System
                         username = _username,
                         division = _division
                     };
+                    objClassBLL.Update();//UPDATE USER DATA
 
-                    //UPDATE USER DATA
-                    objClassBLL.Update();
+
+
                     MessageBox.Show("LM making Update successfully!", "LM MAKING", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //CLEAR ALL TEXBOX AND COMBOBOX

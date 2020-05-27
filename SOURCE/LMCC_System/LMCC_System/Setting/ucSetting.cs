@@ -199,6 +199,7 @@ namespace LMCC_System.Setting
         {
             ClearTextBoxces();//CLEAR ALL TEXBOX AND COMBOBOX
             btnAddDivision.Text = "Add";
+            LoadCommonDetails();//LOAD COMMON DETAILS
         }
 
         private void txtDivisioin_KeyPress(object sender, KeyPressEventArgs e)
@@ -317,6 +318,7 @@ namespace LMCC_System.Setting
         {
             ClearTextBoxces();
             btnSurveyorTypeAdd.Text = "Add";
+            LoadCommonDetails();//LOAD COMMON DETAILS
         }
 
         private void dgvSurveyorType_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -440,6 +442,7 @@ namespace LMCC_System.Setting
         {
             btnLMTypeAdd.Text = "Add";
             ClearTextBoxces();
+            LoadCommonDetails();//LOAD COMMON DETAILS
         }
 
         private void dgvLandMarkType_MouseDoubleClick(object sender, MouseEventArgs e)
