@@ -81,9 +81,9 @@ namespace LMCC_System.Setting
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(txtDivisioin.Text))
+                if (String.IsNullOrWhiteSpace(txtDivisioin.Text) || String.IsNullOrWhiteSpace(txtDeportId.Text))
                 {
-                    MessageBox.Show("Please enter division name!", "Division  Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please enter division name and deport id!", "Division  Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -92,7 +92,8 @@ namespace LMCC_System.Setting
                     {
                         objSetting = new SettingClassBLL()
                         {
-                            division = txtDivisioin.Text
+                            division = txtDivisioin.Text,
+                            deportId=txtDeportId.Text
                         };
 
                         //ADD DIVISION
@@ -139,7 +140,7 @@ namespace LMCC_System.Setting
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(txtDivisioin.Text))
+                if (String.IsNullOrWhiteSpace(txtDivisioin.Text) || String.IsNullOrWhiteSpace(txtDeportId.Text))
                 {
                     MessageBox.Show("Please enter division name!", "Division  Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -152,7 +153,8 @@ namespace LMCC_System.Setting
                         objSetting = new SettingClassBLL()
                         {
                             division = txtDivisioin.Text,
-                            oldDivision = dgvDivision.CurrentRow.Cells[0].Value.ToString()
+                            oldDivision = dgvDivision.CurrentRow.Cells[0].Value.ToString(),
+                            deportId = txtDeportId.Text
                         };
                         objSetting.UpdateDivision();
                         MessageBox.Show("Division Update successfully!", "Division Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -192,7 +194,9 @@ namespace LMCC_System.Setting
         private void DgvDivisionStyle()
         {
             dgvDivision.Columns[0].HeaderText = "Division";
-            dgvDivision.Columns[0].Width = 320;
+            dgvDivision.Columns[1].HeaderText = "Deport ID";
+            dgvDivision.Columns[0].Width = 180;
+            dgvDivision.Columns[1].Width = 50;
         }
 
         private void btnDivisionClear_Click(object sender, EventArgs e)
@@ -572,6 +576,12 @@ namespace LMCC_System.Setting
             {
                 MessageBox.Show(ex.Message, "STOCK", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtDeportId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete || e.KeyChar == (char)Keys.Space);
+
         }
 
 

@@ -9,6 +9,7 @@ namespace BusinessLogicLayer
         //DIVISION PROPERTIES
         public string division { get; set; }
         public string oldDivision { get; set; }
+        public string deportId { get; set; }
 
         //SURVEYOR TYPE PROPERTIES
         public string surveyorType { get; set; }

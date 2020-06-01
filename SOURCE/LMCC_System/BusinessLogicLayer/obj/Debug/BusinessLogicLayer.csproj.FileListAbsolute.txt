@@ -33,6 +33,7 @@ G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\D
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 G:\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\Database.mdf
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\Database_log.ldf
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
@@ -42,7 +43,6 @@ C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\Bu
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\BusinessPropertyLayer.pdb
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
-C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

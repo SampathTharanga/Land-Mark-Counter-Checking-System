@@ -53,14 +53,14 @@ namespace DataAccessLayer
         //INSERT NEW DIVISION
         public void AddNewDivisionDB(ISetting model)
         {
-            string query = "INSERT INTO Table_Division VALUES ('" + model.division + "')";
+            string query = "INSERT INTO Table_Division VALUES ('" + model.division + "', '"+ model.deportId +"')";
             InsertUpdateeleteSQL(query);
         }
 
         //UPDATE DIVISION
         public void UpdateDivisionDB(ISetting model)
         {
-            string query = "UPDATE Table_Division SET division = '" + model.division + "' WHERE division = '" + model.oldDivision + "'";
+            string query = "UPDATE Table_Division SET division = '" + model.division + "', division_deport_id='"+ model.deportId +"' WHERE division = '" + model.oldDivision + "'";
             InsertUpdateeleteSQL(query);
         }
         

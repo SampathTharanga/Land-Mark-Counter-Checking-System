@@ -5,6 +5,7 @@
         //DIVISION PROPERTIES
         string division { get; set; }
         string oldDivision { get; set; }
+        string deportId { get; set; }
 
 
         //SURVEYOR PROPERTIES
