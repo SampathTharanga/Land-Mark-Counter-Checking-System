@@ -110,6 +110,8 @@ E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debu
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.User.frmUserProfile.resources
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.GenerateResource.cache
 E:\DEV\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CoreCompileInputs.cache
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucSurveyor.resources
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CoreCompileInputs.cache
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.LM_Manage.ucLMManage.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Login.frmFogotPassword.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmLogin.resources
@@ -118,14 +120,11 @@ C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LM
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Properties.Resources.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucReport.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.Setting.ucSetting.resources
-C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucSurveyor.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucHelp.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.ucHome.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.frmUser.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.User.frmUserProfile.resources
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.GenerateResource.cache
-C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CoreCompileInputs.cache
-C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csprojAssemblyReference.cache
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database.mdf
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\Database_log.ldf
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\LMCC_System.exe.config
@@ -137,6 +136,7 @@ C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LM
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\BusinessLogicLayer.pdb
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\BusinessPropertyLayer.pdb
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\bin\Debug\DataAccessLayer.pdb
+C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csprojAssemblyReference.cache
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\PresentationLayer.Windows.csproj.CopyComplete
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.exe
 C:\Users\Sampath\Desktop\Land-Mark-Counter-Checking-System\SOURCE\LMCC_System\LMCC_System\obj\Debug\LMCC_System.pdb
