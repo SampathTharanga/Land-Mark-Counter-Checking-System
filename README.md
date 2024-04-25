@@ -34,13 +34,9 @@ To get started with the Land Mark Counter Checking System:
 
 Contributions to this repository are welcome! If you have any suggestions for improvements or would like to contribute new features, please submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-## 🌟 NOTE: GRATE APPRECIATION FOR YOUR ATTENTION 🌟
-
-Kindly be advised that the current back-end of this system is still under development and not yet fully completed. However, I'm excited to highlight that the UI boasts dynamic tabs crafted with pure C# prowess!
-
-Please note, this system is not in active deployment within any government office; it solely serves as a sample showcase of my capabilities.
+> [!NOTE]
+> #### 🌟 GRATE APPRECIATION FOR YOUR ATTENTION 🌟
+> - Kindly be advised that the current back-end of this system is still under development and not yet fully completed. However, I'm excited to highlight that the UI boasts dynamic tabs crafted with pure C# prowess!
+> - Please note, this system is not in active deployment within any government office; it solely serves as a sample showcase of my capabilities.
